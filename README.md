@@ -38,7 +38,16 @@ Copy-Item .env.example .env
 
 ## 3단계: 파이프라인 실행
 
-각 Phase 를 독립적으로 실행할 수 있고, 출력은 `data/` 에 단계별 JSON 으로 쌓입니다.
+### 한 방에 전체 실행
+
+```powershell
+$py = ".\.venv\Scripts\python.exe"
+& $py pipeline.py
+```
+
+Phase 1 → 2 → 3 → 4 가 순차 실행됩니다. 한 단계가 실패해도 이전 단계 출력은 `data/` 에 보존되므로 `--skip` 으로 재개 가능.
+
+### 단계별 실행 (디버깅용)
 
 ```powershell
 $py = ".\.venv\Scripts\python.exe"
@@ -51,12 +60,43 @@ $py = ".\.venv\Scripts\python.exe"
 & $py phase2_youtube_search.py --min-views 500000 --per-keyword 10
 # → data/phase2_videos.json
 
-# Phase 3 — (PoC) 단일 URL 로 쇼핑 스티커 추출 검증
-& $py poc_shopping_sticker.py "https://www.youtube.com/shorts/ovAFK2ASguw"
-# → JSON 표준출력 + debug_page.html
+# Phase 3 — Phase 2 결과의 모든 URL 에서 쇼핑 스티커 추출
+& $py phase3_extract.py
+# → data/phase3_products.json  (Chrome 창이 뜨고 URL 하나씩 자동 방문)
 
-# Phase 3 (다수 URL) + Phase 4 + pipeline.py 는 PoC 검증 통과 후 작성 예정
+# Phase 4 — Phase 2 + 3 합쳐서 web/results.json 생성
+& $py phase4_output.py
+# → web/results.json
 ```
+
+### Phase 3 단일 URL 검증 (PoC)
+
+전체 Phase 3 가 무거우니 먼저 단일 URL 로 셀렉터가 동작하는지 확인:
+
+```powershell
+& $py poc_shopping_sticker.py "https://www.youtube.com/shorts/ovAFK2ASguw"
+```
+
+### 재실행 / 부분 실행
+
+```powershell
+# Phase 1 건너뛰기 (저장된 키워드 재사용)
+& $py pipeline.py --skip 1
+
+# Phase 3 만 다시 (UI 만 수정한 경우)
+& $py pipeline.py --only 3,4
+
+# Phase 3 옵션 조정 (timeout 늘리기, 처음 5개만 처리)
+& $py phase3_extract.py --timeout 15 --limit 5
+```
+
+### 예상 소요 시간
+
+- Phase 1: 10~30초 (pytrends rate limit 의존)
+- Phase 2: 키워드 수 × 1~2초 (API 호출)
+- Phase 3: **영상 수 × 약 15초** (Chrome 페이지 로드 + 스티커 대기 + 인간 모방 딜레이)
+  - 영상 30개 ≈ 7~8분
+- Phase 4: 1초 이하
 
 ## 4단계: 결과 뷰어 (Vercel 배포)
 
@@ -97,15 +137,19 @@ Reference-Searching/
 ├── requirements.txt                # Python 패키지
 ├── .env.example                    # API 키 템플릿 (.env 로 복사 후 채움)
 │
+├── pipeline.py                     # Phase 1→4 오케스트레이션
 ├── phase1_trends.py                # 구글 트렌드 → 키워드
 ├── phase2_youtube_search.py        # YouTube API → 쇼츠 URL+조회수
-├── poc_shopping_sticker.py         # Phase 3 PoC (단일 URL 검증)
+├── phase3_extract.py               # 다수 URL → 쇼핑 스티커 (uc + Chrome)
+├── phase4_output.py                # Phase 2+3 합치기 → web/results.json
+├── poc_shopping_sticker.py         # 단일 URL 검증 도구 (디버깅용)
 │
 ├── data/                           # 단계별 중간 출력 (gitignore 안 함)
 │   ├── phase1_keywords.json
-│   └── phase2_videos.json
+│   ├── phase2_videos.json
+│   └── phase3_products.json
 │
-└── web/                            # ← Vercel 배포 대상 (Root Directory 로 지정)
+└── web/                            # ← Vercel 배포 대상
     ├── index.html                  # 결과 뷰어 (vanilla JS)
     └── results.json                # 최종 데이터 (현재는 샘플)
 ```
@@ -132,9 +176,9 @@ Reference-Searching/
 
 - [x] Phase 1 (pytrends 키워드 추출)
 - [x] Phase 2 (YouTube Data API 검색)
-- [x] Phase 3 PoC (단일 URL 검증) — **❓ 실행 검증 대기 중**
-- [x] 뷰어 (`web/index.html`) + 샘플 데이터
-- [ ] Phase 3 다수 URL 일괄 처리
-- [ ] Phase 4 (`web/results.json` 합치기)
-- [ ] `pipeline.py` 오케스트레이션
-- [ ] 첫 실데이터 푸시
+- [x] Phase 3 PoC (단일 URL 검증 코드)
+- [x] Phase 3 다수 URL 일괄 처리
+- [x] Phase 4 (`web/results.json` 합치기)
+- [x] `pipeline.py` 오케스트레이션
+- [x] 뷰어 (`web/index.html`) + Vercel 배포
+- [ ] **첫 실데이터 푸시** ← 다음 단계
