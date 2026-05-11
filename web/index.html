@@ -5,103 +5,217 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Reference Searching — YouTube Shorts 쇼핑 트렌드</title>
   <meta name="description" content="구글 트렌드 기반 YouTube Shorts 쇼핑 정보 수집 결과" />
+  <link rel="preconnect" href="https://i.ytimg.com" />
   <style>
     :root {
-      --bg: #0a0a0a;
-      --panel: #111;
-      --panel-2: #1a1a1a;
+      --bg: #08080a;
+      --panel: #111114;
+      --panel-2: #18181c;
+      --panel-3: #1f1f24;
       --fg: #fafafa;
-      --muted: #999;
-      --border: #2a2a2a;
+      --muted: #888;
+      --muted-2: #aaa;
+      --border: #26262c;
+      --border-strong: #3a3a42;
       --accent: #ff0033;
       --accent-dim: #cc0029;
+      --positive: #00d97f;
     }
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     html { -webkit-text-size-adjust: 100%; }
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Pretendard", "Apple SD Gothic Neo",
                    "Segoe UI", Roboto, sans-serif;
-      background: var(--bg);
+      background:
+        radial-gradient(ellipse at 20% -10%, rgba(255, 0, 51, 0.08), transparent 50%),
+        radial-gradient(ellipse at 80% 110%, rgba(0, 217, 127, 0.04), transparent 50%),
+        var(--bg);
       color: var(--fg);
       min-height: 100vh;
       line-height: 1.5;
+      letter-spacing: -0.005em;
     }
     a { color: inherit; }
-    .container { max-width: 1200px; margin: 0 auto; padding: 2rem 1rem; }
+    img { display: block; }
+    .container { max-width: 1280px; margin: 0 auto; padding: 2.5rem 1.25rem; }
 
-    header { margin-bottom: 2rem; border-bottom: 1px solid var(--border); padding-bottom: 1.5rem; }
-    header h1 { font-size: 1.75rem; font-weight: 700; letter-spacing: -0.02em; margin-bottom: 0.35rem; }
-    header h1 .accent { color: var(--accent); }
-    header p { color: var(--muted); font-size: 0.875rem; }
+    /* ────────── header ────────── */
+    header { margin-bottom: 2rem; }
+    .title {
+      font-size: clamp(1.5rem, 4vw, 2rem);
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      margin-bottom: 0.25rem;
+    }
+    .title .accent { color: var(--accent); }
+    .subtitle { color: var(--muted); font-size: 0.875rem; margin-bottom: 1.5rem; }
 
+    /* ────────── stats bar ────────── */
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 0.75rem;
+      margin-bottom: 2rem;
+    }
+    .stat {
+      padding: 1rem 1.1rem;
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      transition: border-color 0.15s ease;
+    }
+    .stat:hover { border-color: var(--border-strong); }
+    .stat-value {
+      font-size: 1.6rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: var(--fg);
+      line-height: 1.1;
+    }
+    .stat-label {
+      color: var(--muted);
+      font-size: 0.75rem;
+      margin-top: 0.3rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    /* ────────── filters ────────── */
+    .filters { margin-bottom: 1.5rem; }
+    .keyword-pills {
+      display: flex;
+      gap: 0.4rem;
+      flex-wrap: wrap;
+      margin-bottom: 0.85rem;
+    }
+    .pill {
+      padding: 0.4rem 0.85rem;
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      font-size: 0.82rem;
+      color: var(--muted-2);
+      cursor: pointer;
+      transition: all 0.15s ease;
+      user-select: none;
+      font-family: inherit;
+    }
+    .pill:hover { border-color: var(--accent); color: var(--fg); }
+    .pill.active {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: white;
+      font-weight: 600;
+    }
     .controls {
       display: flex;
       gap: 0.5rem;
-      margin-bottom: 1.5rem;
       flex-wrap: wrap;
     }
     .controls input, .controls select {
-      background: var(--panel-2);
+      background: var(--panel);
       border: 1px solid var(--border);
       color: var(--fg);
-      padding: 0.6rem 0.85rem;
-      border-radius: 6px;
+      padding: 0.65rem 0.9rem;
+      border-radius: 8px;
       font-size: 0.9rem;
       font-family: inherit;
+      transition: border-color 0.15s ease;
     }
     .controls input { flex: 1; min-width: 220px; }
-    .controls input:focus, .controls select:focus { outline: none; border-color: var(--accent); }
+    .controls input:focus, .controls select:focus {
+      outline: none; border-color: var(--accent);
+    }
+    .controls input::placeholder { color: var(--muted); }
 
+    /* ────────── grid + cards ────────── */
     .grid {
       display: grid;
       gap: 1rem;
-      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     }
     .card {
       background: var(--panel);
       border: 1px solid var(--border);
-      border-radius: 8px;
-      padding: 1.25rem;
+      border-radius: 12px;
       display: flex;
       flex-direction: column;
-      transition: border-color 0.15s ease;
+      overflow: hidden;
+      transition: transform 0.15s ease, border-color 0.15s ease;
     }
-    .card:hover { border-color: var(--accent); }
+    .card:hover { transform: translateY(-2px); border-color: var(--border-strong); }
+
+    .thumb {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      background: linear-gradient(135deg, #1a1a1f, #0d0d10);
+      overflow: hidden;
+    }
+    .thumb img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+    .thumb-placeholder {
+      width: 100%; height: 100%;
+      display: flex; align-items: center; justify-content: center;
+      color: var(--border-strong);
+      font-size: 2.5rem;
+      font-weight: 800;
+    }
+    .thumb-badge {
+      position: absolute;
+      top: 0.6rem; left: 0.6rem;
+      padding: 0.2rem 0.5rem;
+      background: rgba(0,0,0,0.75);
+      backdrop-filter: blur(4px);
+      border-radius: 4px;
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: var(--accent);
+    }
+    .thumb-views {
+      position: absolute;
+      bottom: 0.6rem; right: 0.6rem;
+      padding: 0.25rem 0.55rem;
+      background: rgba(0,0,0,0.78);
+      backdrop-filter: blur(4px);
+      border-radius: 4px;
+      font-size: 0.75rem;
+      font-weight: 600;
+    }
+
+    .card-body { padding: 1rem 1.1rem 1.1rem; display: flex; flex-direction: column; flex: 1; }
     .card-title {
       font-weight: 600;
       font-size: 0.95rem;
-      margin-bottom: 0.4rem;
       line-height: 1.35;
+      margin-bottom: 0.4rem;
       display: -webkit-box;
       -webkit-line-clamp: 2;
       -webkit-box-orient: vertical;
       overflow: hidden;
+      min-height: 2.55em;
     }
     .card-meta {
       display: flex;
-      gap: 0.85rem;
+      gap: 0.5rem;
+      align-items: center;
       color: var(--muted);
-      font-size: 0.8rem;
-      margin-bottom: 0.5rem;
-      flex-wrap: wrap;
+      font-size: 0.78rem;
+      margin-bottom: 0.85rem;
     }
-    .badge {
-      display: inline-block;
-      background: var(--panel-2);
-      color: var(--muted);
-      padding: 0.15rem 0.5rem;
-      border-radius: 4px;
-      font-size: 0.7rem;
-      margin-bottom: 0.5rem;
-    }
+    .card-meta .dot { opacity: 0.5; }
 
-    .products { margin-top: 0.5rem; flex: 1; }
+    .products { display: flex; flex-direction: column; gap: 0.5rem; margin-bottom: 0.9rem; }
     .product {
       padding: 0.7rem 0.8rem;
-      background: var(--bg);
+      background: var(--panel-2);
       border: 1px solid var(--border);
-      border-radius: 6px;
-      margin-top: 0.5rem;
+      border-radius: 8px;
     }
     .product-name {
       font-size: 0.85rem;
@@ -111,29 +225,58 @@
       -webkit-box-orient: vertical;
       overflow: hidden;
     }
-    .product-info { color: var(--muted); font-size: 0.78rem; }
-    .product-info .price { color: var(--accent); font-weight: 700; }
+    .product-info {
+      display: flex;
+      gap: 0.4rem;
+      align-items: center;
+      color: var(--muted);
+      font-size: 0.78rem;
+    }
+    .product-info .price { color: var(--positive); font-weight: 700; font-size: 0.85rem; }
+    .product-info .seller-tag {
+      padding: 0.1rem 0.4rem;
+      background: var(--panel-3);
+      border-radius: 3px;
+      font-size: 0.7rem;
+    }
+    .no-products {
+      padding: 0.7rem; text-align: center;
+      color: var(--muted); font-size: 0.78rem;
+      background: var(--panel-2); border-radius: 8px; border: 1px dashed var(--border);
+      margin-bottom: 0.9rem;
+    }
 
-    .card-actions { display: flex; gap: 0.5rem; margin-top: 0.85rem; }
+    .card-actions { display: flex; gap: 0.4rem; margin-top: auto; }
     .btn {
-      flex: 1;
-      text-align: center;
+      flex: 1; text-align: center;
       padding: 0.55rem 0.5rem;
-      border-radius: 6px;
+      border-radius: 8px;
       text-decoration: none;
       font-size: 0.82rem;
-      font-weight: 500;
-      transition: background 0.15s ease;
+      font-weight: 600;
+      transition: all 0.15s ease;
+      border: 1px solid transparent;
     }
-    .btn-video { background: var(--panel-2); color: var(--fg); border: 1px solid var(--border); }
-    .btn-video:hover { background: #252525; }
-    .btn-buy { background: var(--accent); color: white; }
+    .btn-video {
+      background: var(--panel-2);
+      color: var(--fg);
+      border-color: var(--border);
+    }
+    .btn-video:hover { background: var(--panel-3); border-color: var(--border-strong); }
+    .btn-buy {
+      background: var(--accent); color: white;
+    }
     .btn-buy:hover { background: var(--accent-dim); }
 
+    /* ────────── empty + loading ────────── */
     .empty {
+      grid-column: 1 / -1;
       text-align: center;
       padding: 4rem 1rem;
       color: var(--muted);
+      background: var(--panel);
+      border-radius: 12px;
+      border: 1px solid var(--border);
     }
     .empty h2 { color: var(--fg); margin-bottom: 0.5rem; font-size: 1.1rem; }
     .empty code {
@@ -141,46 +284,88 @@
       padding: 0.15rem 0.4rem;
       border-radius: 4px;
       font-size: 0.85em;
+      font-family: ui-monospace, "SF Mono", Menlo, monospace;
     }
 
+    .skeleton-card {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+    .skeleton {
+      background: linear-gradient(90deg, var(--panel-2) 0%, var(--panel-3) 50%, var(--panel-2) 100%);
+      background-size: 200% 100%;
+      animation: shimmer 1.4s infinite;
+      border-radius: 4px;
+    }
+    @keyframes shimmer {
+      0% { background-position: -200% 0; }
+      100% { background-position: 200% 0; }
+    }
+    .sk-thumb { aspect-ratio: 16 / 9; border-radius: 0; }
+    .sk-line { height: 0.9rem; margin: 0.6rem 1.1rem 0; }
+    .sk-line.short { width: 50%; }
+
+    /* ────────── footer ────────── */
     footer {
-      margin-top: 3rem;
+      margin-top: 4rem;
       padding-top: 1.5rem;
       border-top: 1px solid var(--border);
       color: var(--muted);
       font-size: 0.8rem;
       text-align: center;
     }
-    footer a { color: var(--muted); text-decoration: underline; }
+    footer a { color: var(--muted); text-decoration: underline; text-decoration-color: var(--border-strong); }
+    footer a:hover { color: var(--fg); }
+
+    @media (max-width: 480px) {
+      .container { padding: 1.5rem 1rem; }
+      .stat-value { font-size: 1.3rem; }
+      .grid { grid-template-columns: 1fr; }
+    }
   </style>
 </head>
 <body>
   <div class="container">
     <header>
-      <h1>YouTube Shorts <span class="accent">쇼핑 트렌드</span></h1>
-      <p id="meta">로드 중…</p>
+      <h1 class="title">YouTube Shorts <span class="accent">쇼핑 트렌드</span></h1>
+      <p class="subtitle" id="subtitle">로드 중…</p>
+
+      <div class="stats" id="stats">
+        <div class="stat"><div class="stat-value">-</div><div class="stat-label">영상</div></div>
+        <div class="stat"><div class="stat-value">-</div><div class="stat-label">상품</div></div>
+        <div class="stat"><div class="stat-value">-</div><div class="stat-label">누적 조회수</div></div>
+        <div class="stat"><div class="stat-value">-</div><div class="stat-label">판매처</div></div>
+      </div>
     </header>
 
-    <div class="controls">
-      <input id="search" type="search" placeholder="상품명 / 판매처 / 키워드 / 채널 검색" />
-      <select id="sort">
-        <option value="views">조회수↓</option>
-        <option value="views-asc">조회수↑</option>
-        <option value="recent">최신순</option>
-      </select>
+    <div class="filters">
+      <div class="keyword-pills" id="keyword-pills"></div>
+      <div class="controls">
+        <input id="search" type="search" placeholder="상품명 / 판매처 / 키워드 / 채널 검색" />
+        <select id="sort">
+          <option value="views">조회수↓</option>
+          <option value="views-asc">조회수↑</option>
+          <option value="recent">최신순</option>
+          <option value="oldest">오래된순</option>
+        </select>
+      </div>
     </div>
 
     <div id="results"></div>
 
     <footer>
-      <p>구글 트렌드 기반 키워드 → YouTube Data API 검색 → 쇼핑 스티커 추출 결과</p>
-      <p style="margin-top:0.4rem;">소스: <a href="https://github.com/ysm9942/Reference-Searching" target="_blank">github.com/ysm9942/Reference-Searching</a></p>
+      <p>구글 트렌드 키워드 → YouTube Data API 검색 → 쇼핑 스티커 추출</p>
+      <p style="margin-top:0.4rem;">소스: <a href="https://github.com/ysm9942/Reference-Searching" target="_blank" rel="noopener">github.com/ysm9942/Reference-Searching</a></p>
     </footer>
   </div>
 
   <script>
     let allItems = [];
+    let activeKeyword = null;
 
+    /* ────── helpers ────── */
     function escapeHtml(s) {
       return String(s == null ? "" : s).replace(/[&<>"']/g, function (c) {
         return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c];
@@ -190,7 +375,7 @@
     function formatViews(n) {
       n = Number(n) || 0;
       if (n >= 1e8) return (n / 1e8).toFixed(1).replace(/\.0$/, "") + "억";
-      if (n >= 1e4) return Math.round(n / 1e4) + "만";
+      if (n >= 1e4) return Math.round(n / 1e4).toLocaleString("ko-KR") + "만";
       return n.toLocaleString("ko-KR");
     }
 
@@ -206,12 +391,69 @@
       return Math.floor(days / 365) + "년 전";
     }
 
+    function getThumb(item) {
+      if (item.thumbnail) return escapeHtml(item.thumbnail);
+      if (item.video_id && !/^SAMPLE/.test(item.video_id))
+        return "https://i.ytimg.com/vi/" + encodeURIComponent(item.video_id) + "/hqdefault.jpg";
+      return null;
+    }
+
+    /* ────── stats ────── */
+    function computeStats(items) {
+      const totalViews = items.reduce(function (a, i) { return a + (i.view_count || 0); }, 0);
+      const productCount = items.reduce(function (a, i) { return a + ((i.products || []).length); }, 0);
+      const sellers = new Set();
+      items.forEach(function (i) {
+        (i.products || []).forEach(function (p) { if (p.seller) sellers.add(p.seller); });
+      });
+      return { videos: items.length, products: productCount, views: totalViews, sellers: sellers.size };
+    }
+
+    function renderStats(stats) {
+      const el = document.getElementById("stats");
+      el.innerHTML = [
+        ['<div class="stat-value">', stats.videos.toLocaleString("ko-KR"), '</div><div class="stat-label">영상</div>'],
+        ['<div class="stat-value">', stats.products.toLocaleString("ko-KR"), '</div><div class="stat-label">상품</div>'],
+        ['<div class="stat-value">', formatViews(stats.views), '</div><div class="stat-label">누적 조회수</div>'],
+        ['<div class="stat-value">', stats.sellers.toLocaleString("ko-KR"), '</div><div class="stat-label">판매처</div>'],
+      ].map(function (s) { return '<div class="stat">' + s.join("") + '</div>'; }).join("");
+    }
+
+    /* ────── keyword pills ────── */
+    function renderKeywordPills(items) {
+      const counts = {};
+      items.forEach(function (it) {
+        const k = it.matched_keyword;
+        if (k) counts[k] = (counts[k] || 0) + 1;
+      });
+      const keywords = Object.keys(counts).sort(function (a, b) { return counts[b] - counts[a]; });
+      const el = document.getElementById("keyword-pills");
+      const buttons = ['<button class="pill ' + (activeKeyword == null ? "active" : "") + '" data-kw="">전체 · ' + items.length + "</button>"];
+      keywords.forEach(function (k) {
+        buttons.push(
+          '<button class="pill ' + (activeKeyword === k ? "active" : "") + '" data-kw="' + escapeHtml(k) + '">' +
+          escapeHtml(k) + " · " + counts[k] + "</button>"
+        );
+      });
+      el.innerHTML = buttons.join("");
+      el.querySelectorAll(".pill").forEach(function (btn) {
+        btn.addEventListener("click", function () {
+          const kw = btn.getAttribute("data-kw");
+          activeKeyword = kw || null;
+          el.querySelectorAll(".pill").forEach(function (b) { b.classList.remove("active"); });
+          btn.classList.add("active");
+          apply();
+        });
+      });
+    }
+
+    /* ────── cards ────── */
     function renderCards(items) {
       const container = document.getElementById("results");
       if (items.length === 0) {
         container.innerHTML =
           '<div class="empty"><h2>표시할 항목이 없습니다</h2>' +
-          '<p>아직 파이프라인이 한 번도 실행되지 않았거나, 검색어와 일치하는 항목이 없습니다.</p>' +
+          '<p>필터 조건과 일치하는 항목이 없거나, 아직 파이프라인이 한 번도 실행되지 않았습니다.</p>' +
           '<p style="margin-top:0.8rem">로컬에서 실행 후 푸시하세요: <code>python pipeline.py</code></p></div>';
         return;
       }
@@ -220,33 +462,43 @@
         items.map(function (item) {
           const products = item.products || [];
           const firstBuyLink = products[0] && products[0].link;
+          const thumbUrl = getThumb(item);
+          const titleInitial = (item.title || "?").trim().charAt(0).toUpperCase();
           return [
             '<article class="card">',
-            item.matched_keyword ? '<span class="badge">' + escapeHtml(item.matched_keyword) + '</span>' : "",
-            '<div class="card-title">' + escapeHtml(item.title || "제목 없음") + '</div>',
-            '<div class="card-meta">',
-              '<span>조회 ' + formatViews(item.view_count) + '</span>',
-              item.channel ? '<span>' + escapeHtml(item.channel) + '</span>' : "",
-              item.published_at ? '<span>' + relativeDate(item.published_at) + '</span>' : "",
+            '<div class="thumb">',
+              thumbUrl
+                ? '<img loading="lazy" alt="" src="' + thumbUrl + '" onerror="this.onerror=null;this.replaceWith(Object.assign(document.createElement(\'div\'),{className:\'thumb-placeholder\',textContent:\'▶\'}));">'
+                : '<div class="thumb-placeholder">' + escapeHtml(titleInitial) + '</div>',
+              item.matched_keyword ? '<span class="thumb-badge">' + escapeHtml(item.matched_keyword) + '</span>' : "",
+              '<span class="thumb-views">' + formatViews(item.view_count) + " 회</span>",
             '</div>',
-            '<div class="products">',
-              products.map(function (p) {
-                return [
-                  '<div class="product">',
-                    '<div class="product-name">' + escapeHtml(p.name || "상품명 없음") + '</div>',
-                    '<div class="product-info">',
-                      '<span class="price">' + escapeHtml(p.price || "-") + '</span>',
-                      p.seller ? ' · ' + escapeHtml(p.seller) : "",
-                    '</div>',
-                  '</div>',
-                ].join("");
-              }).join(""),
-            '</div>',
-            '<div class="card-actions">',
-              '<a class="btn btn-video" href="' + escapeHtml(item.video_url) + '" target="_blank" rel="noopener">쇼츠 보기</a>',
-              firstBuyLink
-                ? '<a class="btn btn-buy" href="' + escapeHtml(firstBuyLink) + '" target="_blank" rel="noopener">구매하기</a>'
-                : "",
+            '<div class="card-body">',
+              '<div class="card-title">' + escapeHtml(item.title || "제목 없음") + '</div>',
+              '<div class="card-meta">',
+                item.channel ? '<span>' + escapeHtml(item.channel) + '</span>' : "",
+                (item.channel && item.published_at) ? '<span class="dot">·</span>' : "",
+                item.published_at ? '<span>' + relativeDate(item.published_at) + '</span>' : "",
+              '</div>',
+              products.length === 0
+                ? '<div class="no-products">연동된 상품 없음</div>'
+                : '<div class="products">' + products.map(function (p) {
+                    return [
+                      '<div class="product">',
+                        '<div class="product-name">' + escapeHtml(p.name || "상품명 없음") + '</div>',
+                        '<div class="product-info">',
+                          '<span class="price">' + escapeHtml(p.price || "-") + '</span>',
+                          p.seller ? '<span class="seller-tag">' + escapeHtml(p.seller) + '</span>' : "",
+                        '</div>',
+                      '</div>',
+                    ].join("");
+                  }).join("") + '</div>',
+              '<div class="card-actions">',
+                '<a class="btn btn-video" href="' + escapeHtml(item.video_url) + '" target="_blank" rel="noopener">쇼츠 보기</a>',
+                firstBuyLink
+                  ? '<a class="btn btn-buy" href="' + escapeHtml(firstBuyLink) + '" target="_blank" rel="noopener">구매하기</a>'
+                  : "",
+              '</div>',
             '</div>',
             '</article>',
           ].join("");
@@ -254,10 +506,31 @@
         '</div>';
     }
 
+    function renderSkeleton() {
+      const container = document.getElementById("results");
+      const cards = Array.from({ length: 6 }).map(function () {
+        return [
+          '<div class="skeleton-card">',
+            '<div class="skeleton sk-thumb"></div>',
+            '<div class="sk-line skeleton"></div>',
+            '<div class="sk-line short skeleton"></div>',
+            '<div style="height:1rem"></div>',
+          '</div>',
+        ].join("");
+      }).join("");
+      container.innerHTML = '<div class="grid">' + cards + '</div>';
+    }
+
+    /* ────── filter + sort ────── */
     function apply() {
       const q = document.getElementById("search").value.trim().toLowerCase();
       const sort = document.getElementById("sort").value;
       let items = allItems.slice();
+
+      if (activeKeyword) {
+        items = items.filter(function (it) { return it.matched_keyword === activeKeyword; });
+      }
+
       if (q) {
         items = items.filter(function (it) {
           const hay = [
@@ -267,14 +540,20 @@
           return hay.indexOf(q) !== -1;
         });
       }
+
       if (sort === "views") items.sort(function (a, b) { return (b.view_count || 0) - (a.view_count || 0); });
       if (sort === "views-asc") items.sort(function (a, b) { return (a.view_count || 0) - (b.view_count || 0); });
       if (sort === "recent") items.sort(function (a, b) {
         return new Date(b.published_at || 0) - new Date(a.published_at || 0);
       });
+      if (sort === "oldest") items.sort(function (a, b) {
+        return new Date(a.published_at || 0) - new Date(b.published_at || 0);
+      });
       renderCards(items);
     }
 
+    /* ────── boot ────── */
+    renderSkeleton();
     fetch("./results.json")
       .then(function (r) {
         if (!r.ok) throw new Error("status " + r.status);
@@ -282,15 +561,16 @@
       })
       .then(function (data) {
         allItems = data.items || [];
-        const meta = document.getElementById("meta");
         const dt = data.generated_at ? new Date(data.generated_at) : null;
         const dtStr = dt && !Number.isNaN(dt.getTime()) ? dt.toLocaleString("ko-KR") : "알 수 없음";
-        meta.textContent = allItems.length + "개 항목 · 마지막 갱신: " + dtStr;
+        document.getElementById("subtitle").textContent = "마지막 갱신: " + dtStr;
+        renderStats(computeStats(allItems));
+        renderKeywordPills(allItems);
         apply();
       })
       .catch(function (err) {
         console.error(err);
-        document.getElementById("meta").textContent = "results.json 로드 실패";
+        document.getElementById("subtitle").textContent = "results.json 로드 실패";
         document.getElementById("results").innerHTML =
           '<div class="empty"><h2>결과 파일을 찾을 수 없습니다</h2>' +
           '<p>로컬에서 파이프라인을 실행하고 <code>web/results.json</code> 을 푸시해주세요.</p></div>';

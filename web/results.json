@@ -20,29 +20,92 @@
       ]
     },
     {
-      "video_id": "SAMPLE_ID_2",
-      "video_url": "https://www.youtube.com/shorts/SAMPLE_ID_2",
-      "title": "샘플 영상 2 (실제 데이터로 교체됩니다)",
-      "channel": "@sample",
-      "view_count": 850000,
-      "published_at": "2026-05-09T12:00:00Z",
+      "video_id": "SAMPLE_2",
+      "video_url": "https://www.youtube.com/shorts/SAMPLE_2",
+      "title": "이거 진짜 미쳤다 ㅋㅋ 오늘자 챌린지 1위",
+      "channel": "@viral_kr",
+      "view_count": 8500000,
+      "published_at": "2026-05-09T12:30:00Z",
       "matched_keyword": "챌린지",
       "products": [
         {
-          "name": "샘플 상품 — pipeline.py 실행 후 실제 데이터로 교체됨",
-          "price": "₩12,900",
-          "seller": "샘플샵",
-          "link": "https://example.com/sample"
+          "name": "댄스 챌린지용 무선 이어폰 노이즈캔슬링",
+          "price": "₩29,900",
+          "seller": "쿠팡",
+          "link": "https://example.com/sample2-a"
+        },
+        {
+          "name": "운동복 반팔 티셔츠 드라이핏",
+          "price": "₩12,500",
+          "seller": "지마켓",
+          "link": "https://example.com/sample2-b"
         }
       ]
     },
     {
-      "video_id": "SAMPLE_ID_3",
-      "video_url": "https://www.youtube.com/shorts/SAMPLE_ID_3",
-      "title": "샘플 영상 3",
-      "channel": "@demo",
-      "view_count": 450000,
-      "published_at": "2026-05-10T15:30:00Z",
+      "video_id": "SAMPLE_3",
+      "video_url": "https://www.youtube.com/shorts/SAMPLE_3",
+      "title": "MZ세대 사로잡은 그 밈 원본 영상",
+      "channel": "@meme_archive",
+      "view_count": 3120000,
+      "published_at": "2026-05-10T08:15:00Z",
+      "matched_keyword": "밈",
+      "products": [
+        {
+          "name": "감성 LED 무드등 USB 충전식 침실 인테리어",
+          "price": "₩15,800",
+          "seller": "11번가",
+          "link": "https://example.com/sample3"
+        }
+      ]
+    },
+    {
+      "video_id": "SAMPLE_4",
+      "video_url": "https://www.youtube.com/shorts/SAMPLE_4",
+      "title": "이게 진짜 8천원? 가성비 끝판왕 발견",
+      "channel": "@daily_haul",
+      "view_count": 567000,
+      "published_at": "2026-05-10T18:00:00Z",
+      "matched_keyword": "가성비",
+      "products": [
+        {
+          "name": "다이소 인기 정리함 3종 세트 수납박스",
+          "price": "₩7,900",
+          "seller": "다이소몰",
+          "link": "https://example.com/sample4"
+        }
+      ]
+    },
+    {
+      "video_id": "SAMPLE_5",
+      "video_url": "https://www.youtube.com/shorts/SAMPLE_5",
+      "title": "올해 여름 트렌드 코디 5가지 #shorts",
+      "channel": "@style_today",
+      "view_count": 1850000,
+      "published_at": "2026-05-07T15:45:00Z",
+      "matched_keyword": "패션",
+      "products": [
+        {
+          "name": "여름 린넨 셔츠 오버핏 화이트",
+          "price": "₩32,000",
+          "seller": "무신사",
+          "link": "https://example.com/sample5-a"
+        },
+        {
+          "name": "와이드 데님 팬츠 라이트 워싱",
+          "price": "₩45,500",
+          "seller": "무신사",
+          "link": "https://example.com/sample5-b"
+        }
+      ]
+    },
+    {
+      "video_id": "SAMPLE_6",
+      "video_url": "https://www.youtube.com/shorts/SAMPLE_6",
+      "title": "이거 모르고 사면 후회한다 #밈",
+      "channel": "@review_lab",
+      "view_count": 980000,
+      "published_at": "2026-05-11T03:20:00Z",
       "matched_keyword": "밈",
       "products": []
     }
