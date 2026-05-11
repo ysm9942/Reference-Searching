@@ -1,0 +1,50 @@
+{
+  "generated_at": "2026-05-11T00:00:00Z",
+  "note": "sample data — replaced by pipeline.py output after first real run",
+  "items": [
+    {
+      "video_id": "ovAFK2ASguw",
+      "video_url": "https://www.youtube.com/shorts/ovAFK2ASguw",
+      "title": "많은 사람들이 오해했다는 사진 #shorts",
+      "channel": "@roentgenium",
+      "view_count": 1234567,
+      "published_at": "2026-05-08T09:00:00Z",
+      "matched_keyword": "착시",
+      "products": [
+        {
+          "name": "레이어드팔찌 아돌프 더블 가죽팔찌(실버) 본상품",
+          "price": "₩8,900",
+          "seller": "쿠팡",
+          "link": "https://link.coupang.com/re3/AFYOUTUBE?pageKey=9419099496"
+        }
+      ]
+    },
+    {
+      "video_id": "SAMPLE_ID_2",
+      "video_url": "https://www.youtube.com/shorts/SAMPLE_ID_2",
+      "title": "샘플 영상 2 (실제 데이터로 교체됩니다)",
+      "channel": "@sample",
+      "view_count": 850000,
+      "published_at": "2026-05-09T12:00:00Z",
+      "matched_keyword": "챌린지",
+      "products": [
+        {
+          "name": "샘플 상품 — pipeline.py 실행 후 실제 데이터로 교체됨",
+          "price": "₩12,900",
+          "seller": "샘플샵",
+          "link": "https://example.com/sample"
+        }
+      ]
+    },
+    {
+      "video_id": "SAMPLE_ID_3",
+      "video_url": "https://www.youtube.com/shorts/SAMPLE_ID_3",
+      "title": "샘플 영상 3",
+      "channel": "@demo",
+      "view_count": 450000,
+      "published_at": "2026-05-10T15:30:00Z",
+      "matched_keyword": "밈",
+      "products": []
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+env/
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+
+# Secrets
+.env
+.env.local
+*.key
+
+# Node / Next.js (if added later)
+node_modules/
+.next/
+.vercel/
+
+# Playwright / debug artifacts
+playwright-report/
+test-results/
+debug_page.html
+debug_*.html
+debug_*.png
+
+# IDE / agent state
+.vscode/
+.idea/
+.claude/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
