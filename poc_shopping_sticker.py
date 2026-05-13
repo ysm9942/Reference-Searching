@@ -95,6 +95,18 @@ def _clean_url(url: str | None) -> str | None:
         return url
 
 
+_IMAGE_HOSTS = ("gstatic.com", "ytimg.com", "ggpht.com")
+
+
+def _is_image_url(url: str | None) -> bool:
+    """True if the URL clearly points at an image rather than a buy page."""
+    if not url:
+        return False
+    if "/shopping?q=tbn" in url:
+        return True
+    return any(host in url for host in _IMAGE_HOSTS)
+
+
 def _match_braces(text: str, start: int, limit: int = 20_000) -> int:
     """Given index of `{`, return index AFTER the matching `}` (or -1)."""
     if start >= len(text) or text[start] != "{":
@@ -184,7 +196,15 @@ def extract_products_from_json(html: str) -> list[dict]:
             if sm:
                 seller = sm.group(1).strip() or None
 
-        link_m = _AFFILIATE_URL_RE.search(block) or _ANY_URL_RE.search(block)
+        # Prefer the affiliate URL inside this block. If absent, fall back to
+        # any URL — but reject image hosts (gstatic/ytimg) which would
+        # otherwise leak the product thumbnail into the buy-link slot.
+        link_m = _AFFILIATE_URL_RE.search(block)
+        if not link_m:
+            for fallback in _ANY_URL_RE.finditer(block):
+                if not _is_image_url(fallback.group(1)):
+                    link_m = fallback
+                    break
         link = _clean_url(link_m.group(1)) if link_m else None
         thumbnail = _clean_url(thumb_m.group(1)) if thumb_m else None
 

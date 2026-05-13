@@ -1,0 +1,22 @@
+{
+  "generated_at": "2026-05-13T00:00:00Z",
+  "config": {
+    "seeds": ["manual"],
+    "geo": "KR",
+    "timeframe": "now 7-d",
+    "top": 10,
+    "note": "pytrends rate-limited (429); using curated keyword list for testing"
+  },
+  "keywords": [
+    {"keyword": "리뷰", "growth": null, "seed": "manual"},
+    {"keyword": "추천템", "growth": null, "seed": "manual"},
+    {"keyword": "다이소", "growth": null, "seed": "manual"},
+    {"keyword": "가성비", "growth": null, "seed": "manual"},
+    {"keyword": "이어폰", "growth": null, "seed": "manual"},
+    {"keyword": "운동화", "growth": null, "seed": "manual"},
+    {"keyword": "립스틱", "growth": null, "seed": "manual"},
+    {"keyword": "주방용품", "growth": null, "seed": "manual"},
+    {"keyword": "여름신상", "growth": null, "seed": "manual"},
+    {"keyword": "꿀템", "growth": null, "seed": "manual"}
+  ]
+}
