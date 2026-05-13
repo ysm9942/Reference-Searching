@@ -1,22 +1,32 @@
 {
-  "generated_at": "2026-05-13T00:00:00Z",
+  "generated_at": "2026-05-13T07:00:00+00:00",
   "config": {
-    "seeds": ["manual"],
+    "seeds": ["여름 옷"],
     "geo": "KR",
     "timeframe": "now 7-d",
-    "top": 10,
-    "note": "pytrends rate-limited (429); using curated keyword list for testing"
+    "gprop": "youtube",
+    "top": 40,
+    "note": "pytrends rate-limited (429); keywords transcribed verbatim from the Google Trends UI screenshot (지난 1주, South Korea, YouTube 검색)"
   },
   "keywords": [
-    {"keyword": "리뷰", "growth": null, "seed": "manual"},
-    {"keyword": "추천템", "growth": null, "seed": "manual"},
-    {"keyword": "다이소", "growth": null, "seed": "manual"},
-    {"keyword": "가성비", "growth": null, "seed": "manual"},
-    {"keyword": "이어폰", "growth": null, "seed": "manual"},
-    {"keyword": "운동화", "growth": null, "seed": "manual"},
-    {"keyword": "립스틱", "growth": null, "seed": "manual"},
-    {"keyword": "주방용품", "growth": null, "seed": "manual"},
-    {"keyword": "여름신상", "growth": null, "seed": "manual"},
-    {"keyword": "꿀템", "growth": null, "seed": "manual"}
+    {"keyword": "옷 추천",         "growth": "-9%",  "category": "top",    "seed": "여름 옷"},
+    {"keyword": "여름 옷 추천",     "growth": "-9%",  "category": "top",    "seed": "여름 옷"},
+    {"keyword": "여름 코디",       "growth": "-3%",  "category": "top",    "seed": "여름 옷"},
+    {"keyword": "옷 코디",         "growth": "-3%",  "category": "top",    "seed": "여름 옷"},
+    {"keyword": "여름 옷 코디",     "growth": "-3%",  "category": "top",    "seed": "여름 옷"},
+    {"keyword": "코디",            "growth": "-3%",  "category": "top",    "seed": "여름 옷"},
+    {"keyword": "남자 옷",         "growth": "-1%",  "category": "top",    "seed": "여름 옷"},
+    {"keyword": "남자 여름 옷",     "growth": "-3%",  "category": "top",    "seed": "여름 옷"},
+    {"keyword": "에이블리",        "growth": "-30%", "category": "top",    "seed": "여름 옷"},
+    {"keyword": "남자 옷 코디",     "growth": "+9%",  "category": "top",    "seed": "여름 옷"},
+
+    {"keyword": "여름 남자 코디",   "growth": "+10%", "category": "rising", "seed": "여름 옷"},
+    {"keyword": "여름 코디 남자",   "growth": "+10%", "category": "rising", "seed": "여름 옷"},
+    {"keyword": "남자 여름 옷 코디", "growth": "+10%", "category": "rising", "seed": "여름 옷"},
+    {"keyword": "남자 여름 코디",   "growth": "+10%", "category": "rising", "seed": "여름 옷"},
+    {"keyword": "남자 여름 바지",   "growth": "+9%",  "category": "rising", "seed": "여름 옷"},
+    {"keyword": "여름 원피스",      "growth": "+6%",  "category": "rising", "seed": "여름 옷"},
+    {"keyword": "반팔",            "growth": "-1%",  "category": "rising", "seed": "여름 옷"},
+    {"keyword": "여름 코디 여자",   "growth": "-2%",  "category": "rising", "seed": "여름 옷"}
   ]
 }
