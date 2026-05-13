@@ -217,6 +217,45 @@ Reference-Searching/
    - 진행/오류는 같은 폴더 `pipeline.log` 에 기록
 4. `web\results.json` 을 git 저장소로 복사 → push → Vercel 자동 배포
 
+### Vercel 사이트에서 exe 배포하는 법 (GitHub Releases)
+
+[reference-searching.vercel.app](https://reference-searching.vercel.app/) 상단의 다운로드
+버튼은 다음 URL 로 연결됩니다:
+
+```
+https://github.com/ysm9942/Reference-Searching/releases/latest/download/Setup.exe
+https://github.com/ysm9942/Reference-Searching/releases/latest/download/Pipeline.exe
+```
+
+이 URL 들은 **GitHub Release 의 latest 태그를 자동 추적**하므로, 새 버전 올릴 때마다
+사이트 코드 수정 불필요. 릴리즈 만드는 절차:
+
+1. **로컬 빌드**
+   ```powershell
+   PowerShell -ExecutionPolicy Bypass -File build.ps1
+   # → dist\Reference-Searching\Setup.exe, Pipeline.exe
+   ```
+
+2. **GitHub 에서 Release 생성**
+   - 저장소 페이지 → 우측 **Releases** → **Draft a new release**
+   - Tag: `v0.1.0` (다음부터 v0.2.0, v0.3.0 …)
+   - Title: `v0.1.0 — first release` 같은 식
+   - Description: 변경사항 간단히
+   - **Attach binaries**: `dist\Reference-Searching\Setup.exe`, `Pipeline.exe` 드래그
+   - **Publish release** 클릭
+
+3. **검증**
+   - [reference-searching.vercel.app](https://reference-searching.vercel.app/) 의
+     다운로드 버튼 클릭 → 방금 올린 exe 가 다운로드되면 OK
+
+### gh CLI 로 릴리즈 한 줄 자동화 (선택)
+
+```powershell
+# gh CLI 가 깔려 있고 인증되어 있어야 함: winget install GitHub.cli ; gh auth login
+gh release create v0.1.0 dist\Reference-Searching\Setup.exe dist\Reference-Searching\Pipeline.exe `
+  --title "v0.1.0" --notes "First release"
+```
+
 ## 진행 상황
 
 - [x] Phase 1 (pytrends 키워드 추출)

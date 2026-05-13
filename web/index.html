@@ -307,6 +307,77 @@
     .sk-line { height: 0.9rem; margin: 0.6rem 1.1rem 0; }
     .sk-line.short { width: 50%; }
 
+    /* ────────── download section ────────── */
+    .downloads {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    .downloads-head {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-bottom: 1rem;
+    }
+    .downloads-head h2 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+    }
+    .downloads-head .subtitle {
+      color: var(--muted);
+      font-size: 0.82rem;
+    }
+    .dl-grid {
+      display: grid;
+      gap: 0.65rem;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    }
+    .dl-card {
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+      padding: 0.9rem 1rem;
+      background: var(--panel-2);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      text-decoration: none;
+      color: inherit;
+      transition: all 0.15s ease;
+    }
+    .dl-card:hover {
+      border-color: var(--accent);
+      transform: translateY(-1px);
+    }
+    .dl-icon {
+      width: 40px; height: 40px;
+      display: flex; align-items: center; justify-content: center;
+      background: var(--panel-3);
+      border-radius: 8px;
+      flex-shrink: 0;
+      font-size: 1.2rem;
+    }
+    .dl-info { flex: 1; min-width: 0; }
+    .dl-title { font-weight: 600; font-size: 0.95rem; margin-bottom: 0.15rem; }
+    .dl-desc { color: var(--muted); font-size: 0.78rem; }
+    .dl-meta {
+      color: var(--muted);
+      font-size: 0.72rem;
+      font-family: ui-monospace, "SF Mono", Menlo, monospace;
+      flex-shrink: 0;
+    }
+    .dl-note {
+      margin-top: 0.9rem;
+      color: var(--muted);
+      font-size: 0.78rem;
+      text-align: center;
+    }
+    .dl-note a { color: var(--muted-2); text-decoration: underline; text-decoration-color: var(--border-strong); }
+
     /* ────────── footer ────────── */
     footer {
       margin-top: 4rem;
@@ -339,6 +410,35 @@
         <div class="stat"><div class="stat-value">-</div><div class="stat-label">판매처</div></div>
       </div>
     </header>
+
+    <section class="downloads">
+      <div class="downloads-head">
+        <h2>이 도구 직접 사용하기</h2>
+        <span class="subtitle">Windows 전용 · Chrome 필수</span>
+      </div>
+      <div class="dl-grid">
+        <a class="dl-card" href="https://github.com/ysm9942/Reference-Searching/releases/latest/download/Setup.exe">
+          <div class="dl-icon">⚙</div>
+          <div class="dl-info">
+            <div class="dl-title">Setup.exe</div>
+            <div class="dl-desc">API 키 입력 · 초기 설정 (최초 1회)</div>
+          </div>
+          <div class="dl-meta">~80MB</div>
+        </a>
+        <a class="dl-card" href="https://github.com/ysm9942/Reference-Searching/releases/latest/download/Pipeline.exe">
+          <div class="dl-icon">▶</div>
+          <div class="dl-info">
+            <div class="dl-title">Pipeline.exe</div>
+            <div class="dl-desc">백그라운드 데이터 수집 실행</div>
+          </div>
+          <div class="dl-meta">~250MB</div>
+        </a>
+      </div>
+      <p class="dl-note">
+        릴리즈 준비 전이면 위 링크가 404 입니다 ·
+        <a href="https://github.com/ysm9942/Reference-Searching#exe-사용" target="_blank" rel="noopener">사용법 보기</a>
+      </p>
+    </section>
 
     <div class="filters">
       <div class="keyword-pills" id="keyword-pills"></div>
