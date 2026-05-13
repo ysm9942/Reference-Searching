@@ -17,9 +17,13 @@
 
 ## 사전 요구사항
 
-- **Python 3.10+** ([python.org](https://www.python.org/downloads/))
-- **Google Chrome** ([google.com/chrome](https://www.google.com/chrome/)) — Phase 3 용
+- **Python 3.10+** ([python.org](https://www.python.org/downloads/)) — 소스 실행 또는 exe 빌드 시
+- **Google Chrome** ([google.com/chrome](https://www.google.com/chrome/)) — Phase 3 용 (exe 사용 시에도 필수)
 - **YouTube Data API v3 키** ([발급 가이드](.env.example)) — Phase 2 용 (무료, 10,000 unit/일)
+
+> **두 가지 사용 방식**
+> - **(A) 개발자 — 소스 직접 실행** → 아래 1~4단계
+> - **(B) 일반 사용자 — `Setup.exe` + `Pipeline.exe` 더블클릭** → [exe 사용](#exe-사용) 절로 점프
 
 ## 1단계: 설치 (한 번만)
 
@@ -172,6 +176,47 @@ Reference-Searching/
 - **Vercel 에서 results.json 못 찾음** — Root Directory 가 `web` 으로 설정됐는지 확인.
 - **`Set-ExecutionPolicy` 오류** — `setup.ps1` 실행 시 `-ExecutionPolicy Bypass` 옵션 필수.
 
+## exe 사용
+
+설치된 패키지·가상환경·터미널 명령어 다 건너뛰고 두 개의 exe 만으로 돌리는 방식.
+
+### 빌드 (개발자가 한 번)
+
+```powershell
+# 1. 일반 setup 끝낸 상태에서
+PowerShell -ExecutionPolicy Bypass -File build.ps1
+```
+
+`dist\Reference-Searching\` 에 다음이 생성됩니다:
+
+```
+Reference-Searching/
+├── Setup.exe           ← API 키 입력 GUI
+├── Pipeline.exe        ← 파이프라인 백그라운드 실행
+├── web/
+│   ├── index.html
+│   └── results.json
+└── README.txt          ← 최종 사용자용 짧은 가이드
+```
+
+이 폴더 통째로 zip 해서 배포하면 됩니다. 예상 크기: 250~400MB.
+
+### 빌드 실패 시 (PyInstaller + uc 의 알려진 까칠함)
+
+- **"chromedriver not found"**: `.venv\Lib\site-packages\undetected_chromedriver\__init__.py` 의 `--collect-all` 결과를 수동으로 spec 파일에 추가
+- **"version_main mismatch"**: 빌드한 PC 와 실행 PC 의 Chrome 버전 차이 — Pipeline 실행 시 자동 재다운로드되니 처음 실행이 느릴 뿐
+- **백신이 차단**: PyInstaller 바이너리는 False positive 가 흔함. Windows Defender 예외 처리 또는 코드 서명
+
+### 최종 사용자 흐름
+
+1. zip 받아서 원하는 폴더에 압축 해제
+2. `Setup.exe` 더블클릭 → Chrome 감지 확인 + API 키 붙여넣기 + 저장
+3. `Pipeline.exe` 더블클릭 → 백그라운드에서 Phase 1→4 실행
+   - Phase 3 동안 Chrome 창 잠깐 보임 (의도)
+   - 완료 시 Windows 알림 팝업
+   - 진행/오류는 같은 폴더 `pipeline.log` 에 기록
+4. `web\results.json` 을 git 저장소로 복사 → push → Vercel 자동 배포
+
 ## 진행 상황
 
 - [x] Phase 1 (pytrends 키워드 추출)
@@ -181,4 +226,5 @@ Reference-Searching/
 - [x] Phase 4 (`web/results.json` 합치기)
 - [x] `pipeline.py` 오케스트레이션
 - [x] 뷰어 (`web/index.html`) + Vercel 배포
+- [x] `Setup.exe` / `Pipeline.exe` 패키징 (build.ps1)
 - [ ] **첫 실데이터 푸시** ← 다음 단계

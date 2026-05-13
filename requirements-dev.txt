@@ -1,0 +1,5 @@
+# Build-time dependencies — not needed at runtime for end users.
+# Install with:  pip install -r requirements-dev.txt
+# Used by build.ps1 to bundle Setup.exe and Pipeline.exe.
+pyinstaller>=6.3.0
+pyinstaller-hooks-contrib>=2024.0

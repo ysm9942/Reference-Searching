@@ -19,6 +19,12 @@ node_modules/
 .next/
 .vercel/
 
+# PyInstaller build artifacts
+build/
+dist/
+*.spec
+pipeline.log
+
 # Playwright / debug artifacts
 playwright-report/
 test-results/
