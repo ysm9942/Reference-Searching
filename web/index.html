@@ -463,7 +463,8 @@
 
   <script>
     let allItems = [];
-    let activeKeyword = null;
+    // "all" | "with" | "without"  — filter by product presence
+    let activeFilter = "all";
 
     /* ────── helpers ────── */
     function escapeHtml(s) {
@@ -519,27 +520,29 @@
       ].map(function (s) { return '<div class="stat">' + s.join("") + '</div>'; }).join("");
     }
 
-    /* ────── keyword pills ────── */
-    function renderKeywordPills(items) {
-      const counts = {};
-      items.forEach(function (it) {
-        const k = it.matched_keyword;
-        if (k) counts[k] = (counts[k] || 0) + 1;
-      });
-      const keywords = Object.keys(counts).sort(function (a, b) { return counts[b] - counts[a]; });
+    /* ────── filter pills (product presence) ────── */
+    function renderFilterPills(items) {
+      const withCount = items.filter(function (it) {
+        return (it.products || []).length > 0;
+      }).length;
+      const withoutCount = items.length - withCount;
+
+      const options = [
+        { key: "all", label: "전체", count: items.length },
+        { key: "with", label: "제품 있음", count: withCount },
+        { key: "without", label: "제품 없음", count: withoutCount },
+      ];
+
       const el = document.getElementById("keyword-pills");
-      const buttons = ['<button class="pill ' + (activeKeyword == null ? "active" : "") + '" data-kw="">전체 · ' + items.length + "</button>"];
-      keywords.forEach(function (k) {
-        buttons.push(
-          '<button class="pill ' + (activeKeyword === k ? "active" : "") + '" data-kw="' + escapeHtml(k) + '">' +
-          escapeHtml(k) + " · " + counts[k] + "</button>"
-        );
-      });
-      el.innerHTML = buttons.join("");
+      el.innerHTML = options.map(function (o) {
+        return '<button class="pill ' + (activeFilter === o.key ? "active" : "") +
+               '" data-filter="' + o.key + '">' +
+               escapeHtml(o.label) + " · " + o.count + "</button>";
+      }).join("");
+
       el.querySelectorAll(".pill").forEach(function (btn) {
         btn.addEventListener("click", function () {
-          const kw = btn.getAttribute("data-kw");
-          activeKeyword = kw || null;
+          activeFilter = btn.getAttribute("data-filter");
           el.querySelectorAll(".pill").forEach(function (b) { b.classList.remove("active"); });
           btn.classList.add("active");
           apply();
@@ -627,8 +630,10 @@
       const sort = document.getElementById("sort").value;
       let items = allItems.slice();
 
-      if (activeKeyword) {
-        items = items.filter(function (it) { return it.matched_keyword === activeKeyword; });
+      if (activeFilter === "with") {
+        items = items.filter(function (it) { return (it.products || []).length > 0; });
+      } else if (activeFilter === "without") {
+        items = items.filter(function (it) { return (it.products || []).length === 0; });
       }
 
       if (q) {
@@ -665,7 +670,7 @@
         const dtStr = dt && !Number.isNaN(dt.getTime()) ? dt.toLocaleString("ko-KR") : "알 수 없음";
         document.getElementById("subtitle").textContent = "마지막 갱신: " + dtStr;
         renderStats(computeStats(allItems));
-        renderKeywordPills(allItems);
+        renderFilterPills(allItems);
         apply();
       })
       .catch(function (err) {
