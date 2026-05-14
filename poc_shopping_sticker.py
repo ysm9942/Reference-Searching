@@ -83,12 +83,33 @@ def _decode_escapes(s: str) -> str:
 
 def _clean_url(url: str | None) -> str | None:
     """
-    URLs in YouTube's embedded JSON contain Python-style escape sequences
-    (`\\u0026`, `\\x3d`, etc.) that we want decoded to real characters.
-    Python's `unicode_escape` codec handles all of them in one pass.
+    URLs in YouTube's embedded JSON often arrive with leftover JS escape
+    sequences (`\\u0026`, `\\u003d`, …) that we need decoded to the real
+    characters. We try two strategies because the source occasionally mixes
+    escape conventions within a single page:
+
+      1) explicit replacement for the handful of `\\uXXXX` codes seen in
+         affiliate URLs — safe even if some other layer already decoded part
+         of the string.
+      2) `unicode_escape` codec for anything else that slipped through.
     """
     if not url:
         return url
+
+    # Use chr(0x5c) to write a literal backslash, dodging any tool-level
+    # interpretation of `\\uXXXX` inside this source file.
+    bs = chr(0x5c)
+    for src, dst in (
+        (bs + "u0026", "&"),
+        (bs + "u003d", "="),
+        (bs + "u003c", "<"),
+        (bs + "u003e", ">"),
+        (bs + "u002f", "/"),
+        (bs + "/", "/"),
+    ):
+        if src in url:
+            url = url.replace(src, dst)
+
     try:
         return url.encode("latin-1", errors="ignore").decode("unicode_escape")
     except (UnicodeEncodeError, UnicodeDecodeError):
@@ -137,86 +158,110 @@ def _match_braces(text: str, start: int, limit: int = 20_000) -> int:
     return -1
 
 
-_SELLER_RE = re.compile(r"판매처\s*:\s*([^,\"\}]+)")
-_PRICE_RE = re.compile(r'"price"\s*:\s*"([^"]+)"')
-_TITLE_RE = re.compile(r'"title"\s*:\s*\{\s*"simpleText"\s*:\s*"([^"]+)"')
-_ACCESSIBILITY_RE = re.compile(r'"accessibilityTitle"\s*:\s*"([^"]+)"')
-_THUMB_RE = re.compile(
-    r'"thumbnail"\s*:\s*\{\s*"thumbnails"\s*:\s*\[\s*\{\s*"url"\s*:\s*"([^"]+)"'
+# productSticker = the actual creator-tagged product overlay (what we want).
+# productListItemRenderer = items in the "shopping shelf" / discovery feed,
+# which YouTube populates with ad-style recommendations unrelated to the
+# video content. Earlier versions of this PoC scraped the latter, which
+# caused random products (치즈돈까스, 파충류사육상자, etc.) to be matched
+# to unrelated fashion videos. We now read ONLY productSticker.
+_LABEL_RE = re.compile(
+    r'"accessibility"\s*:\s*\{\s*"label"\s*:\s*"([^"]+)"'
 )
-# Buy link priority: known affiliate domains, then any external URL inside the block.
+_SELLER_LABEL_RE = re.compile(r"판매처\s*:\s*(.+?)\s*$")
+_PRICE_LABEL_RE = re.compile(r"(₩\s*[\d,]+|\$\s*[\d,]+(?:\.\d{1,2})?)")
+_THUMB_SOURCE_RE = re.compile(
+    r'"image"\s*:\s*\{\s*"sources"\s*:\s*\[\s*\{\s*"url"\s*:\s*"([^"]+)"'
+)
+# URL is inside imageAction.command.commandExecutorCommand.commands[1].urlEndpoint.url
+# (or webCommandMetadata.url). Match either via "urlEndpoint" or "webCommandMetadata"
+# context, restricted to known affiliate redirector hosts to avoid feedback
+# /youtubei/v1/feedback URLs leaking in.
 _AFFILIATE_URL_RE = re.compile(
     r'"url"\s*:\s*"(https?://(?:link\.coupang\.com|www\.coupang\.com|'
     r'click\.linkprice\.com|search\.shopping\.naver\.com|smartstore\.naver\.com|'
     r'gmarket\.co\.kr|11st\.co\.kr|kakao\.com|googleadservices\.com)[^"]+)"'
 )
-_ANY_URL_RE = re.compile(r'"url"\s*:\s*"(https?://[^"]+)"')
+# Fallback: any non-internal URL (excludes /youtubei/* feedback endpoints).
+_EXTERNAL_URL_RE = re.compile(r'"url"\s*:\s*"(https?://(?!www\.youtube\.com)[^"]+)"')
+
+
+def _parse_label(label: str) -> tuple[str | None, str | None, str | None]:
+    """Pull (name, price, seller) out of YouTube's accessibility-label format."""
+    if not label:
+        return None, None, None
+    seller_m = _SELLER_LABEL_RE.search(label)
+    seller = seller_m.group(1).strip() if seller_m else None
+    if seller in ("", None):
+        seller = None
+
+    price_m = _PRICE_LABEL_RE.search(label)
+    price = price_m.group(1).strip() if price_m else None
+
+    if price_m:
+        name = label[: price_m.start()].rstrip(" ,·-—|").strip()
+    else:
+        # No price found — keep everything before "판매처:" as name
+        name = label
+        if seller_m:
+            name = label[: seller_m.start()].rstrip(" ,·-—|").strip()
+    return name or None, price, seller
 
 
 def extract_products_from_json(html: str) -> list[dict]:
-    """Find every productListItemRenderer block and pull its fields."""
+    """
+    Find every `productSticker` block (the actual creator-tagged product
+    overlay on the Shorts video) and pull name / price / seller / link /
+    thumbnail. One video may carry 0-N stickers depending on how the
+    creator tagged it.
+    """
     decoded = _decode_escapes(html)
     products: list[dict] = []
-    seen: set[str] = set()
+    seen_links: set[str] = set()
 
-    for m in re.finditer(r'"productListItemRenderer"\s*:\s*\{', decoded):
+    for m in re.finditer(r'"productSticker"\s*:\s*\{', decoded):
         brace_start = decoded.find("{", m.end() - 1)
         if brace_start < 0:
             continue
-        end = _match_braces(decoded, brace_start)
+        end = _match_braces(decoded, brace_start, limit=15_000)
         if end < 0:
             continue
         block = decoded[brace_start:end]
 
-        # The first 1-2 matches in any YT page are "renderer-type registries"
-        # — JSON lists naming all known renderer classes for client lazy-loading.
-        # Filter them out.
-        if (
-            "compactProductListRenderer" in block
-            and "richGridRenderer" in block
-            and "simpleText" not in block
-        ):
+        label_m = _LABEL_RE.search(block)
+        if not label_m:
+            continue  # Not a real sticker — no accessibility label
+        label = label_m.group(1)
+        name, price, seller = _parse_label(label)
+        if not name:
             continue
 
-        title_m = _TITLE_RE.search(block)
-        if not title_m:
-            continue
-        name = title_m.group(1).strip()
-        if not name or name in seen:
-            continue
-        seen.add(name)
+        thumb_m = _THUMB_SOURCE_RE.search(block)
+        thumbnail = _clean_url(thumb_m.group(1)) if thumb_m else None
 
-        price_m = _PRICE_RE.search(block)
-        accessibility_m = _ACCESSIBILITY_RE.search(block)
-        thumb_m = _THUMB_RE.search(block)
-
-        seller: str | None = None
-        if accessibility_m:
-            sm = _SELLER_RE.search(accessibility_m.group(1))
-            if sm:
-                seller = sm.group(1).strip() or None
-
-        # Prefer the affiliate URL inside this block. If absent, fall back to
-        # any URL — but reject image hosts (gstatic/ytimg) which would
-        # otherwise leak the product thumbnail into the buy-link slot.
+        # Prefer affiliate domains; fall back to any external URL.
         link_m = _AFFILIATE_URL_RE.search(block)
         if not link_m:
-            for fallback in _ANY_URL_RE.finditer(block):
+            for fallback in _EXTERNAL_URL_RE.finditer(block):
                 if not _is_image_url(fallback.group(1)):
                     link_m = fallback
                     break
         link = _clean_url(link_m.group(1)) if link_m else None
-        thumbnail = _clean_url(thumb_m.group(1)) if thumb_m else None
+
+        # Dedup if YT serializes the same sticker twice in different contexts
+        dedup_key = link or name
+        if dedup_key in seen_links:
+            continue
+        seen_links.add(dedup_key)
 
         products.append(
             {
                 "name": name,
-                "price": price_m.group(1).strip() if price_m else None,
+                "price": price,
                 "seller": seller,
                 "thumbnail": thumbnail,
                 "link": link,
-                "raw_alt": accessibility_m.group(1) if accessibility_m else None,
-                "matched_selector": "json:productListItemRenderer",
+                "raw_alt": label,
+                "matched_selector": "json:productSticker",
             }
         )
 
@@ -294,12 +339,12 @@ def wait_for_any_sticker(driver: WebDriver, timeout: float = 10.0) -> str | None
     page source, or a known sticker selector attaches to the DOM. Returns
     the matched signal so the caller can log which path triggered.
     """
-    marker = "productListItemRenderer"
+    marker = "productSticker"
     deadline = time.time() + timeout
     while time.time() < deadline:
         try:
             if marker in driver.page_source:
-                return "json:productListItemRenderer"
+                return "json:productSticker"
         except WebDriverException:
             pass
         for selector in PRODUCT_STICKER_SELECTORS:
@@ -351,7 +396,7 @@ def run(url: str, *, headless: bool, save_debug: bool, timeout: float) -> list[d
         # code AFTER initial load — sometimes immediately, sometimes after
         # video playback starts. Poll the page source for the marker string
         # rather than guessing a fixed sleep.
-        marker = "productListItemRenderer"
+        marker = "productSticker"
         deadline = time.time() + timeout
         html = ""
         found_marker = False

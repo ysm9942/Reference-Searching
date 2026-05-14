@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-13T07:12:37.500167+00:00",
+  "generated_at": "2026-05-14T05:41:55.711056+00:00",
   "processed": 81,
   "total": 81,
   "results": [
@@ -11,7 +11,17 @@
     {
       "video_id": "s3mngXTSx5I",
       "video_url": "https://www.youtube.com/shorts/s3mngXTSx5I",
-      "products": []
+      "products": [
+        {
+          "name": "라벨라코 테이 실내화 핑크 여성용 FREE(240 mm 내외) 1개",
+          "price": "₩13,900",
+          "seller": "쿠팡!",
+          "thumbnail": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcQu8G9Lx9o2V2vzf18pKdz2zf2EhPKr17mHVfI7J6k6VveNo320v92EaODT2ouPg1tMkNjWgGL1aCzWwStFbgaDPY5cZmOJkofHxSopgZJGw5XUgyfdUx4",
+          "link": "https://link.coupang.com/re3/AFYOUTUBE?pageKey=7371328878\\&ctag=7371328878\\&itemId=19015513396\\&vendorItemId=86140024257\\&subparam=YT3-Sp3Cg3lM6u2nxYKs6Wx1stZNQc5PiLjU4YaNiVaM0bGguOIGMlDZYLZlt2J6fhin0KlAgmLPNWBVBGxWUzuOj-_Uiri9ecbw",
+          "raw_alt": "라벨라코 테이 실내화 핑크 여성용 FREE(240 mm 내외) 1개, ₩13,900 제휴사, 판매처: 쿠팡!",
+          "matched_selector": "json:productSticker"
+        }
+      ]
     },
     {
       "video_id": "-j92jOdKaCI",
@@ -25,11 +35,11 @@
         {
           "name": "HDEX 에이치덱스 반팔 메인로고 머슬핏 반팔티 8 color 카키 M",
           "price": "₩59,300",
-          "seller": null,
-          "thumbnail": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcR4NaKteoRz1KJrFFCUWOcOKhsPBr-Vm7hz7OXvOnDR05q93y6fIxEGbE-O4btkSl_S2NT3v1jU",
-          "link": "https://link.coupang.com/re3/AFYOUTUBE?pageKey=8120865669&ctag=8120865669&itemId=23034997064&vendorItemId=90068747733&subparam=YT3-btIn1iQLO1b3RDa3aogyLfdqUAKJSVhPHO5rigpJcjfGEzDWh94V9FMZ2orbIKuYZR3Bveb1Jc3dKuR8eut4WUIM9rx6uA31kDy2",
-          "raw_alt": "HDEX 에이치덱스 반팔 메인로고 머슬핏 반팔티 8 color 카키 M, ₩59,300 , 판매처: ",
-          "matched_selector": "json:productListItemRenderer"
+          "seller": "쿠팡",
+          "thumbnail": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcR6B5GlSQZWEXYJUol58vxbSs_lZaW5y_R2xsszMIXblAGKkSvx6ygXKYJdJbz93oxe9irY6AqtZdxWWbgoJofG-gQIwVyfnYOwyZJThwqAV5E-eTi4U_I",
+          "link": "https://link.coupang.com/re3/AFYOUTUBE?pageKey=8120865669&ctag=8120865669&itemId=23034997064&vendorItemId=90068747733&subparam=YT3-IzS1tUAnnOQsw4Y24IdSEhEboTDPzgGBQQFfyMGjvNWO47bLVOj7keR5f_8XvrUKYCF70gj7awqBav06RgF23PFNIswThl0",
+          "raw_alt": "HDEX 에이치덱스 반팔 메인로고 머슬핏 반팔티 8 color 카키 M, ₩59,300 제휴사, 판매처: 쿠팡",
+          "matched_selector": "json:productSticker"
         }
       ]
     },
@@ -40,20 +50,20 @@
         {
           "name": "서브22 역도 데드리프트 스쿼트화 헬스 리프팅화 39(245mm) 블랙",
           "price": "₩21,900",
-          "seller": null,
-          "thumbnail": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcTUU00oOYccozDbVVIgfsffUkF1j7vi0SOKjoJBlckR8slnAJpNzMaipMokKZs",
-          "link": "https://link.coupang.com/re3/AFYOUTUBE?pageKey=7251437557&ctag=7251437557&itemId=18447016969&vendorItemId=85589853215&subparam=YT3-GbeGYF-xBGsfSrvuAcouh00MRAX7_lMh-_FCnxk6OizvmmdHI_AqvjaT3I8QanMiYgi2U8-qo0jztde6FBpzXHxg6yMjmK5H",
-          "raw_alt": "서브22 역도 데드리프트 스쿼트화 헬스 리프팅화 39(245mm) 블랙, ₩21,900 , 판매처: ",
-          "matched_selector": "json:productListItemRenderer"
+          "seller": "쿠팡!",
+          "thumbnail": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQhAdIYlx4Yti93BTZuJVbNJ11VUynXUmWkDw01GCYI4EbbgQG01dK9adDiTozQYSBy21kc7vYR",
+          "link": "https://link.coupang.com/re3/AFYOUTUBE?pageKey=7251437557&ctag=7251437557&itemId=18447016969&vendorItemId=85589853215&subparam=YT3-V9_zXy4e2VhYP1MzE5TWghQbNtZ63mlWUDjz11vP-zdTSr7GFF0htM9kMob8gXryfticsyrC5ZCDbTOZ9Q2eeJX0HtodWniV",
+          "raw_alt": "서브22 역도 데드리프트 스쿼트화 헬스 리프팅화 39(245mm) 블랙, ₩21,900 제휴사, 판매처: 쿠팡!",
+          "matched_selector": "json:productSticker"
         },
         {
-          "name": "헬스운동보호대 1Pcs 목 버팀대 부드러운 거품 자궁 경부 칼라 척추 랩 정렬 및 안정화 조절 가능한 지원 통증 완화 [01] Type 1 Blue [03] L 1개",
-          "price": "₩15,890",
-          "seller": null,
-          "thumbnail": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcR9bgIEe_zA4yfV9pmljpDATSRPQ-ZZtHQi0Iyty3upz6K-hXZcq_7SVhJ1fbuAlyAJ93-T_8g",
-          "link": "https://link.coupang.com/re3/AFYOUTUBE?pageKey=8374934319&ctag=8374934319&itemId=18607265132&vendorItemId=85743131263&subparam=YT3-PaLkhwBzcT6PNTNDdyGW7foCeSlzgFsFhMxhFiUMT3QatOlKWNj7PXU1AiolO4WMWDDh2wFBaXK31R4WYMyiDKMA2AMGDCOR",
-          "raw_alt": "헬스운동보호대 1Pcs 목 버팀대 부드러운 거품 자궁 경부 칼라 척추 랩 정렬 및 안정화 조절 가능한 지원 통증 완화 [01] Type 1 Blue [03] L 1개, ₩15,890 , 판매처: ",
-          "matched_selector": "json:productListItemRenderer"
+          "name": "언더바 오토바이 헬멧 U-01 Neon L",
+          "price": "₩87,070",
+          "seller": "쿠팡!",
+          "thumbnail": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcT9fwRAPui5B_BbIC1FOl4Je9q13DgoYopQ4KhD3fGW8v9KQysiAjAEWpbcp5Yoc_NKFjx_uy2H5Xka76W2aHsfvo6E5QTvAoYjP0uKgLTlBCt022-iZA",
+          "link": "https://link.coupang.com/re3/AFYOUTUBE?pageKey=6514048239\\&ctag=6514048239\\&itemId=14401390228\\&vendorItemId=81645513465\\&subparam=YT3-x-U-8RRXvQxqLOez9DdxiL-zdp7fUxGbCoGo_xPwkL5BA25QsJ9hwYalvkdmDD2DITIAoKH-xHnNYJfEl8GxxIsKj_egb-4",
+          "raw_alt": "언더바 오토바이 헬멧 U-01 Neon L, ₩87,070 제휴사, 판매처: 쿠팡!",
+          "matched_selector": "json:productSticker"
         }
       ]
     },
@@ -69,20 +79,11 @@
         {
           "name": "얼굴 잡티 제거 스팀기 헤어 모공관리 홈케어 미스트기 가정용 미용 스티머 피부 관리기 토끼 파랑",
           "price": "₩20,700",
-          "seller": null,
-          "thumbnail": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcSH4vazPCv_PjS_w5MfD0uWB2_gI4GxRI1pVEPbpy171DGvSOklFUyBPQoXN_jo3rDZY0aMfvw",
-          "link": "https://link.coupang.com/re3/AFYOUTUBE?pageKey=7138680582&ctag=7138680582&itemId=17918304721&vendorItemId=85080936459&subparam=YT3-zizHn58vAFHrBEnIf_XqJQ7TyaHBjxbbJmLFL11paXR_alpInX4h781z9vgxnxvY2NMjroP9W2srD0LbYzce3eyp5_myZgyB",
-          "raw_alt": "얼굴 잡티 제거 스팀기 헤어 모공관리 홈케어 미스트기 가정용 미용 스티머 피부 관리기 토끼 파랑, ₩20,700 , 판매처: ",
-          "matched_selector": "json:productListItemRenderer"
-        },
-        {
-          "name": "버스 학원차 택배차량 차량 번호스티커 1개 미디움+흰색",
-          "price": "₩3,420",
-          "seller": null,
-          "thumbnail": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcRpqdUX4bz5k49ox8niYfCZypCD61DZ0bamaVVq-HmZGD5vqj5lQyKvZQRrxh3LMREr_kI7vB4-",
-          "link": "https://link.coupang.com/re3/AFYOUTUBE?pageKey=8777371505\\u0026ctag=8777371505\\u0026itemId=25508624448\\u0026vendorItemId=92500627276\\u0026subparam=YT3-Rxc6JSgkpILYhj9q1pZEVl0lqYzGxoA6vHjlatBexIoYhe0HsKSKdoOzMUll_vad_ADBMm54VgT0zP1de-zu23qd1cJQwEad",
-          "raw_alt": "버스 학원차 택배차량 차량 번호스티커 1개 미디움+흰색, ₩3,420 , 판매처: ",
-          "matched_selector": "json:productListItemRenderer"
+          "seller": "쿠팡",
+          "thumbnail": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQqvrvBGO21UBSYdVzqU2_3rJHguATDJQg5mOsnrd2VxTlpXTpbuvifDmlyilCerQE-0hBdbrW-Ii77PjETm0i20s4ZOlEOeDU6bTs8wMuaC1kop5sipKE",
+          "link": "https://link.coupang.com/re3/AFYOUTUBE?pageKey=7138680582&ctag=7138680582&itemId=17918304721&vendorItemId=85080936459&subparam=YT3-RsgBJ3E7P1YBtLYkuUBKR1wDv9bkEkOh3OJVGE9mo-BQh0oJxKlT7rQO69ZnYh0PHLlutwDoT9JCMc8aWSkqLkdWASbprk19",
+          "raw_alt": "얼굴 잡티 제거 스팀기 헤어 모공관리 홈케어 미스트기 가정용 미용 스티머 피부 관리기 토끼 파랑, ₩20,700 제휴사, 판매처: 쿠팡",
+          "matched_selector": "json:productSticker"
         }
       ]
     },
@@ -91,22 +92,13 @@
       "video_url": "https://www.youtube.com/shorts/Z6PPFqBQjPA",
       "products": [
         {
-          "name": "신라면 컵 65g 12개",
-          "price": "₩10,040",
-          "seller": null,
-          "thumbnail": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcSBW_1y1PkQjb-vZjaZh0hi7-V9Ew9qmvBzrbOuXzM6_n_oZsAcyJ3sG0hckF5EFqX_jK1mB9w",
-          "link": "https://link.coupang.com/re3/AFYOUTUBE?pageKey=4498353\\u0026ctag=4498353\\u0026itemId=2922749146\\u0026vendorItemId=3028288909\\u0026subparam=YT3-rKN5zbe6_oVGXT31-zHGeuiUnfqu1X4eKUakolkJ356Gh9iR8hs7EmwOG_M4dZzA4GQg2SEl3C6Y5qkMhBxaN_Om4N6EhTv5DEvIzg",
-          "raw_alt": "신라면 컵 65g 12개, ₩10,040 , 판매처: ",
-          "matched_selector": "json:productListItemRenderer"
-        },
-        {
-          "name": "무항생제 신선한 대란 30구 1개",
-          "price": "₩7,990",
-          "seller": null,
-          "thumbnail": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcQ18vXeK4hkqXoHhnu-lHRFu1r4_uc8KpVJI4_KBm4sTJc6AMkHiys5kUClNr8",
-          "link": "https://link.coupang.com/re3/AFYOUTUBE?pageKey=4842938988\\u0026ctag=4842938988\\u0026itemId=6261001344\\u0026vendorItemId=73556670010\\u0026subparam=YT3-RBnGkkDiqAxKrX8bz8g6kofLvF5In1yHku2Z2ffN1KF4mmY0rOxMb7495SIvTCIDJDLr6-9IStyxv1Gu8AJvnohIABvIGXFV_srtIA",
-          "raw_alt": "무항생제 신선한 대란 30구 1개, ₩7,990 , 판매처: ",
-          "matched_selector": "json:productListItemRenderer"
+          "name": "펭귄 양모 펠트 동물 찌름 재미 Diy 자수 바느질 귀여운 수제 DIY 재미 있은 연인 재료 패키지 커플 선물 2 1개",
+          "price": "₩18,340",
+          "seller": "쿠팡",
+          "thumbnail": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcTdl1kZ3nALA_vSdzQhd1QAAZofA3jGAmT8OcQf_apuHl6GLEJ1v2Q_C5pfG1VTrms7YcT_1Sk",
+          "link": "https://link.coupang.com/re3/AFYOUTUBE?pageKey=8828426037\\&ctag=8828426037\\&itemId=19817179537\\&vendorItemId=86919198588\\&subparam=YT3-7ZyKODUdkJssdhztwxZ1TUm-e08YsmaJQSs5kcyL4CRk5Fwp_TjSoU9WbHCxYpVT6x4uyey2YAX2RvD00eyu7_WnuL1Q5eW6",
+          "raw_alt": "펭귄 양모 펠트 동물 찌름 재미 Diy 자수 바느질 귀여운 수제 DIY 재미 있은 연인 재료 패키지 커플 선물 2 1개, ₩18,340 제휴사, 판매처: 쿠팡",
+          "matched_selector": "json:productSticker"
         }
       ]
     },
@@ -132,31 +124,41 @@
         {
           "name": "[더달콤] 골반뽕 엉덩이뽕 보정팬티모음 보정속옷",
           "price": "₩14,220",
-          "seller": null,
-          "thumbnail": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcT2S457LeJLX3xG3VDBlcNw-wrYkXQoLMtNK0tmHlWg5uVaNufZch1YyHPa",
-          "link": "https://zigzag.kr/link/bridge?product_id=125369152&shop_id=360&srsltid=AfmBOoq5mo9wfIaHmZkmIOGMTntg0JvNe_cMRudbxkdHX3lDOJoIWxTy6-Q&utm_content=YT3-fnw3FCNE4VCPmAkNdTrqn9PDrTxhPXheKeM7i0BCrYRjCS41q4fDbfdBdBhILLX0CGJd6WhMaHhFz8eCQnVXnUO6GLP6tcLFhFOuwg&utm_source=youtube&utm_medium=product_shelf&utm_commission=paid",
-          "raw_alt": "[더달콤] 골반뽕 엉덩이뽕 보정팬티모음 보정속옷, ₩14,220 , 판매처: ",
-          "matched_selector": "json:productListItemRenderer"
+          "seller": "지그재그",
+          "thumbnail": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcQ7kHzaMF_akcu4ymhAXGmL2RCGYopTkla-POL4YhygE7n3dAg",
+          "link": "https://zigzag.kr/link/bridge?product_id=125369152&shop_id=360&srsltid=AfmBOorPNuX_mgmElyCW9n3RPaEB7gL43mT3ICN17PhSSEbcQ5JqTPRSKJw&utm_content=YT3-9eI7bbde5-yomklx8cjVA9aW_PhUpNlxT7GGd0PyDu_6WvZjHDssrm5mI01aLh0ohjYhSMghiC1I1emHQqbRaCaLEf_Pr06a&utm_source=youtube&utm_medium=product_shelf&utm_commission=paid",
+          "raw_alt": "[더달콤] 골반뽕 엉덩이뽕 보정팬티모음 보정속옷, ₩14,220 제휴사, 판매처: 지그재그",
+          "matched_selector": "json:productSticker"
         }
       ]
     },
     {
       "video_id": "GIO_3DLYDL0",
       "video_url": "https://www.youtube.com/shorts/GIO_3DLYDL0",
-      "products": []
+      "products": [
+        {
+          "name": "애원 동물 강아지 강아지 쿠션 사계절 하우스 50cm 오리 1개",
+          "price": "₩24,900",
+          "seller": "쿠팡",
+          "thumbnail": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcS0HbkLJGaOKFUihGaUm13iz1HTHhQcW-uAAvL7cC_IIDTUbe8",
+          "link": "https://link.coupang.com/re3/AFYOUTUBE?pageKey=6718888964\\&ctag=6718888964\\&itemId=15621618880\\&vendorItemId=82839254343\\&subparam=YT3-XZ54sSEbKlrwxg85SS8_RNAy021NixArbPCEjT__9NI-_RAbXvUZ1giFPetS_Y07lH4q5fUlEdKHv1xcI9H_cHtqyyW45Shu",
+          "raw_alt": "애원 동물 강아지 강아지 쿠션 사계절 하우스 50cm 오리 1개, ₩24,900 제휴사, 판매처: 쿠팡",
+          "matched_selector": "json:productSticker"
+        }
+      ]
     },
     {
       "video_id": "lbsO1sVmu9c",
       "video_url": "https://www.youtube.com/shorts/lbsO1sVmu9c",
       "products": [
         {
-          "name": "CK 남성 사각 드로즈 팬티 A타입 블랙",
-          "price": "₩8,900",
-          "seller": null,
-          "thumbnail": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcSf_K5SqvyQlQlTswpWtmpJy68ywCK62O0Qe0bHm83DKSlKt51gJQIsAA5VXFCU9XjE6n6a4jAI",
-          "link": "https://web.queenit.kr/product/0b7c9f73b1ce6340e5f38d564cd515aa?open_app=true\\u0026campaign=web_GMC_feed_1129\\u0026ad_group=web_GMC_feed_1129\\u0026ad_creative=0b7c9f73b1ce6340e5f38d564cd515aa\\u0026srsltid=AfmBOopVVljV5yrzxv79jqmFu5D4QHiEZtMWTqvPMBApPjcdJaYjpNjvB7I\\u0026utm_content=YT3-cse8uQiDk0mb8FrqBfKqM52cE53ZF0KcrfLg4QUVI2rurb65UmT2ObfMby9PSrTWqV8Z-5atukWFNhSSGqyqx3o4aMZX21qq\\u0026utm_source=youtube_partners\\u0026utm_campaign=youtube_shopping",
-          "raw_alt": "CK 남성 사각 드로즈 팬티 A타입 블랙, ₩8,900 , 판매처: ",
-          "matched_selector": "json:productListItemRenderer"
+          "name": "다다미 카페트 그린 12mm 195x195cm(9칸) 잎 130x195cm(6구라) 두께 12 mm(봉투 공급) 4. 연한 파랑",
+          "price": "₩163,600",
+          "seller": "쿠팡",
+          "thumbnail": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcQtd57A4z3NtmPBKZIV00Doz90Lcg8Pdw-JkLUhfSOvIBz1iI2n",
+          "link": "https://link.coupang.com/re3/AFYOUTUBE?pageKey=9088733216\\&ctag=9088733216\\&itemId=26707221853\\&vendorItemId=93678979721\\&subparam=YT3-pwne-jUcqUPGUXU4GfRJmnMLazubzowdyNMOUjG7BAXE-Qg5UVW2Vkh2O-_6eYrHYDTwx4z3AhI6XqtifmW9KZVeXbysa9xQ",
+          "raw_alt": "다다미 카페트 그린 12mm 195x195cm(9칸) 잎 130x195cm(6구라) 두께 12 mm(봉투 공급) 4. 연한 파랑, ₩163,600 제휴사, 판매처: 쿠팡",
+          "matched_selector": "json:productSticker"
         }
       ]
     },
@@ -178,17 +180,7 @@
     {
       "video_id": "zm8L-GWiD8s",
       "video_url": "https://www.youtube.com/shorts/zm8L-GWiD8s",
-      "products": [
-        {
-          "name": "젠배 잼베 교육용 10 12인치 클래식 젬배 성인 드럼 10인치/레드 페인팅/선물 1개",
-          "price": "₩64,500",
-          "seller": null,
-          "thumbnail": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcS0r8BS1qx64rlghFm4hn63VFQlUWJ9taHKBEpJMlSuwcDm1M2TF26A6ZT4Cg",
-          "link": "https://link.coupang.com/re3/AFYOUTUBE?pageKey=8260139855\\u0026ctag=8260139855\\u0026itemId=23794310243\\u0026vendorItemId=90818308718\\u0026subparam=YT3-8NE5ChJMKZ5Pts2VG4SbpbAP132lvhVTDwFHl3eatCEh6AlmJtph1payNRW3ivVBarj4LDeSqm5DM8Dena_kIWE6FAHkM9U",
-          "raw_alt": "젠배 잼베 교육용 10 12인치 클래식 젬배 성인 드럼 10인치/레드 페인팅/선물 1개, ₩64,500 , 판매처: ",
-          "matched_selector": "json:productListItemRenderer"
-        }
-      ]
+      "products": []
     },
     {
       "video_id": "aOxUR-J4T1s",
@@ -200,13 +192,13 @@
       "video_url": "https://www.youtube.com/shorts/DdNAc8o2Z50",
       "products": [
         {
-          "name": "아트박스/달퐁이네 문방구 축결혼 축의금봉투 본품",
-          "price": "₩1,500",
-          "seller": null,
-          "thumbnail": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcRUvOLF4GiTc1AdaaD2xcOo9kPCP03tbRUBbSWlNYVkjCXXnLi8mKckw0IpwQ",
-          "link": "https://link.coupang.com/re3/AFYOUTUBE?pageKey=152377434\\u0026ctag=152377434\\u0026itemId=440031336\\u0026vendorItemId=3754321222\\u0026subparam=YT3-k62PWnKQiEw_s0nXkwXhZpDBYLAXel3TYTfQ5KSSKIervtulM0cKsxGm0ZYzjAtYQT2wbgSSRXPoMNxx-hmOiV3NSCPf6Wg5hgG76Q",
-          "raw_alt": "아트박스/달퐁이네 문방구 축결혼 축의금봉투 본품, ₩1,500 , 판매처: ",
-          "matched_selector": "json:productListItemRenderer"
+          "name": "피구공 안전피구공 6.3인치 1개",
+          "price": "₩18,000",
+          "seller": "쿠팡",
+          "thumbnail": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcSl4UJRmqLO1xTn-vOZerXj6_qrc_pQmV2DKxlwImQaeH0RHz37fOGqjgQSFwW8LffOxn36BIbJcC1kAuue4DckgCV-LbKPpTP8lBF8C7bpxf0X2mooRiM",
+          "link": "https://link.coupang.com/re3/AFYOUTUBE?pageKey=8522492259\\&ctag=8522492259\\&itemId=22187013386\\&vendorItemId=89233275867\\&subparam=YT3-FfSgMNcuhXErdiyj9ceCwcsOLz6bheJGasw82h4X5PLDokJBCukRX_WXQr1lpWOdYVt2HJY9iJlyTlGH5PYmb5Qs9sxQT9Y0",
+          "raw_alt": "피구공 안전피구공 6.3인치 1개, ₩18,000 제휴사, 판매처: 쿠팡",
+          "matched_selector": "json:productSticker"
         }
       ]
     },
@@ -215,22 +207,13 @@
       "video_url": "https://www.youtube.com/shorts/5lJyzBHYQNo",
       "products": [
         {
-          "name": "파충류사육상자 개미 거미 환기 거북이부화기 자기 1공간 컨테이너 코코넛 항아리 수송 난초 메시 서식지 수족 파충류상자 사육상자 보온상자 애완동물상자 1공간 통풍 매트 트레이 그물 1개 스테인리스 팬 추가 옵션",
-          "price": "₩57,900",
-          "seller": null,
-          "thumbnail": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcR_uov1HFcmm5XeYAhv9EIN0UyaK__lX6A1leCY5wPLGF5BXrLCPOk14FeIkA",
-          "link": "https://link.coupang.com/re3/AFYOUTUBE?pageKey=9035892424\\u0026ctag=9035892424\\u0026itemId=26469770812\\u0026vendorItemId=93444936278\\u0026subparam=YT3-nwvzpwNRdHc9vR88iHzEeCNX0BDr3v1d_R15Nt4XbyVnIX0ICwTGsYY8qXE0wQCyQRkaYYrEZ3jhNFcsXygpUs6dGpkfWhSU",
-          "raw_alt": "파충류사육상자 개미 거미 환기 거북이부화기 자기 1공간 컨테이너 코코넛 항아리 수송 난초 메시 서식지 수족 파충류상자 사육상자 보온상자 애완동물상자 1공간 통풍 매트 트레이 그물 1개 스테인리스 팬 추가 옵션, ₩57,900 , 판매처: ",
-          "matched_selector": "json:productListItemRenderer"
-        },
-        {
-          "name": "거미 RC 장난감 미니 리모컨 무선 조종 코끼리 동물 1개",
-          "price": "₩25,800",
-          "seller": null,
-          "thumbnail": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcRFy5NKyflchTrrN8r_sKyuswOWlmJ3YrTo7J_kwtZVZ6kN2X0vzK1XtMskmQ",
-          "link": "https://link.coupang.com/re3/AFYOUTUBE?pageKey=8181733769\\u0026ctag=8181733769\\u0026itemId=23393912899\\u0026vendorItemId=92097770978\\u0026subparam=YT3-5LE7pmzs5ca8z2YQZlvYSoKgicFNZgyjOA2YU5VvWq6Trlwmukv2aLO8nFb9YaZ9uvJTSwQRNdRsnefYVpzSVvyewXE5UAGb",
-          "raw_alt": "거미 RC 장난감 미니 리모컨 무선 조종 코끼리 동물 1개, ₩25,800 , 판매처: ",
-          "matched_selector": "json:productListItemRenderer"
+          "name": "킥복싱 연습용 스마트 복싱 머신 조절 1개 4. Black",
+          "price": "₩32,670",
+          "seller": "쿠팡",
+          "thumbnail": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcRR6EukUyifXfklnpSILXmKlwpImGqBzrS9llg1Lwu9vBkLKCdy8ULZshljSDtVzw_LAzaQabtXXvdoJgtgqo8P3ZH_TetWZ7U5YsfxXkanRbeP53Z5TQ",
+          "link": "https://link.coupang.com/re3/AFYOUTUBE?pageKey=8611839235\\&ctag=8611839235\\&itemId=24978648243\\&vendorItemId=91984217395\\&subparam=YT3-cQXQvyBBlQ1CW5rE-Xb0g4Qtu3q0gpIP2AzHL5-tXIiiShhjSRKa1wssBHz9qM9v41n5m7ZHp7SpfCBrdhEK34Ic_apNpbHD",
+          "raw_alt": "킥복싱 연습용 스마트 복싱 머신 조절 1개 4. Black, ₩32,670 제휴사, 판매처: 쿠팡",
+          "matched_selector": "json:productSticker"
         }
       ]
     },
@@ -241,11 +224,11 @@
         {
           "name": "알작은선글라스 레옹 선글라스 레드",
           "price": "₩2,600",
-          "seller": null,
-          "thumbnail": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcQ1c2ouIVd9xDO8bSOki3WIUylHDS2OPdaJNXWLhiun4EoBPU-wG5gqVByetCbb1DR8Ngsa1ME",
-          "link": "https://link.coupang.com/re3/AFYOUTUBE?pageKey=9362246965\\u0026ctag=9362246965\\u0026itemId=27779993754\\u0026vendorItemId=94740325315\\u0026subparam=YT3-fuijpMmGGAu5FeruwPwfyJc3Y5ykVL455n6wRE-jJd9t3O7c0ZHcdpAtnctNpBrbWnVp3RVf8-8OSmGYW6KtV3w0tLCAdUD9",
-          "raw_alt": "알작은선글라스 레옹 선글라스 레드, ₩2,600 , 판매처: ",
-          "matched_selector": "json:productListItemRenderer"
+          "seller": "쿠팡",
+          "thumbnail": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcQhhzWdOUCFJhT_H3WBi3Ri25Gm-G4pHDiq88jr64Wi079Hfw6wl2D6rFNntxs-yyZAkfsZkuDTJxQAgigra1kqfwp_eJzqSs_pgiMhvKWbD8_E7JWAX6eX",
+          "link": "https://link.coupang.com/re3/AFYOUTUBE?pageKey=9362246965\\&ctag=9362246965\\&itemId=27779993754\\&vendorItemId=94740325315\\&subparam=YT3-F6S1IJR3umrQbheK-7YD84z4YuNOZiiHrqBjD8F-cf-4fZojsgXSHgUIWDQUyMrjEKHek9ypQTd1RG9C5JxdOVNtyjK6dzqp",
+          "raw_alt": "알작은선글라스 레옹 선글라스 레드, ₩2,600 제휴사, 판매처: 쿠팡",
+          "matched_selector": "json:productSticker"
         }
       ]
     },
@@ -262,26 +245,7 @@
     {
       "video_id": "jtia9t2lKvA",
       "video_url": "https://www.youtube.com/shorts/jtia9t2lKvA",
-      "products": [
-        {
-          "name": "파충류사육상자 개미 거미 환기 거북이부화기 자기 1공간 컨테이너 코코넛 항아리 수송 난초 메시 서식지 수족 파충류상자 사육상자 보온상자 애완동물상자 1공간 통풍 매트 트레이 그물 1개 스테인리스 팬 추가 옵션",
-          "price": "₩57,900",
-          "seller": null,
-          "thumbnail": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcR_uov1HFcmm5XeYAhv9EIN0UyaK__lX6A1leCY5wPLGF5BXrLCPOk14FeIkA",
-          "link": "https://link.coupang.com/re3/AFYOUTUBE?pageKey=9035892424\\u0026ctag=9035892424\\u0026itemId=26469770812\\u0026vendorItemId=93444936278\\u0026subparam=YT3-nwvzpwNRdHc9vR88iHzEeCNX0BDr3v1d_R15Nt4XbyVnIX0ICwTGsYY8qXE0wQCyQRkaYYrEZ3jhNFcsXygpUs6dGpkfWhSU",
-          "raw_alt": "파충류사육상자 개미 거미 환기 거북이부화기 자기 1공간 컨테이너 코코넛 항아리 수송 난초 메시 서식지 수족 파충류상자 사육상자 보온상자 애완동물상자 1공간 통풍 매트 트레이 그물 1개 스테인리스 팬 추가 옵션, ₩57,900 , 판매처: ",
-          "matched_selector": "json:productListItemRenderer"
-        },
-        {
-          "name": "거미 RC 장난감 미니 리모컨 무선 조종 코끼리 동물 1개",
-          "price": "₩25,800",
-          "seller": null,
-          "thumbnail": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcRFy5NKyflchTrrN8r_sKyuswOWlmJ3YrTo7J_kwtZVZ6kN2X0vzK1XtMskmQ",
-          "link": "https://link.coupang.com/re3/AFYOUTUBE?pageKey=8181733769\\u0026ctag=8181733769\\u0026itemId=23393912899\\u0026vendorItemId=92097770978\\u0026subparam=YT3-5LE7pmzs5ca8z2YQZlvYSoKgicFNZgyjOA2YU5VvWq6Trlwmukv2aLO8nFb9YaZ9uvJTSwQRNdRsnefYVpzSVvyewXE5UAGb",
-          "raw_alt": "거미 RC 장난감 미니 리모컨 무선 조종 코끼리 동물 1개, ₩25,800 , 판매처: ",
-          "matched_selector": "json:productListItemRenderer"
-        }
-      ]
+      "products": []
     },
     {
       "video_id": "zi4l5QTlOCk",
@@ -306,27 +270,37 @@
     {
       "video_id": "w0QlJUzumyU",
       "video_url": "https://www.youtube.com/shorts/w0QlJUzumyU",
-      "products": []
+      "products": [
+        {
+          "name": "각얼음(택배발송불가상품)(MIR-0664)",
+          "price": "₩7,000",
+          "seller": "쿠팡",
+          "thumbnail": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcTfVcsg-41_L0dpndr9xte93it9tv6Qiv34TF8lEmtzmi9F5htr4kT-6Fgg4rFh090SCPfzcgHS",
+          "link": "https://link.coupang.com/re3/AFYOUTUBE?pageKey=7708824666\\&ctag=7708824666\\&itemId=20658739215\\&vendorItemId=87731569047\\&subparam=YT3-Q74xCCUc-bSTq-6fcwlziFT2IFpZfX1ITLvJ39qe0IDVyxpbg9X__O91Gvm44n8tGJprLsVX_uSIQ8Wf3bNZkjnT4V3VUPQ",
+          "raw_alt": "각얼음(택배발송불가상품)(MIR-0664), ₩7,000 제휴사, 판매처: 쿠팡",
+          "matched_selector": "json:productSticker"
+        }
+      ]
     },
     {
       "video_id": "SsJ8ZYRS_RM",
       "video_url": "https://www.youtube.com/shorts/SsJ8ZYRS_RM",
-      "products": []
+      "products": [
+        {
+          "name": "야구방망이 진열대 야구장 걸이대 34x8x8cm(4구) 블랙",
+          "price": "₩22,500",
+          "seller": "쿠팡",
+          "thumbnail": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcTTtnhkKGI6XKkwT6WiU5fZDzvjgrRz7f4XwLg5PaUJnyfBTVnv",
+          "link": "https://link.coupang.com/re3/AFYOUTUBE?pageKey=9237091093\\&ctag=9237091093\\&itemId=27310651292\\&vendorItemId=94277105118\\&subparam=YT3-Egq4jeMaJOCGW-BLoylTyULNTKRuNcryTmRc_xY_xpo-KklTJaH8pX-yZxWtxxH9QOlFMg5qgAycmk5EWAHAWaSpzXjQjzFB",
+          "raw_alt": "야구방망이 진열대 야구장 걸이대 34x8x8cm(4구) 블랙, ₩22,500 제휴사, 판매처: 쿠팡",
+          "matched_selector": "json:productSticker"
+        }
+      ]
     },
     {
       "video_id": "A1dK-nY08lc",
       "video_url": "https://www.youtube.com/shorts/A1dK-nY08lc",
-      "products": [
-        {
-          "name": "치즈돈까스 380gx3+소스3개 3개 380g",
-          "price": "₩26,900",
-          "seller": null,
-          "thumbnail": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcRZLUcqv-Vyn_V290d909hmzmWuayT0zzX8p_7JapudCDFddsLLshpDO2WuLRI",
-          "link": "https://link.coupang.com/re3/AFYOUTUBE?pageKey=9392204917\\u0026ctag=9392204917\\u0026itemId=3604509402\\u0026vendorItemId=71590184722\\u0026subparam=YT3-DAfjPjYIafAJ3T68mBrN6xqAKD2oklA1Kg9vWEKEn34OCdoYJ90fBz2k2II11DjGR_-3dD1TNPS0a3u0JwMK3T6AJrEB7AFBpHCo",
-          "raw_alt": "치즈돈까스 380gx3+소스3개 3개 380g, ₩26,900 , 판매처: ",
-          "matched_selector": "json:productListItemRenderer"
-        }
-      ]
+      "products": []
     },
     {
       "video_id": "sgFuTy4N0HI",
@@ -335,11 +309,11 @@
         {
           "name": "[변우석 PICK] 다슈 데일리 볼륨 업 컬크림 150ml",
           "price": "₩10,500",
-          "seller": null,
-          "thumbnail": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQpFWjsFC45AQb9E3wO15gSCZUY6THaPjtXDBH5QZ23Ei8I-K0G9W8kLhn_FA",
-          "link": "https://hairwax.co.kr/product/detail.html?product_no=4318&utm_campaign=sag_organic&srsltid=AfmBOooy-3fQexwjEyrxADMoOoOhsWSCfK1pbtXj2qn1FVGK7t_xhkknCUA&utm_content=YT3-k986IzcEzGt6VoEXVSUHm0T5IRlHYrtk_MJgBa9JY8jTOR3E6g57i_o5fSxUU3D0Mdapl6IQSX1BgxxOfXfZ-T1eJR-7Hmtr&utm_term=UCP2kDkT8fPPucv4SwkjJI-w&utm_medium=product_shelf&utm_source=youtube",
-          "raw_alt": "[변우석 PICK] 다슈 데일리 볼륨 업 컬크림 150ml, ₩10,500 , 판매처: ",
-          "matched_selector": "json:productListItemRenderer"
+          "seller": "다슈코리아",
+          "thumbnail": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcSbYFo05RsOknAuKmOSe7xUWqjEl95Lf9BngxxmEYU7e32Pm9CKTsulrtNjhxjsrWk5DdG41j4",
+          "link": "https://hairwax.co.kr/product/detail.html?product_no=4318&utm_campaign=sag_organic&srsltid=AfmBOoqA9RgAn0yAd649X6yP4mXUi-VdaB2_jfQr9lrEc8ZqyOY2X-FaPR0&utm_content=YT3-cJNUaha7Qa81FpUxra9w9ZqhaknofpPzEPIU_rlMBhE2JfoUT2wWeCCX_4qPfoimQaI66R3BD94yQ7o55uT51ulshzr_XA_Q&utm_term=UCP2kDkT8fPPucv4SwkjJI-w&utm_medium=product_shelf&utm_source=youtube",
+          "raw_alt": "[변우석 PICK] 다슈 데일리 볼륨 업 컬크림 150ml, ₩10,500 , 판매처: 다슈코리아",
+          "matched_selector": "json:productSticker"
         }
       ]
     },
@@ -363,31 +337,13 @@
       "video_url": "https://www.youtube.com/shorts/6936EQe5k0k",
       "products": [
         {
-          "name": "소니 WHCH520 컴팩트 휴대용 무선 블루투스 온이어 헤드폰마이크블랙 번들 헤드폰 액세서리2개 품목 1개",
-          "price": "₩121,200",
-          "seller": null,
-          "thumbnail": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcTf0cL5YgxnzqLXUc9sjpDEK4pN_Ar1E0L9DOuvzC4ybn6bV-CObShMFjgNuvw",
-          "link": "https://link.coupang.com/re3/AFYOUTUBE?pageKey=8613550165\\u0026ctag=8613550165\\u0026itemId=24984786592\\u0026vendorItemId=91990214609\\u0026subparam=YT3-nBlcRkevmgHuUcrtrraKcwXkPNtQ_EF3TLUkeEC9MBuuu9-bqZw7gb8_dYJp0WiTXsshLQr0GFCUxjDzt0jz0C0GzzxVcSD6",
-          "raw_alt": "소니 WHCH520 컴팩트 휴대용 무선 블루투스 온이어 헤드폰마이크블랙 번들 헤드폰 액세서리2개 품목 1개, ₩121,200 , 판매처: ",
-          "matched_selector": "json:productListItemRenderer"
-        },
-        {
-          "name": "소니 WH-1000XM5 무선 헤드폰 미드나잇 블루 노이즈 캔슬링 최적화 30시간 배터리 음성 제어 지원 소니 WH-1000XM5/S 무선 노이즈캔슬링 블루투스 실버",
-          "price": "₩541,000",
-          "seller": null,
-          "thumbnail": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcS4Ynpuva-TrvSR1RSCwE0LaVqBi2T4txrzsFDn5HRdB3WN4Dl9g0c7tkffIsU",
-          "link": "https://link.coupang.com/re3/AFYOUTUBE?pageKey=8625330869\\u0026ctag=8625330869\\u0026itemId=25025735145\\u0026vendorItemId=92583984675\\u0026subparam=YT3-UevLZ28Fw5e7AYKNaEv7hcv8bg-oSR4JvrA95b70pQHyfoRyY6q1UPuEZ3ASfqXVb-L059grzllHk9mrb3Xd2aUF3N7InyI6",
-          "raw_alt": "소니 WH-1000XM5 무선 헤드폰 미드나잇 블루 노이즈 캔슬링 최적화 30시간 배터리 음성 제어 지원 소니 WH-1000XM5/S 무선 노이즈캔슬링 블루투스 실버, ₩541,000 , 판매처: ",
-          "matched_selector": "json:productListItemRenderer"
-        },
-        {
-          "name": "소니 노이즈캔슬링 블루투스 헤드폰 WH-1000XM5 플래티넘실버 40시간 PLATINUM SILVER",
-          "price": "₩588,000",
-          "seller": null,
-          "thumbnail": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcRAOxzj5hFfRnCM3vlVBb7q1tu_C76Ys7lo3omzHpv5CMjrQiZHPTFHmpUXzQ",
-          "link": "https://link.coupang.com/re3/AFYOUTUBE?pageKey=9460038393\\u0026ctag=9460038393\\u0026itemId=28148500385\\u0026vendorItemId=95103861585\\u0026subparam=YT3-XfLYmKpyW76-HI3w14sXRXrOf-96EmVXI2UJqaImYS5MH9WAkLnqCuE5vx_omPJPfpBh3ChjU4CfsrWB47QOnPvN-ddrZqNZ",
-          "raw_alt": "소니 노이즈캔슬링 블루투스 헤드폰 WH-1000XM5 플래티넘실버 40시간 PLATINUM SILVER, ₩588,000 , 판매처: ",
-          "matched_selector": "json:productListItemRenderer"
+          "name": "1/2 Pcs 프랑스 빵 쇼핑백 접이식 보관 가방 만화 휴대용 대용량 휴대용 친환경 가방",
+          "price": "₩7,564",
+          "seller": "AliExpress",
+          "thumbnail": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcRANHWihS0Bh0enZ8UkEC8RY53ykStBf_atHFQ4BvBFkGDyYry5ag3UATqYYNm1d9HW9gjH8nn7dScLXEGF4_dOzj49VdRpa1DsJVPD6lERhDBq_V8nHHo",
+          "link": "https://ko.aliexpress.com/item/1005011963386174.html?_randl_currency=KRW\\&_randl_shipto=KR\\&src=google\\&aff_short_key=_oCbUExD\\&aff_platform=true\\&isdl=y\\&dp=YT3-dKsyU-zUtMCJCULO5BY1nTLi3dEMI2zkw-dl9zJj3wzIAM2Po23ubvzFJUDKaHHWXYPblRNGmg3Pjsg5jzx11waHHlOzX8Y\\&cn=youtube",
+          "raw_alt": "1/2 Pcs 프랑스 빵 쇼핑백 접이식 보관 가방 만화 휴대용 대용량 휴대용 친환경 가방, ₩7,564 제휴사, 판매처: AliExpress",
+          "matched_selector": "json:productSticker"
         }
       ]
     },
@@ -398,47 +354,11 @@
         {
           "name": "진정 아이스볼 쿨링 마사지기 GB004 펄핑크 2개",
           "price": "₩12,200",
-          "seller": null,
-          "thumbnail": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQBPWU9SRHdOW4oy5iKimgaFyYHj6QFVvBJKAes61WbEEyfH6yM7TCQsggH6XLh862AjwSGIANc",
-          "link": "https://link.coupang.com/re3/AFYOUTUBE?pageKey=8209668191&ctag=8209668191&itemId=9127713263&vendorItemId=76413756022&subparam=YT3-hkD-qDRSb5oa7y5UGBhAJ951jToOZswDC2cci5QxkNOSYEMqRZq5etpGiXYMmkIpGx8yWfei0SuGKkmN9yUxHr4hXelCMCrb",
-          "raw_alt": "진정 아이스볼 쿨링 마사지기 GB004 펄핑크 2개, ₩12,200 , 판매처: ",
-          "matched_selector": "json:productListItemRenderer"
-        },
-        {
-          "name": "매드포코스 인뎁스 리쥬브 바이오셀룰로오스 마스크팩 4개입 2개",
-          "price": "₩20,880",
-          "seller": null,
-          "thumbnail": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcSml2hbiCxUKutNdsAfUuMzTFfjtXsrbT4u1ikbPhRP1N4sMrhf2BvvDKyTPAvy34EecAtrWEsk",
-          "link": "https://link.coupang.com/re3/AFYOUTUBE?pageKey=7558764627&ctag=7558764627&itemId=13608934937&vendorItemId=94231416139&subparam=YT3-jlsbK0_81Lo2BNlhE1S8U1UgBV68EXxlVdMm1FplYRD63DeqlJTYQ8dWYGkk52XW0905xn6b-zAiRZFK-0Of_zN8JuM_h4mV",
-          "raw_alt": "매드포코스 인뎁스 리쥬브 바이오셀룰로오스 마스크팩 4개입 2개, ₩20,880 , 판매처: ",
-          "matched_selector": "json:productListItemRenderer"
-        },
-        {
-          "name": "서울우유 마이픽 꺾어먹는 딸기 요거트 120g 1개입 48개",
-          "price": "₩39,940",
-          "seller": null,
-          "thumbnail": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcS5FQ2XnLicH0ODRVbdObpfu-cJ4eQ0w5W6n-nwIFTaJdc_RF5qc77Yh5MQGA",
-          "link": "https://link.coupang.com/re3/AFYOUTUBE?pageKey=8234464830&ctag=8234464830&itemId=23702772044&vendorItemId=90727809235&subparam=YT3-L4ddXpQV-SNkUWoXgkVNF2Cm5lNxJQfiKLlchVXTqLeV9XV-w-fGMpFHwU-vwjT06oMJI_II1orwXBj5D4UR8AM8rSgkGh1j",
-          "raw_alt": "서울우유 마이픽 꺾어먹는 딸기 요거트 120g 1개입 48개, ₩39,940 , 판매처: ",
-          "matched_selector": "json:productListItemRenderer"
-        },
-        {
-          "name": "클로란 피오니 두피 진정 SOS 세럼 100ml 1개",
-          "price": "₩28,800",
-          "seller": null,
-          "thumbnail": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcT43FiwSDffJofrF06PIY9AEahOIKpzsO_pHjlJhyMeY8Wz3c_F8VMOD90OOc6U3tsPsrydsTM",
-          "link": "https://link.coupang.com/re3/AFYOUTUBE?pageKey=7690062466&ctag=7690062466&itemId=20562450739&vendorItemId=87989779564&subparam=YT3-6X0zMr8qk5M38lDeljMVvBZ8CLZka1UkkRhfwFh6SetsTPoaXPlFgGxjRkBoMzI4yPXiuHGXdAKX3nLViz5KIPJT2Y4Ip-kk",
-          "raw_alt": "클로란 피오니 두피 진정 SOS 세럼 100ml 1개, ₩28,800 , 판매처: ",
-          "matched_selector": "json:productListItemRenderer"
-        },
-        {
-          "name": "[잡티/미백] 아이소이 브라이트닝 잡티 패드 60매",
-          "price": "₩17,800",
-          "seller": null,
-          "thumbnail": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcQgoCMyr56JFco2ER_hKEYC7P3uI_IqBeq-QnGkR1q_aYV0MnGkF6dLxGIAOw",
-          "link": "https://m.oliveyoung.co.kr/m/goods/getGoodsDetail.do?goodsNo=A000000230574&srsltid=AfmBOor2295Aj8SzQgoCnLILK_dkqQM3lS4CYlhrzAZRtonz6yXR6wPfXa0&utm_content=YT3-N1a7rryKS2tddgrmmc2hnLD5S8MPCa0_kAxYfPWdJX9yg3UcVFOvlpHjz4C7CwZIz3LywVzEpwwEDt4k_gtliT8CZq_ITV3Z&utm_source=youtube&utm_medium=product_shelf",
-          "raw_alt": "[잡티/미백] 아이소이 브라이트닝 잡티 패드 60매, ₩17,800 , 판매처: ",
-          "matched_selector": "json:productListItemRenderer"
+          "seller": "쿠팡!",
+          "thumbnail": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQimzR23Ewrjga0aLorpl8abzfUo5DGejLT2q6o9uD5ouxk4edZEmose9yPnqr_rBlgrZVe0o-mMTbvheZeebqzpPVDGaunTPcbMAFamPRZ21W76mBzpA",
+          "link": "https://link.coupang.com/re3/AFYOUTUBE?pageKey=8209668191&ctag=8209668191&itemId=9127713263&vendorItemId=76413756022&subparam=YT3-Ob68SrgR2OQ5adNdv5lxtoI4CkjOebYCW4rplgvo5pz0gTdBFrwueR0b-LlNLXPCi8kX6rZDE9Ers7ebDP3TVuzAXu0Rw_40",
+          "raw_alt": "진정 아이스볼 쿨링 마사지기 GB004 펄핑크 2개, ₩12,200 제휴사, 판매처: 쿠팡!",
+          "matched_selector": "json:productSticker"
         }
       ]
     },
@@ -452,30 +372,20 @@
       "video_url": "https://www.youtube.com/shorts/q5tp9WJ5Bz8",
       "products": [
         {
-          "name": "치즈돈까스 380gx3+소스3개 3개 380g",
-          "price": "₩26,900",
-          "seller": null,
-          "thumbnail": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcRZLUcqv-Vyn_V290d909hmzmWuayT0zzX8p_7JapudCDFddsLLshpDO2WuLRI",
-          "link": "https://link.coupang.com/re3/AFYOUTUBE?pageKey=9392204917\\u0026ctag=9392204917\\u0026itemId=3604509402\\u0026vendorItemId=71590184722\\u0026subparam=YT3-DAfjPjYIafAJ3T68mBrN6xqAKD2oklA1Kg9vWEKEn34OCdoYJ90fBz2k2II11DjGR_-3dD1TNPS0a3u0JwMK3T6AJrEB7AFBpHCo",
-          "raw_alt": "치즈돈까스 380gx3+소스3개 3개 380g, ₩26,900 , 판매처: ",
-          "matched_selector": "json:productListItemRenderer"
+          "name": "로투스 스프레드 크런치 380g 5개",
+          "price": "₩30,750",
+          "seller": "쿠팡",
+          "thumbnail": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcQZ14BuvBt_IHPN0kUKYFNCG0N0xhXqf0mQmyhMUoL87Je-ESmLOdi89m6PmqCCsZHckOZkZ6n7uarIxtKKMtSy7clRMMEAaddAT9WvNW9j39UOC2SUEZt4",
+          "link": "https://link.coupang.com/re3/AFYOUTUBE?pageKey=9448492228\\&ctag=9448492228\\&itemId=15687255891\\&vendorItemId=87246169861\\&subparam=YT3-fA75eBTpuzasWAc2-f1D1o3WT6FkxjdPNBclO1fcFIa9KrWwI1zrNJhVCI9LSMDJnMsp8T6X58jnxhPxUY1bJobQPGhl6fU",
+          "raw_alt": "로투스 스프레드 크런치 380g 5개, ₩30,750 제휴사, 판매처: 쿠팡",
+          "matched_selector": "json:productSticker"
         }
       ]
     },
     {
       "video_id": "QURyfAsebMU",
       "video_url": "https://www.youtube.com/shorts/QURyfAsebMU",
-      "products": [
-        {
-          "name": "치즈돈까스 380gx3+소스3개 3개 380g",
-          "price": "₩26,900",
-          "seller": null,
-          "thumbnail": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcRZLUcqv-Vyn_V290d909hmzmWuayT0zzX8p_7JapudCDFddsLLshpDO2WuLRI",
-          "link": "https://link.coupang.com/re3/AFYOUTUBE?pageKey=9392204917\\u0026ctag=9392204917\\u0026itemId=3604509402\\u0026vendorItemId=71590184722\\u0026subparam=YT3-OT24ynfIEKS_W72WXCQj0H0xvrFJ1317A38VZwvKQ6Sl3c6LBfoaIs1gPOXwMmLBTUv1488HrM4mopHM6irma2t1QJkfpfw",
-          "raw_alt": "치즈돈까스 380gx3+소스3개 3개 380g, ₩26,900 , 판매처: ",
-          "matched_selector": "json:productListItemRenderer"
-        }
-      ]
+      "products": []
     },
     {
       "video_id": "l1OCqvOUTT4",
@@ -490,17 +400,7 @@
     {
       "video_id": "vu-rvO_spT0",
       "video_url": "https://www.youtube.com/shorts/vu-rvO_spT0",
-      "products": [
-        {
-          "name": "치즈돈까스 380gx3+소스3개 3개 380g",
-          "price": "₩26,900",
-          "seller": null,
-          "thumbnail": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcRZLUcqv-Vyn_V290d909hmzmWuayT0zzX8p_7JapudCDFddsLLshpDO2WuLRI",
-          "link": "https://link.coupang.com/re3/AFYOUTUBE?pageKey=9392204917\\u0026ctag=9392204917\\u0026itemId=3604509402\\u0026vendorItemId=71590184722\\u0026subparam=YT3-DAfjPjYIafAJ3T68mBrN6xqAKD2oklA1Kg9vWEKEn34OCdoYJ90fBz2k2II11DjGR_-3dD1TNPS0a3u0JwMK3T6AJrEB7AFBpHCo",
-          "raw_alt": "치즈돈까스 380gx3+소스3개 3개 380g, ₩26,900 , 판매처: ",
-          "matched_selector": "json:productListItemRenderer"
-        }
-      ]
+      "products": []
     },
     {
       "video_id": "lmu_xQsspd4",
@@ -525,44 +425,7 @@
     {
       "video_id": "Y-bKnKlTr2M",
       "video_url": "https://www.youtube.com/shorts/Y-bKnKlTr2M",
-      "products": [
-        {
-          "name": "큰컵라면 삼양 까르보 불닭볶음면 105g 8개",
-          "price": "₩17,910",
-          "seller": null,
-          "thumbnail": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcSqomUsVcwrh_lwymabx3A99rmFRS3tq7qa2JFSFUEk7H8vNnKeEuScQRGrFdKiwpYnJKBuuw8",
-          "link": "https://link.coupang.com/re3/AFYOUTUBE?pageKey=9289833745\\u0026ctag=9289833745\\u0026itemId=28082464562\\u0026vendorItemId=95038907462\\u0026subparam=YT3-QnE2oUgPo-wTybVU_gjcQkpNhrKp2v5f2J9R7sMl0maeY9GR3b0HHio7Macdz2imfvjr8nJnVPPtDT-leie5JjNlixC0dwn-",
-          "raw_alt": "큰컵라면 삼양 까르보 불닭볶음면 105g 8개, ₩17,910 , 판매처: ",
-          "matched_selector": "json:productListItemRenderer"
-        },
-        {
-          "name": "곰곰 체다치즈 슬라이스 18g 100개입 2개",
-          "price": "₩39,400",
-          "seller": null,
-          "thumbnail": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcR9t5TuSUAQf6bWaFJfwZuL5nKnzy68X01pI7yj8UtawftT3gmjlAvMKk0j9A",
-          "link": "https://link.coupang.com/re3/AFYOUTUBE?pageKey=1606628686\\u0026ctag=1606628686\\u0026itemId=19223795585\\u0026vendorItemId=86340481941\\u0026subparam=YT3-JhKyv_-vIIJ59epx6nqV7jdOGfbQ0-F4FhaJrXEQXy3jxF4CGSXhxoJJY4tZMAqBtNrA0i1uv1BJePG3nedDh8vwOsuSoTc7",
-          "raw_alt": "곰곰 체다치즈 슬라이스 18g 100개입 2개, ₩39,400 , 판매처: ",
-          "matched_selector": "json:productListItemRenderer"
-        },
-        {
-          "name": "서울우유 슈레드 모짜렐라 치즈 1kg 1개입 1개",
-          "price": "₩14,650",
-          "seller": null,
-          "thumbnail": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcT08Ecm0sZCTp8kSwQX22Uw-KxNUkuDy53ScYHobBhn_gnto2zZ5STCpCFLCw",
-          "link": "https://link.coupang.com/re3/AFYOUTUBE?pageKey=130515366\\u0026ctag=130515366\\u0026itemId=651682277\\u0026vendorItemId=4691954862\\u0026subparam=YT3-Z9Do5JBQPw1VZ_WYe1NXMBTSHJLFv_c6YMb2OZBL6NCoBB888esQJXmUXBuZwnoIqQ6MwNcjxHZgWwMfb6m7E5dXdy_HwLFd",
-          "raw_alt": "서울우유 슈레드 모짜렐라 치즈 1kg 1개입 1개, ₩14,650 , 판매처: ",
-          "matched_selector": "json:productListItemRenderer"
-        },
-        {
-          "name": "오뚜기 고소한 골드 마요네즈 4개 500g",
-          "price": "₩34,000",
-          "seller": null,
-          "thumbnail": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcSxlfX9ofwM_xIiegozBQCDasTTjX_jliVozdjLJNpWvIsth8tMqQAYbB4acQjvO6pEWJexnI-9",
-          "link": "https://link.coupang.com/re3/AFYOUTUBE?pageKey=7147459384\\u0026ctag=7147459384\\u0026itemId=28160748956\\u0026vendorItemId=95151429368\\u0026subparam=YT3-STQfKKkqSO9atKSFtOWC_TEAt0q-s-mZtyoN_Mdu3De-ZM_46c1PhxvpgWoEVHVXidRvXJeI6s5buMJETsgijAAcBJxIxtrg",
-          "raw_alt": "오뚜기 고소한 골드 마요네즈 4개 500g, ₩34,000 , 판매처: ",
-          "matched_selector": "json:productListItemRenderer"
-        }
-      ]
+      "products": []
     },
     {
       "video_id": "D9K1OO5ShOI",
@@ -572,32 +435,12 @@
     {
       "video_id": "xgUpO-juXFY",
       "video_url": "https://www.youtube.com/shorts/xgUpO-juXFY",
-      "products": [
-        {
-          "name": "신발건조기 건조기 타이머 신발 안전화 제품 관리기 2064004 1개 2. 6암 고효율 건조 (신발 3켤레)",
-          "price": "₩56,100",
-          "seller": null,
-          "thumbnail": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcRi1qYgoKYMU3JmrOajkkGe3_dpJSkaKnHIwvxTHqlhGaNKRl8ZnPNuQkVzuP4",
-          "link": "https://link.coupang.com/re3/AFYOUTUBE?pageKey=9168218955\\u0026ctag=9168218955\\u0026itemId=27016151723\\u0026vendorItemId=93984779065\\u0026subparam=YT3-A5I_-kn1VhUFXh0Kc0uzik1QWboMVPG8RW87CWd4DVjxTqnHAMgXdx89tY4IR0aUEtVrwcoz7Kc6jEKv-HalxOC2qfoUZjB2",
-          "raw_alt": "신발건조기 건조기 타이머 신발 안전화 제품 관리기 2064004 1개 2. 6암 고효율 건조 (신발 3켤레), ₩56,100 , 판매처: ",
-          "matched_selector": "json:productListItemRenderer"
-        }
-      ]
+      "products": []
     },
     {
       "video_id": "5ZPzcWgHfvY",
       "video_url": "https://www.youtube.com/shorts/5ZPzcWgHfvY",
-      "products": [
-        {
-          "name": "Nik-L-Nips 닉클립 왁스병 캔디 1파운드 벌크팩 1개 453g",
-          "price": "₩30,270",
-          "seller": null,
-          "thumbnail": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQvFqMxagoa5xsPH5OtQujR3SfgYZ6Ijc4FKHZvsEXnm61cf66mEYjaqPi8uAg",
-          "link": "https://link.coupang.com/re3/AFYOUTUBE?pageKey=8779571124\\u0026ctag=8779571124\\u0026itemId=23767454168\\u0026vendorItemId=92676124280\\u0026subparam=YT3-vaxSAc0Cv_Fq1UFcT0-up0NqGgtnOl7G_m2ryWvw6lNKci0L2M-EJXuUlyEApfmfrP-cEzyte4zSLS4kemSdq6dJB6X7MrShyL2M",
-          "raw_alt": "Nik-L-Nips 닉클립 왁스병 캔디 1파운드 벌크팩 1개 453g, ₩30,270 , 판매처: ",
-          "matched_selector": "json:productListItemRenderer"
-        }
-      ]
+      "products": []
     },
     {
       "video_id": "e9sA2AJBY5A",
@@ -617,17 +460,7 @@
     {
       "video_id": "spT_r2RZrZE",
       "video_url": "https://www.youtube.com/shorts/spT_r2RZrZE",
-      "products": [
-        {
-          "name": "치즈돈까스 380gx3+소스3개 3개 380g",
-          "price": "₩26,900",
-          "seller": null,
-          "thumbnail": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcRZLUcqv-Vyn_V290d909hmzmWuayT0zzX8p_7JapudCDFddsLLshpDO2WuLRI",
-          "link": "https://link.coupang.com/re3/AFYOUTUBE?pageKey=9392204917\\u0026ctag=9392204917\\u0026itemId=3604509402\\u0026vendorItemId=71590184722\\u0026subparam=YT3-DAfjPjYIafAJ3T68mBrN6xqAKD2oklA1Kg9vWEKEn34OCdoYJ90fBz2k2II11DjGR_-3dD1TNPS0a3u0JwMK3T6AJrEB7AFBpHCo",
-          "raw_alt": "치즈돈까스 380gx3+소스3개 3개 380g, ₩26,900 , 판매처: ",
-          "matched_selector": "json:productListItemRenderer"
-        }
-      ]
+      "products": []
     },
     {
       "video_id": "lfcDBJ45sGE",
@@ -647,49 +480,22 @@
     {
       "video_id": "io_So3L7P_g",
       "video_url": "https://www.youtube.com/shorts/io_So3L7P_g",
-      "products": [
-        {
-          "name": "오뚜기 와사비분 300g 1개",
-          "price": "₩6,250",
-          "seller": null,
-          "thumbnail": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcTxRQ431Rv1fxmxb65_fdUeARrpeGPl5BEApCpo90lk6FL5_QN4lY1UhYF_yhtTGojxrLcnqU8T",
-          "link": "https://link.coupang.com/re3/AFYOUTUBE?pageKey=7124149863\\u0026ctag=7124149863\\u0026itemId=17969181743\\u0026vendorItemId=3005113497\\u0026subparam=YT3-_szy4800KKjFtvw1oHUXF9akbII8_uZ-MgfmnpVimDJxnwqXtP1mGfJgcnFj81JeEtQHljGtpozoPNIScIVceb7y5Gs5d213JDpK",
-          "raw_alt": "오뚜기 와사비분 300g 1개, ₩6,250 , 판매처: ",
-          "matched_selector": "json:productListItemRenderer"
-        },
-        {
-          "name": "자숙 대두 (냉동) 1kg 1개",
-          "price": "₩6,990",
-          "seller": null,
-          "thumbnail": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcRb-kHhHtRgHNY5Azb_MxWa4TfypdWNx1aqXZ0X-_KvGS29ojjEJ01lfXBvApw",
-          "link": "https://link.coupang.com/re3/AFYOUTUBE?pageKey=7722942244\\u0026ctag=7722942244\\u0026itemId=20731832800\\u0026vendorItemId=87802441845\\u0026subparam=YT3-cwuonmMZPlnunAk85Qx1WrNwnOq7j0oVeJcTAkeAZ5SLXrfOPhV4tKUfZ87VHzZsFTjGl_C1vksr5qNhcuiOd3MiamqJveFxWPow",
-          "raw_alt": "자숙 대두 (냉동) 1kg 1개, ₩6,990 , 판매처: ",
-          "matched_selector": "json:productListItemRenderer"
-        },
-        {
-          "name": "비치치 새우칩 1kg 업소용 1개",
-          "price": "₩6,560",
-          "seller": null,
-          "thumbnail": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcRtkXFKxtwp17qaAciKgZL9VDGoA_YIK4VWbpgi9iyUhyDnJADxQjZPwB7aqxyvC-Z-uatjwNAJ",
-          "link": "https://link.coupang.com/re3/AFYOUTUBE?pageKey=9472562031\\u0026ctag=9472562031\\u0026itemId=28195805652\\u0026vendorItemId=91761050306\\u0026subparam=YT3-3uomVkhi91BMx6xw5t6NJQ7z3w5KYPo_qQOO8bw-kcFzwrRQPBjIFPLZ40nYJNVsFG9SWPeFuafbR6Z8rqAwQnP1-KJvZA7uj7JF",
-          "raw_alt": "비치치 새우칩 1kg 업소용 1개, ₩6,560 , 판매처: ",
-          "matched_selector": "json:productListItemRenderer"
-        },
-        {
-          "name": "지엔씨푸드 나루토마끼 (냉동) 800g 4개",
-          "price": "₩47,100",
-          "seller": null,
-          "thumbnail": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcRTwh4hMR-Xk_KCdE4Dut5RbS63OKFh_Xnp8ETMmUlmjEyGMRZ7eRSvMQrSpw",
-          "link": "https://link.coupang.com/re3/AFYOUTUBE?pageKey=8620790758\\u0026ctag=8620790758\\u0026itemId=26965472217\\u0026vendorItemId=93934417693\\u0026subparam=YT3-L_dEe5xuxSMEcQr0dqnKwp-JIKy_vzwe6RyXZzx2WU2DIc2_rshOOY_74P2H9KT4WXzCRN-RJv_LAt-A0RXsA9EsgCr70qod-CBF",
-          "raw_alt": "지엔씨푸드 나루토마끼 (냉동) 800g 4개, ₩47,100 , 판매처: ",
-          "matched_selector": "json:productListItemRenderer"
-        }
-      ]
+      "products": []
     },
     {
       "video_id": "hGmxZHPVnBc",
       "video_url": "https://www.youtube.com/shorts/hGmxZHPVnBc",
-      "products": []
+      "products": [
+        {
+          "name": "1/2 Pcs 프랑스 빵 쇼핑백 접이식 보관 가방 만화 휴대용 대용량 휴대용 친환경 가방",
+          "price": "₩7,564",
+          "seller": "AliExpress",
+          "thumbnail": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcRANHWihS0Bh0enZ8UkEC8RY53ykStBf_atHFQ4BvBFkGDyYry5ag3UATqYYNm1d9HW9gjH8nn7dScLXEGF4_dOzj49VdRpa1DsJVPD6lERhDBq_V8nHHo",
+          "link": "https://ko.aliexpress.com/item/1005011963386174.html?_randl_currency=KRW\\&_randl_shipto=KR\\&src=google\\&aff_short_key=_oCbUExD\\&aff_platform=true\\&isdl=y\\&dp=YT3-dKsyU-zUtMCJCULO5BY1nTLi3dEMI2zkw-dl9zJj3wzIAM2Po23ubvzFJUDKaHHWXYPblRNGmg3Pjsg5jzx11waHHlOzX8Y\\&cn=youtube",
+          "raw_alt": "1/2 Pcs 프랑스 빵 쇼핑백 접이식 보관 가방 만화 휴대용 대용량 휴대용 친환경 가방, ₩7,564 제휴사, 판매처: AliExpress",
+          "matched_selector": "json:productSticker"
+        }
+      ]
     },
     {
       "video_id": "08pY9bJH-3Q",
@@ -714,84 +520,47 @@
     {
       "video_id": "dl8S5RmyXqc",
       "video_url": "https://www.youtube.com/shorts/dl8S5RmyXqc",
-      "products": []
+      "products": [
+        {
+          "name": "천연가죽 럭스체인백 가정의달 할인",
+          "price": "₩129,800",
+          "seller": "Mintiz",
+          "thumbnail": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcTXBgOFPtT6ywaiPQw4N9Sjv2KVT7CHQpXTKnt6dYp-uCaDlwxre515V5oE6iI_Wjrm6SFUIfLzbaop6qvWB7JTg55Znxp-cQy66lIhuYaywYWQRRg7y_QG",
+          "link": "https://mintiz.shop/product/detail.html?product_no=359\\&utm_campaign=sag_organic\\&srsltid=AfmBOorCetTFF1eyilAMod0-Y9nv5wyTWsYGhrXgdGM_CvIfQo2LnVexVBU\\&utm_content=YT3-rTKUC5WHPT8fiGfLMX-O2SwTf7CN4Ha6WzB3yx8YnWLL4weqAu1k6Qs4cqYXkaToVYOacOWc1JJvUd64BVF35kMmpMj7t6A\\&utm_term=UCdYr-oAFinkSJtDeZ_38Gzw\\&utm_medium=product_shelf\\&utm_source=youtube\\&yts_sig=eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6IndHSGgyQSJ9.eyJleHBpcnlfdG9rZW4iOiI1ODY0OWYxNS00Mzc4LTRjYmYtOWI5Ny02OGYxODYwN2Y4ZWQiLCJleHAiOjE3NzkzNDIwODN9.Me_7-j1VIfWkvsiSVl6bjAHD0qN8UkcW1KCBN0m3imHpevDGomAQ4c2Lzb4wwwVDoaC5hlf3vqfS1KSYu9zIFddSbzpeIj_CrYcuE5n8FPUFdhHaSHBkJR5T1ZBo0Psv6wf9e4BjP3vzjQVtyQnU4Qq5NbRMuzezdKh1GThbblM6L67rpCsLWymlz0yy9goOOkwIQOQ3NACe3pcBTg6g3Iia7Pe-EOWYlXCtQlz4Uoqbor3YYBIVeMngkGbFFMvqD-VZV9aZ4XqSKRxGWvi2VUcqUBFWMRxe955TTFgZS7bQL1l_-i9qcKPv-l_j2KhHJdOy2_7NL9hLzxaH6ec2SQ_kLJLSM08ag-Ujz7rCgt8nCAP6XiTigI9e89BYEQEEJiLSjg4bWzMLTKvhf3_mgVg9O8Qt-R_VzmDT-ZiFLsTG1I52Js6Hz4TDXOhqg2reC7waG8xnu_yAkrRCkOoE5zDrliekb-DimwmF_yu6uBk7Uw6-g3CdHd_hGHpzztbm\\&yts_source=Aa9_yn5h-a_t9F6v3cMkFHapfUe3eNC8c2G1sQUcKw0EXFykgoYmlTCX6GqIfGa6aCBRsuw5hd83qgEhy2qtLOpdu73YjQKycwNVGhaOtfM5HY5qGzm1t-18zI2doyEJyW3esyI8UgdW-hh8nhjTkbdn0sj-JzH0C_xwns32BIv5SId78x0LCUlTUp8",
+          "raw_alt": "천연가죽 럭스체인백 가정의달 할인, ₩129,800 , 판매처: Mintiz",
+          "matched_selector": "json:productSticker"
+        }
+      ]
     },
     {
       "video_id": "uP1O7U-__A8",
       "video_url": "https://www.youtube.com/shorts/uP1O7U-__A8",
-      "products": [
-        {
-          "name": "야구방망이 진열대 야구장 걸이대 34x8x8cm(4구) 블랙",
-          "price": "₩22,500",
-          "seller": null,
-          "thumbnail": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcQf8e8mcA0LMC3Oumofd3NsdFxck6kEPJhnqC_k7_bXw3bemmMXkzKQ0JkgjKw",
-          "link": "https://link.coupang.com/re3/AFYOUTUBE?pageKey=9237091093\\u0026ctag=9237091093\\u0026itemId=27310651292\\u0026vendorItemId=94277105118\\u0026subparam=YT3-fI2xo08QekPkgR_tAjdzlycB2302gTfKfDsDFMeMb0s-iTIXKwqMb3NGsryWOVP-CU0hhaZ6Nqc14ybAZaC0u6ZfOZAvc92X",
-          "raw_alt": "야구방망이 진열대 야구장 걸이대 34x8x8cm(4구) 블랙, ₩22,500 , 판매처: ",
-          "matched_selector": "json:productListItemRenderer"
-        }
-      ]
+      "products": []
     },
     {
       "video_id": "x6clw1IGb-g",
       "video_url": "https://www.youtube.com/shorts/x6clw1IGb-g",
-      "products": [
-        {
-          "name": "치즈돈까스 380gx3+소스3개 3개 380g",
-          "price": "₩26,900",
-          "seller": null,
-          "thumbnail": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcRZLUcqv-Vyn_V290d909hmzmWuayT0zzX8p_7JapudCDFddsLLshpDO2WuLRI",
-          "link": "https://link.coupang.com/re3/AFYOUTUBE?pageKey=9392204917\\u0026ctag=9392204917\\u0026itemId=3604509402\\u0026vendorItemId=71590184722\\u0026subparam=YT3-DAfjPjYIafAJ3T68mBrN6xqAKD2oklA1Kg9vWEKEn34OCdoYJ90fBz2k2II11DjGR_-3dD1TNPS0a3u0JwMK3T6AJrEB7AFBpHCo",
-          "raw_alt": "치즈돈까스 380gx3+소스3개 3개 380g, ₩26,900 , 판매처: ",
-          "matched_selector": "json:productListItemRenderer"
-        }
-      ]
+      "products": []
     },
     {
       "video_id": "M2RQ9a3MRZU",
       "video_url": "https://www.youtube.com/shorts/M2RQ9a3MRZU",
-      "products": [
-        {
-          "name": "치즈생각 블랙치즈볼(30개입) 930g 1개",
-          "price": "₩12,490",
-          "seller": null,
-          "thumbnail": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcT5LBpYBsdHmY_ysE0vZvqtpqrmk34ZwEiH0MFS1ZPqUHa-ozRPde4RZ8kfkyCy2m_N1xPyTxQ",
-          "link": "https://link.coupang.com/re3/AFYOUTUBE?pageKey=7825503868\\u0026ctag=7825503868\\u0026itemId=19461718114\\u0026vendorItemId=78633130095\\u0026subparam=YT3-zf9HwEkhi6tgDBPg6xXBNnrFlO99FcMG0ffzBiEc9y2lwDl8rOd95tj9_A5UDKVVk5m659nZVM9IGfrr7gN-C6NDfOuGN0cX",
-          "raw_alt": "치즈생각 블랙치즈볼(30개입) 930g 1개, ₩12,490 , 판매처: ",
-          "matched_selector": "json:productListItemRenderer"
-        },
-        {
-          "name": "올반 미니찰핫도그 (냉동) 40g 8개입 1개",
-          "price": "₩7,630",
-          "seller": null,
-          "thumbnail": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQsNKs6k4hRhUGBIp3AsJdO_kqSsQSzinMNciI9t_OC4r1eDmT_WINSOjj-J1EG4s9sl-lHIKE",
-          "link": "https://link.coupang.com/re3/AFYOUTUBE?pageKey=2176243689\\u0026ctag=2176243689\\u0026itemId=3703210820\\u0026vendorItemId=71688484429\\u0026subparam=YT3-lNL8y0KkpkfrxUNIOQErmHSid4vDwS9Q9cQXxw0CvXEIViU_lC2LwUDhTNCT3fbmELjqipVJAoB1qK3BPj3mx2pZUnwVodOc",
-          "raw_alt": "올반 미니찰핫도그 (냉동) 40g 8개입 1개, ₩7,630 , 판매처: ",
-          "matched_selector": "json:productListItemRenderer"
-        },
-        {
-          "name": "팝콘치킨 1kg + 팝콘치킨 치즈팡팡 190g 없음",
-          "price": "₩20,430",
-          "seller": null,
-          "thumbnail": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcRkhfIUV6gGh8GpAkTD8NrkFDNRabiABUCv-a2xcSisIT9pwRaRHzgT51jfsF_KGv0jEd4z4HfW",
-          "link": "https://link.coupang.com/re3/AFYOUTUBE?pageKey=8586885170\\u0026ctag=8586885170\\u0026itemId=24911701299\\u0026vendorItemId=91918113296\\u0026subparam=YT3-uOBER_52DTexZ7unlSKNbGipQy4iwB1nukxlb6tf-LF5Fk7oP2bXFJUP4gVayhfr-HGH2RNvcUzxG_maJ7fDzcAvdJGpdaFf",
-          "raw_alt": "팝콘치킨 1kg + 팝콘치킨 치즈팡팡 190g 없음, ₩20,430 , 판매처: ",
-          "matched_selector": "json:productListItemRenderer"
-        },
-        {
-          "name": "아이엠소스 뿌리셔시즈닝 치킨 감자튀김 (당일발송보장) 500g 1개",
-          "price": "₩13,490",
-          "seller": null,
-          "thumbnail": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcQKi6UGrirnJio3J8kYTQOhlrNgsp_Bm5h4K55Yo7nlZGrskjVJP1lDZILxrsFkeGiXGsEQcHef",
-          "link": "https://link.coupang.com/re3/AFYOUTUBE?pageKey=7637556986\\u0026ctag=7637556986\\u0026itemId=20284491537\\u0026vendorItemId=87356990605\\u0026subparam=YT3-kmL0h3zNuM8OJoGrkqLK6lchd-Wo79PSOJm4EmvRJcFL8XYsdWQSuwirJt0ycIpYXFmwl6hASTmP65uKg_TFQ59aKjbPjR9K",
-          "raw_alt": "아이엠소스 뿌리셔시즈닝 치킨 감자튀김 (당일발송보장) 500g 1개, ₩13,490 , 판매처: ",
-          "matched_selector": "json:productListItemRenderer"
-        }
-      ]
+      "products": []
     },
     {
       "video_id": "YJuS6vWMASA",
       "video_url": "https://www.youtube.com/shorts/YJuS6vWMASA",
-      "products": []
+      "products": [
+        {
+          "name": "DIPYLON 대형 일자 테이블 중역 사장책상 사무실 A",
+          "price": "₩11,080,000",
+          "seller": "쿠팡",
+          "thumbnail": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcSUJFySAbEs4uUcca9cGGFnTkLUjhV9JH3EzIAB3t8IJkmpy-_d",
+          "link": "https://link.coupang.com/re3/AFYOUTUBE?pageKey=8785869289\\&ctag=8785869289\\&itemId=25566749702\\&vendorItemId=92557939218\\&subparam=YT3-Hr4J2HD-Gwvak-63iXEROCcbrH97VZBLAHrtylnmZjbS0SDicqaA8URookrXZm2wgzk6cQDIsMYcOudHoT_JNNXYVcf3aEtj",
+          "raw_alt": "DIPYLON 대형 일자 테이블 중역 사장책상 사무실 A, ₩11,080,000 제휴사, 판매처: 쿠팡",
+          "matched_selector": "json:productSticker"
+        }
+      ]
     },
     {
       "video_id": "4ML4_bsmT0s",
@@ -800,97 +569,23 @@
         {
           "name": "[자체제작] 1mm 티셔츠",
           "price": "₩27,900",
-          "seller": null,
-          "thumbnail": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQcO7-6dVTJIPeXSVElPpEZPpO5zIyHnY38NToGbwwRf9vh7b0A8F7afENw",
-          "link": "https://grit8518.cafe24.com/shop2/product/detail.html?product_no=2591&item_code=P0000DVR000A&utm_content=YT3-OppYRvXlNfnyyyCta__jbPXShm3jd--eiN5MraZH2e6XwobsoO966u-kq42mvLHp1SvkjnmWoTOTzDnzKO4N3rVh9QMmHCz3&utm_term=UCgQ39hN41_5BAy0BYo300Zg&utm_medium=product_shelf&utm_source=youtube&yts_sig=eyJ0eXAiOiJKV1QiLCJraWQiOiJ3R0hoMkEiLCJhbGciOiJSUzI1NiJ9.eyJleHBpcnlfdG9rZW4iOiI5ODMxMzlkZS01MjIzLTRlZTktODY2ZC1mMTE1NjNmOTBkNDQiLCJleHAiOjE3NzkyNjExNDZ9.AyM19pgjjAzTasBLGSFX_qEen9rlDRAG2N_VS9-fot3C04ErCARPxc5kHuZy5gcrMn68aTRSCvy6Cl13OSBZ8XoRYKzI4nbo53C0oL64nnjU_W1E0uSuW7X6UQOReiyWkPxTtIaGHJ5JlMK93T3cDo50RE3SI0FfbERWGgo8uRk7NiWW-v7UdJlRkLiJrlgWvuMJbgBUQmbFy8F6Oi2J6_xqr7SPus3cULqTwVhUBsiZyYNnPLT_LLRcchwfnDmrCrm4dUFFAJzgJIFOTU2EJlPhIq_TlT84wX_u0_oxGIIj7ENm2bhkYXlUjF70EUGctr75OnCY6RFk3wSbLpO8ig5Fz5cw41z5K2lpJNI2NzqsaNKMmJmt3QIYFYfCtGwKHHmAGVSdYqlsx_swn2Q-4LwI6n-0G33b7BMVeKXPSQ-LLT7nA6SAF306POULzWI90-e3QrHS1JF2NmAnbdpAPYJTL2AehtRyN8IqfV5CgJjoSFSq4bkILVmDGeIhHHT_&yts_source=Aa9_yn7byWWLixEelvDW4vCpG0O09jOnxuErt-pskNx0Ze93IXsBwm6UOIVEACNeZKzmXdlIhb7V1FxlgMWXk32eJunDskRL9Y2e50We2YBph2rj9FbdI4cQgyrhL-BAxZQbeqhUae48EVEbsYV-E7IAy1XVkNI9WgGdix7jkHTbHCcczYASLsonOiQ",
-          "raw_alt": "[자체제작] 1mm 티셔츠, 재고 한정 , 판매처: ",
-          "matched_selector": "json:productListItemRenderer"
+          "seller": "코디정 호감을 만드는 스타일",
+          "thumbnail": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQNWXjtNgyEaNq_e5IRKM2B59CEbvZAMSd4NxmSg_cOslAqyqtkZwDyvpSQMQxaQ9HVZJtlIeI",
+          "link": "https://grit8518.cafe24.com/shop2/product/detail.html?product_no=2591&item_code=P0000DVR000A&utm_content=YT3-fEa0KSakJPhCqMDwqWCQj2HA7G73jpq7B5gQ4bXxJNZYXXrMuRwImT-tOw-vVHXeiTRNQ5d78-fkFWdjvoEFLOq3jtmx_o1n&utm_term=UCgQ39hN41_5BAy0BYo300Zg&utm_medium=product_shelf&utm_source=youtube&yts_sig=eyJhbGciOiJSUzI1NiIsImtpZCI6IndHSGgyQSIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NzkzNDIxMDYsImV4cGlyeV90b2tlbiI6IjFkOGIwMGRmLWNjZDEtNDlmNi1hMjg1LWQ1YzBjYmRmMTY1YiJ9.SIEH6UFChRmsLeqd93R3vDhlUvaI3kEMHOGE5jAqlVP6hyUB17cbRe8GzTajJAkcigWSbwJzG1WywVwDxNN93Og5Gd5XmirfWQbJwwOQds12El0EA0HINkcPKOdoq3DHutYct5y9zKVfE60w3Vi867-LSAd2x4FZM0w0fISvU5cAzhWyM3hOIxktVvcqlNZpXIVu418r-UeQsGcndI2gACUKX7eAjOqPyzmUi6Na-CjIuUS7V-NvQN9OxcaAJ-hQQXZMQIGIwjwgXZhckk0CIiwODzytQc7V9KAmc3iGOd93tJZV4XFHfHhEN4TqBffYBE1p9F2B7YJJyCqRHDsOwiYAn7S8eC4X0EiHXVrskCrx8eIxS5h5suQO49Gw-y434BFKwSClspTSnmRkRrD1vg5f-TEX88JFWGMOLyt53DNttO4BDTOoXUIZ4C7HBRFA-T0ixlAcgmjXxmzlnIVN5hHmCmi8G9nlhZ1YnioFNz--dByTuSPcDMuVJ5GwX5kj&yts_source=Aa9_yn7PemAL4IK_VnQ_6bLTVDNYOKj8RnFJd_T69T_j9KjVhwq8g0-71rIkO_mATeaPRRmepMcCs1u68R7cMUOkjGHQ53q2sSSTdcr53I2mACmUzfwrCZWKiHrBFTcwJ-1ZX_equ-wUqHQycrXmS3-B3s3SKTja1i5ope2TX2klziiYSAFjMb4HQQU",
+          "raw_alt": "[자체제작] 1mm 티셔츠, ₩27,900 , 판매처: 코디정 호감을 만드는 스타일",
+          "matched_selector": "json:productSticker"
         }
       ]
     },
     {
       "video_id": "Meqno6_4eYM",
       "video_url": "https://www.youtube.com/shorts/Meqno6_4eYM",
-      "products": [
-        {
-          "name": "오뚜기 와사비분 300g 1개",
-          "price": "₩6,250",
-          "seller": null,
-          "thumbnail": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcTxRQ431Rv1fxmxb65_fdUeARrpeGPl5BEApCpo90lk6FL5_QN4lY1UhYF_yhtTGojxrLcnqU8T",
-          "link": "https://link.coupang.com/re3/AFYOUTUBE?pageKey=7124149863\\u0026ctag=7124149863\\u0026itemId=17969181743\\u0026vendorItemId=3005113497\\u0026subparam=YT3-_szy4800KKjFtvw1oHUXF9akbII8_uZ-MgfmnpVimDJxnwqXtP1mGfJgcnFj81JeEtQHljGtpozoPNIScIVceb7y5Gs5d213JDpK",
-          "raw_alt": "오뚜기 와사비분 300g 1개, ₩6,250 , 판매처: ",
-          "matched_selector": "json:productListItemRenderer"
-        },
-        {
-          "name": "자숙 대두 (냉동) 1kg 1개",
-          "price": "₩6,990",
-          "seller": null,
-          "thumbnail": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcRb-kHhHtRgHNY5Azb_MxWa4TfypdWNx1aqXZ0X-_KvGS29ojjEJ01lfXBvApw",
-          "link": "https://link.coupang.com/re3/AFYOUTUBE?pageKey=7722942244\\u0026ctag=7722942244\\u0026itemId=20731832800\\u0026vendorItemId=87802441845\\u0026subparam=YT3-cwuonmMZPlnunAk85Qx1WrNwnOq7j0oVeJcTAkeAZ5SLXrfOPhV4tKUfZ87VHzZsFTjGl_C1vksr5qNhcuiOd3MiamqJveFxWPow",
-          "raw_alt": "자숙 대두 (냉동) 1kg 1개, ₩6,990 , 판매처: ",
-          "matched_selector": "json:productListItemRenderer"
-        },
-        {
-          "name": "비치치 새우칩 1kg 업소용 1개",
-          "price": "₩6,560",
-          "seller": null,
-          "thumbnail": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcRtkXFKxtwp17qaAciKgZL9VDGoA_YIK4VWbpgi9iyUhyDnJADxQjZPwB7aqxyvC-Z-uatjwNAJ",
-          "link": "https://link.coupang.com/re3/AFYOUTUBE?pageKey=9472562031\\u0026ctag=9472562031\\u0026itemId=28195805652\\u0026vendorItemId=91761050306\\u0026subparam=YT3-3uomVkhi91BMx6xw5t6NJQ7z3w5KYPo_qQOO8bw-kcFzwrRQPBjIFPLZ40nYJNVsFG9SWPeFuafbR6Z8rqAwQnP1-KJvZA7uj7JF",
-          "raw_alt": "비치치 새우칩 1kg 업소용 1개, ₩6,560 , 판매처: ",
-          "matched_selector": "json:productListItemRenderer"
-        },
-        {
-          "name": "지엔씨푸드 나루토마끼 (냉동) 800g 4개",
-          "price": "₩47,100",
-          "seller": null,
-          "thumbnail": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcRTwh4hMR-Xk_KCdE4Dut5RbS63OKFh_Xnp8ETMmUlmjEyGMRZ7eRSvMQrSpw",
-          "link": "https://link.coupang.com/re3/AFYOUTUBE?pageKey=8620790758\\u0026ctag=8620790758\\u0026itemId=26965472217\\u0026vendorItemId=93934417693\\u0026subparam=YT3-L_dEe5xuxSMEcQr0dqnKwp-JIKy_vzwe6RyXZzx2WU2DIc2_rshOOY_74P2H9KT4WXzCRN-RJv_LAt-A0RXsA9EsgCr70qod-CBF",
-          "raw_alt": "지엔씨푸드 나루토마끼 (냉동) 800g 4개, ₩47,100 , 판매처: ",
-          "matched_selector": "json:productListItemRenderer"
-        }
-      ]
+      "products": []
     },
     {
       "video_id": "cP3aMKDtAXk",
       "video_url": "https://www.youtube.com/shorts/cP3aMKDtAXk",
-      "products": [
-        {
-          "name": "치즈생각 블랙치즈볼(30개입) 930g 1개",
-          "price": "₩12,490",
-          "seller": null,
-          "thumbnail": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcT5LBpYBsdHmY_ysE0vZvqtpqrmk34ZwEiH0MFS1ZPqUHa-ozRPde4RZ8kfkyCy2m_N1xPyTxQ",
-          "link": "https://link.coupang.com/re3/AFYOUTUBE?pageKey=7825503868\\u0026ctag=7825503868\\u0026itemId=19461718114\\u0026vendorItemId=78633130095\\u0026subparam=YT3-zf9HwEkhi6tgDBPg6xXBNnrFlO99FcMG0ffzBiEc9y2lwDl8rOd95tj9_A5UDKVVk5m659nZVM9IGfrr7gN-C6NDfOuGN0cX",
-          "raw_alt": "치즈생각 블랙치즈볼(30개입) 930g 1개, ₩12,490 , 판매처: ",
-          "matched_selector": "json:productListItemRenderer"
-        },
-        {
-          "name": "올반 미니찰핫도그 (냉동) 40g 8개입 1개",
-          "price": "₩7,630",
-          "seller": null,
-          "thumbnail": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQsNKs6k4hRhUGBIp3AsJdO_kqSsQSzinMNciI9t_OC4r1eDmT_WINSOjj-J1EG4s9sl-lHIKE",
-          "link": "https://link.coupang.com/re3/AFYOUTUBE?pageKey=2176243689\\u0026ctag=2176243689\\u0026itemId=3703210820\\u0026vendorItemId=71688484429\\u0026subparam=YT3-lNL8y0KkpkfrxUNIOQErmHSid4vDwS9Q9cQXxw0CvXEIViU_lC2LwUDhTNCT3fbmELjqipVJAoB1qK3BPj3mx2pZUnwVodOc",
-          "raw_alt": "올반 미니찰핫도그 (냉동) 40g 8개입 1개, ₩7,630 , 판매처: ",
-          "matched_selector": "json:productListItemRenderer"
-        },
-        {
-          "name": "팝콘치킨 1kg + 팝콘치킨 치즈팡팡 190g 없음",
-          "price": "₩20,430",
-          "seller": null,
-          "thumbnail": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcRkhfIUV6gGh8GpAkTD8NrkFDNRabiABUCv-a2xcSisIT9pwRaRHzgT51jfsF_KGv0jEd4z4HfW",
-          "link": "https://link.coupang.com/re3/AFYOUTUBE?pageKey=8586885170\\u0026ctag=8586885170\\u0026itemId=24911701299\\u0026vendorItemId=91918113296\\u0026subparam=YT3-uOBER_52DTexZ7unlSKNbGipQy4iwB1nukxlb6tf-LF5Fk7oP2bXFJUP4gVayhfr-HGH2RNvcUzxG_maJ7fDzcAvdJGpdaFf",
-          "raw_alt": "팝콘치킨 1kg + 팝콘치킨 치즈팡팡 190g 없음, ₩20,430 , 판매처: ",
-          "matched_selector": "json:productListItemRenderer"
-        },
-        {
-          "name": "아이엠소스 뿌리셔시즈닝 치킨 감자튀김 (당일발송보장) 500g 1개",
-          "price": "₩13,490",
-          "seller": null,
-          "thumbnail": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcQKi6UGrirnJio3J8kYTQOhlrNgsp_Bm5h4K55Yo7nlZGrskjVJP1lDZILxrsFkeGiXGsEQcHef",
-          "link": "https://link.coupang.com/re3/AFYOUTUBE?pageKey=7637556986\\u0026ctag=7637556986\\u0026itemId=20284491537\\u0026vendorItemId=87356990605\\u0026subparam=YT3-kmL0h3zNuM8OJoGrkqLK6lchd-Wo79PSOJm4EmvRJcFL8XYsdWQSuwirJt0ycIpYXFmwl6hASTmP65uKg_TFQ59aKjbPjR9K",
-          "raw_alt": "아이엠소스 뿌리셔시즈닝 치킨 감자튀김 (당일발송보장) 500g 1개, ₩13,490 , 판매처: ",
-          "matched_selector": "json:productListItemRenderer"
-        }
-      ]
+      "products": []
     },
     {
       "video_id": "7Oc5i360j_U",
@@ -904,20 +599,11 @@
         {
           "name": "[자체제작] 1mm 티셔츠",
           "price": "₩27,900",
-          "seller": null,
-          "thumbnail": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQcO7-6dVTJIPeXSVElPpEZPpO5zIyHnY38NToGbwwRf9vh7b0A8F7afENw",
-          "link": "https://grit8518.cafe24.com/shop2/product/detail.html?product_no=2591&item_code=P0000DVR000A&utm_content=YT3-VSf6QvR0xkp6slQskmLmLNMbQvvoImEXZNpHTifVkqPhNgmNmpbxbrmwW7N3Uy3ysircMP7de-XuVoycjEC3XTM0C2xR8eg&utm_term=UCgQ39hN41_5BAy0BYo300Zg&utm_medium=product_shelf&utm_source=youtube&yts_sig=eyJ0eXAiOiJKV1QiLCJraWQiOiJ3R0hoMkEiLCJhbGciOiJSUzI1NiJ9.eyJleHBpcnlfdG9rZW4iOiI0NzNiNzYzOS03YzEwLTQ4NjAtOGIzNS1mNjdkMjg5MmY1OTIiLCJleHAiOjE3NzkyNjExNDh9.DmoTxDR9XL-MnjsguZWy2waX0chJ_BGiArI4r9c1gdCiclOJNW7Zc-FP7cUeg8oDTCj6nxjqwdeBVYORfjy9cKO0iEZ4H4TTkFeJqX_sfbCbeFeW5WzAUuOnsUU2x4guGtK6mlV7lgLC8FWDUROklGjvLdlnfXQcfzhOszNJFRPQ2mgzjfXqQ97njoYhGeqZDzs0v4lobOml5cn4beEtkH_6ZtCwf_0cn8K8bVoBCJt7HirtmE3uLUWMqY4UgmVA2JjG8W8T8TFqrabZy4c04BP_efzFxAfW3kJoi4olCpvV_8kk5nbQXbkY4UrE8sureTnAWzCCU9LM6yCyB1hHi6M_9pcPEhNgqSSOfNPXl-WzOcnHhQY7fYi3WRWu8WwH7GI-dkFvtN_ZEwD72p_Hrt0r-1x47o2WEfxASSXLafG5CtbvfGEkC0IDxALgZywaNccfIIfovDCNv5IVXZ2Rrfs_G4Dv7A3vTjp5BL4UFTxEwkK9WnXpcUSdz3sEi6Lp&yts_source=Aa9_yn7CG7kRISZYBIKI_5zjSolpbxj5MrrFfei_4bfztXJvNunVtBAiEp6wukhuGZxieF_BMbhLaV_8PFlb58AJyGWB5e8nRLj3pa9avfrkq-iqgNegcKrMFXmBcQFlgcHWrC2yOfIBLsFpNwywGwwIezEC5-1cKKN7lw7uZTlQYUF1yEe0TUIcHBA",
-          "raw_alt": "[자체제작] 1mm 티셔츠, 재고 한정 , 판매처: ",
-          "matched_selector": "json:productListItemRenderer"
-        },
-        {
-          "name": "이케아 핫도그세트 핫도그빵 핫도그소시지 2종 1개 924g",
-          "price": "₩15,300",
-          "seller": null,
-          "thumbnail": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcR0u53uurlCUvPUF44OhY_bQ2bVWNjCMhVZ0Y5RvJJexbvDT7daY2eOcAPwUhrCrV5O4SDNJTyQ",
-          "link": "https://link.coupang.com/re3/AFYOUTUBE?pageKey=8493891557\\u0026ctag=8493891557\\u0026itemId=24583220545\\u0026vendorItemId=91592623766\\u0026subparam=YT3-Ch1xYKwhzUpOE7Yo23lNTnqYKeZTsFsx4oQxQApX55Q5EhLsPFIpR3sUJAjB3YiJYiEd1_CMT8pjSgICBaodMXaQ0ZPMgTQ",
-          "raw_alt": "이케아 핫도그세트 핫도그빵 핫도그소시지 2종 1개 924g, ₩15,300 , 판매처: ",
-          "matched_selector": "json:productListItemRenderer"
+          "seller": "코디정 호감을 만드는 스타일",
+          "thumbnail": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQNWXjtNgyEaNq_e5IRKM2B59CEbvZAMSd4NxmSg_cOslAqyqtkZwDyvpSQMQxaQ9HVZJtlIeI",
+          "link": "https://grit8518.cafe24.com/shop2/product/detail.html?product_no=2591&item_code=P0000DVR000A&utm_content=YT3-tTXclz8yZzTpSh8GhvbJGfKu15CF1Zy3cJgAcKvr94SCkJuO3OGsWb15BE3btDJ_BPAKoIWud9tBCNCcM0hnPWOjLi1KlFA&utm_term=UCgQ39hN41_5BAy0BYo300Zg&utm_medium=product_shelf&utm_source=youtube&yts_sig=eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6IndHSGgyQSJ9.eyJleHAiOjE3NzkzNDIxMDgsImV4cGlyeV90b2tlbiI6IjJjY2M1ZDdkLTQyMjAtNDYwZS05OTExLTBhMTA2N2VmMGU0OSJ9.ut9En7JA7J3Vc3v02MCZsF_hEUv8E2v4SNm6HpmW3_LXekgAdTkMYDERXCU6U09OP4LhPmDIfazmV-fbyZDHsiQraOMjh5ATQei7ohLHhJ9ArEB25NDv-185nqK0Xk89P6MuGh4XPG8KndB8ZkVuX6nqVi-zhvUPe5OtKa2wA8B0gmUb0XvSgiS6DEVcUbKrv_0CfrEElGk7wV6cBfGeZ0_6MJNZu2zuyglAxUlG4tRzkp96HBqejkYavuk-0r69A77H2V4RDPgn98CPF6nPO2EPTgV1jDWAPMlPMtM-7Ftgp4k1hI-KQ38OC8BKR56ED8SsBe1-cgzbVRpvjf7YOuFQhgHUKpl3BqAFTxJ4V9sWgjuENMs7AgZWi1_lKdnIuD7Sb8MMIfQobcxtnnVEOgJcTVv9L3QXMeAzKefzwn6BADrz7uB2Fa86slQhtAuTddu4kOplza31eHXRBBQJ8rxn3pF9U-vog9zv0i0nlxnJmfx26_7pAOgrXNhJhHCz&yts_source=Aa9_yn5JfC9PJTTQa2XmpGSQ4nar0hr4A08R7gyqcdvpmqRNGmEl7_bjhQb1yaVpoQTkhEqkK4PMups0VDaXNyFUFLq8VWinMCOvK0caEoZU1vgub1CAA5nW6z6X7ToHc0MMEDC_CQOv9ka6QJy80Fad7Opc3k1nZrwFIHN2VqUAnK6RtTMbyPjoQwM",
+          "raw_alt": "[자체제작] 1mm 티셔츠, ₩27,900 , 판매처: 코디정 호감을 만드는 스타일",
+          "matched_selector": "json:productSticker"
         }
       ]
     },
@@ -929,80 +615,7 @@
     {
       "video_id": "_jYFwCg1cP4",
       "video_url": "https://www.youtube.com/shorts/_jYFwCg1cP4",
-      "products": [
-        {
-          "name": "EOS 90D BODY+EF-S 18-135mm F3.5-5.6 IS USM+ LCD보호필름+크리닝킷+16GB 메모리패키지 128G패키지",
-          "price": "₩2,300,000",
-          "seller": null,
-          "thumbnail": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcQi4iapAXuMWXiwoQvGNupkvMNrXLzd1Jf-3QcMe65oTz-0-Lm7LstIn0Bsu-fgFrcS8W8TTpKD",
-          "link": "https://link.coupang.com/re3/AFYOUTUBE?pageKey=4974883639\\u0026ctag=4974883639\\u0026itemId=6612956177\\u0026vendorItemId=73906860276\\u0026subparam=YT3-lFLRpahO8KpiuY3ICXxKnLQngRw5qWdU3lRAmx4_OHYF898SpEu3wSvbKJ0liIvuq0wWUeQI0k8glUUFZh074kebKZMZjeF_",
-          "raw_alt": "EOS 90D BODY+EF-S 18-135mm F3.5-5.6 IS USM+ LCD보호필름+크리닝킷+16GB 메모리패키지 128G패키지, ₩2,300,000 , 판매처: ",
-          "matched_selector": "json:productListItemRenderer"
-        },
-        {
-          "name": "디지털 카메라 브이로그 입문 레트로 니콘 D7500 DSLR 및 AF-S DX NIKKOR 18-140mm f/3.5-5.6G ED VR 렌즈 Black_D7500 Dual Zoom Lens kit 블랙_D7500 듀얼 줌 렌즈 키트 | 베이스",
-          "price": "₩2,189,300",
-          "seller": null,
-          "thumbnail": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcSWwwsoUEXQAHNxnoQB7MUuoLZz5RkoTXYSh9M6yq_RNH6iS_V_eRJ58T27VUc",
-          "link": "https://link.coupang.com/re3/AFYOUTUBE?pageKey=8111348975\\u0026ctag=8111348975\\u0026itemId=22978891638\\u0026vendorItemId=94086678491\\u0026subparam=YT3-USLaSLiRbG5bkipkOUFU844VwYKg0viHw8Ltxvqg-lUjYdqRmFGOX2cirma92l8UIQfKDzAKGGnw3ZChdfWmp84g2zhnBZAc",
-          "raw_alt": "디지털 카메라 브이로그 입문 레트로 니콘 D7500 DSLR 및 AF-S DX NIKKOR 18-140mm f/3.5-5.6G ED VR 렌즈 Black_D7500 Dual Zoom Lens kit 블랙_D7500 듀얼 줌 렌즈 키트 | 베이스, ₩2,189,300 , 판매처: ",
-          "matched_selector": "json:productListItemRenderer"
-        },
-        {
-          "name": "캐논 EOS 70D 렌즈미포함 [ CNC ]",
-          "price": "₩700,000",
-          "seller": null,
-          "thumbnail": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcQjG0a_W6lM8gj-IQiHT72zACegB4-bLJepypeEeYXm7zsfUjSVQg_ByP3osCcEvmZ5QE3rmnE",
-          "link": "https://link.coupang.com/re3/AFYOUTUBE?pageKey=8251882954\\u0026ctag=8251882954\\u0026itemId=23758317360\\u0026vendorItemId=91515912388\\u0026subparam=YT3-VaHuh9h7iXhHkV_hJDp2ls_IKhnqqqmqI2DFsvOOUHbkiJjmPspqiWPDkja8v4_SnYHjq1XmK1-DWQrDNE_qPSqqKfdFC3w3",
-          "raw_alt": "캐논 EOS 70D 렌즈미포함 [ CNC ], ₩700,000 , 판매처: ",
-          "matched_selector": "json:productListItemRenderer"
-        },
-        {
-          "name": "캐논 EOS 100D + 18~135mm STM 렌즈킷 클릭 블랙",
-          "price": "₩488,420",
-          "seller": null,
-          "thumbnail": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcT9Ni59RpvnyuwX_aE3mZwauSkkbf0j5hC-gZRbtibhMNERVfcaYwzPXPdH7g",
-          "link": "https://link.coupang.com/re3/AFYOUTUBE?pageKey=8251883142\\u0026ctag=8251883142\\u0026itemId=23758317963\\u0026vendorItemId=93003655838\\u0026subparam=YT3-FixvIYfbNpX5Ht4M83RcRpHpk3rtFY6jv8NgPmm4HdZG3kg7burC3pBVCqqXljo-J5QOiQLm4zED-mxh_YOKCLjz7ED5vPOl",
-          "raw_alt": "캐논 EOS 100D + 18~135mm STM 렌즈킷 클릭 블랙, ₩488,420 , 판매처: ",
-          "matched_selector": "json:productListItemRenderer"
-        },
-        {
-          "name": "EOS 5D Mark IV BODY+EF 24-70mm F2.8L II USM+32G 메모리 패키지 256G+캐논가방+DSLR삼각대+크리닝킷",
-          "price": "₩5,549,000",
-          "seller": null,
-          "thumbnail": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcQyhCwJyCE4SDCbuqUWUd_rKcg05aMOxN-0FdjA0hJqxJR1G-AqU2vwMI3IjfEvcPn20tRWLO9P",
-          "link": "https://link.coupang.com/re3/AFYOUTUBE?pageKey=4971230669\\u0026ctag=4971230669\\u0026itemId=6600232274\\u0026vendorItemId=73894160798\\u0026subparam=YT3-QhRCKpMjdAYKiguOmh4INdH_yhfsooAOpSM2MFw3O5UsFVzmyV0s1x9U292dGmOwWYh-IhGleI3nsqsRXhiCysvJUGlSl5Hu",
-          "raw_alt": "EOS 5D Mark IV BODY+EF 24-70mm F2.8L II USM+32G 메모리 패키지 256G+캐논가방+DSLR삼각대+크리닝킷, ₩5,549,000 , 판매처: ",
-          "matched_selector": "json:productListItemRenderer"
-        },
-        {
-          "name": "Canon 디지털 SLR 카메라 EOS 6D Mark II 바디 EOS6DMK2 상세페이지 참조",
-          "price": "₩2,415,930",
-          "seller": null,
-          "thumbnail": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcSV3wAXSQG3xvq2z4lTL5eSWX1kHie6thbbR3PN8a6BjpBMwjrf9HjaqxfFSxsdaj3skVTcpU8",
-          "link": "https://link.coupang.com/re3/AFYOUTUBE?pageKey=9457819577\\u0026ctag=9457819577\\u0026itemId=28140885614\\u0026vendorItemId=95096366926\\u0026subparam=YT3-t2rw5kFkis4NlBdJ4q10lRJVXCdo6mzKLyE_aWiLbHpL0I7Na6o53o0odQa0EttN48VfGhtMvDmdSmTTM_pcASJ4yKekdbME",
-          "raw_alt": "Canon 디지털 SLR 카메라 EOS 6D Mark II 바디 EOS6DMK2 상세페이지 참조, ₩2,415,930 , 판매처: ",
-          "matched_selector": "json:productListItemRenderer"
-        },
-        {
-          "name": "Canon EOS 4000D Kit 1855 III DSLR Camera WiFi Enabled International Version Black 상세페이지 참조",
-          "price": "₩1,087,780",
-          "seller": null,
-          "thumbnail": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcSVFhx9V4C55qhtqwk03z2-BdVrKqxcnT_zbf6iQ8aE_W6oSKxwsCJRYcjL57c18nIRfkLFnRbh",
-          "link": "https://link.coupang.com/re3/AFYOUTUBE?pageKey=9027800070\\u0026ctag=9027800070\\u0026itemId=26478620181\\u0026vendorItemId=93453656300\\u0026subparam=YT3-c1zi11fkammFD8A2xtpVbYCKguoGazciHnPWDAv3vX1DAk1F2py9qeKiCzznnKaazTvzTDwjk4dXSFUCpkXzB7pxRsRnGaBq",
-          "raw_alt": "Canon EOS 4000D Kit 1855 III DSLR Camera WiFi Enabled International Version Black 상세페이지 참조, ₩1,087,780 , 판매처: ",
-          "matched_selector": "json:productListItemRenderer"
-        },
-        {
-          "name": "캐논 750D + 18-55mm + 입문자 풀 패키지 / 패키지 선택가능 2.아마추어패키지",
-          "price": "₩810,000",
-          "seller": null,
-          "thumbnail": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcTkGx--ixuBdc4H1CbpAeAS60wF2PeJQYu5-wvjg7IL_dNt8--N-1qDq_FV1vQDG4eMOkREi-jxfA",
-          "link": "https://link.coupang.com/re3/AFYOUTUBE?pageKey=8512574472\\u0026ctag=8512574472\\u0026itemId=24641594806\\u0026vendorItemId=91652373279\\u0026subparam=YT3-jNBVAO8MDwrRHCJUtEEilxZSyPuHZBSjUnMo6VBUCWqQIH56XfA-Qms2sKcsNHkzCCk2UYUvboWlETFg6mvPaPyOlNO3PqNq",
-          "raw_alt": "캐논 750D + 18-55mm + 입문자 풀 패키지 / 패키지 선택가능 2.아마추어패키지, ₩810,000 , 판매처: ",
-          "matched_selector": "json:productListItemRenderer"
-        }
-      ]
+      "products": []
     },
     {
       "video_id": "tm_-FXzrp_c",
