@@ -172,7 +172,13 @@ class handler(BaseHTTPRequestHandler):
         self.send_response(status)
         self.send_header("Content-Type", "application/json; charset=utf-8")
         self.send_header("Access-Control-Allow-Origin", "*")
-        self.send_header("Cache-Control", "public, max-age=300")  # 5-min cache
+        # Only cache successful responses. Errors must be re-fetched so a
+        # transient failure (e.g. missing env var while it's being set,
+        # YouTube quota blip) doesn't get pinned for 5 minutes by the CDN.
+        if 200 <= status < 300:
+            self.send_header("Cache-Control", "public, max-age=300")
+        else:
+            self.send_header("Cache-Control", "no-store")
         self.send_header("Content-Length", str(len(body)))
         self.end_headers()
         self.wfile.write(body)
