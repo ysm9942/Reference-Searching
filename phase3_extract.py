@@ -1,17 +1,25 @@
 """
-Phase 3 (parallel batch): visit each video URL from Phase 2 and extract
-the embedded shopping JSON. Runs N Chrome instances in parallel via a
-ThreadPoolExecutor to cut wall-clock time roughly Nx.
+Phase 3 (HTTP, parallel): fetch each Shorts page via plain HTTPS and parse the
+embedded `productSticker` JSON directly from the response body.
 
-Since we read the data out of `page_source` (`productListItemRenderer`
-JSON blocks), headless Chrome works fine — there's no video playback or
-visible sticker dependency. Headless makes parallel runs cheaper on RAM
-and avoids 4 visible browser windows fighting for the screen.
+Why HTTP instead of Chrome:
+    Earlier versions launched `undetected_chromedriver` to render the page,
+    but the data we extract (`productSticker` JSON) is shipped in the
+    initial HTML response. There's no JS rendering required to read it —
+    Selenium was paying ~3-10 seconds of Chrome startup + page-load
+    overhead per video for no actual benefit.
+
+    Plain `requests.get` returns the same JSON in ~1.5s and works fine in
+    parallel via ThreadPoolExecutor. End-to-end on the 81-video set drops
+    from ~130s (Chrome × 4 workers) to ~10-20s (HTTP × 20 workers).
+
+A `--use-chrome` flag preserves the old uc.Chrome path as a safety net for
+URLs that ever start serving stripped content over plain HTTP.
 
 Run:
     python phase3_extract.py
-    python phase3_extract.py --workers 4 --headless --limit 30
-    python phase3_extract.py --workers 6 --timeout 5 --delay 0.5
+    python phase3_extract.py --workers 20 --retries 1
+    python phase3_extract.py --use-chrome    # legacy path
 """
 from __future__ import annotations
 
@@ -24,40 +32,41 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime, timezone
 from pathlib import Path
 
-from poc_shopping_sticker import (
-    build_driver,
-    extract_products,
-    wait_for_any_sticker,
-)
+import requests
+
+from poc_shopping_sticker import extract_products_from_json
 
 
 DATA_DIR = Path("data")
 INPUT_PATH = DATA_DIR / "phase2_videos.json"
 OUTPUT_PATH = DATA_DIR / "phase3_products.json"
 
-# Thread-safe printing so worker logs don't interleave mid-line
-_print_lock = threading.Lock()
+# Browser-like headers so YouTube serves the full HTML (not a stripped
+# variant or a JSON API response).
+DEFAULT_HEADERS = {
+    "User-Agent": (
+        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+        "AppleWebKit/537.36 (KHTML, like Gecko) "
+        "Chrome/120.0.0.0 Safari/537.36"
+    ),
+    "Accept-Language": "ko-KR,ko;q=0.9,en;q=0.8",
+    "Accept": (
+        "text/html,application/xhtml+xml,application/xml;q=0.9,"
+        "image/avif,image/webp,*/*;q=0.8"
+    ),
+    "Sec-Fetch-Site": "none",
+    "Sec-Fetch-Mode": "navigate",
+    "Sec-Fetch-User": "?1",
+    "Sec-Fetch-Dest": "document",
+    "Upgrade-Insecure-Requests": "1",
+}
 
-# uc patches the chromedriver binary at every Chrome() init and races on
-# the patched-binary path when invoked concurrently. We serialize the
-# initialization (the actual page-fetch loop still runs in parallel).
-_driver_init_lock = threading.Lock()
+_print_lock = threading.Lock()
 
 
 def log(msg: str) -> None:
     with _print_lock:
         print(msg, flush=True)
-
-
-def build_driver_serialized(headless: bool, worker_id: int):
-    """build_driver() but with a lock so workers don't fight over chromedriver.exe."""
-    with _driver_init_lock:
-        log(f"[w{worker_id}] initializing driver…")
-        # Brief settle so the previous worker's file handles fully release
-        time.sleep(0.3)
-        driver = build_driver(headless=headless)
-        log(f"[w{worker_id}] driver ready")
-        return driver
 
 
 def load_videos() -> list[dict]:
@@ -89,138 +98,219 @@ def save_results(results: list[dict], total: int) -> None:
     )
 
 
-def process_one(driver, video: dict, timeout: float, settle: float) -> dict:
-    """Visit one URL, extract products. Returns result dict."""
+# ────────────────────────────────────────────────────────────────────────────
+# HTTP path (default)
+# ────────────────────────────────────────────────────────────────────────────
+def fetch_http(
+    session: requests.Session, url: str, timeout: float, retries: int
+) -> tuple[str | None, int]:
+    """Fetch URL via HTTP with optional retries. Returns (html, status_code)."""
+    last_status = -1
+    for attempt in range(retries + 1):
+        try:
+            r = session.get(url, timeout=timeout)
+            last_status = r.status_code
+            if r.status_code == 200 and r.text:
+                return r.text, r.status_code
+        except requests.RequestException:
+            pass
+        if attempt < retries:
+            time.sleep(0.4)
+    return None, last_status
+
+
+def process_one_http(
+    session: requests.Session,
+    video: dict,
+    timeout: float,
+    retries: int,
+) -> dict:
     url = video.get("video_url")
     vid = video.get("video_id")
-    products: list[dict] = []
     if not url:
         return {"video_id": vid, "video_url": url, "products": []}
-
-    try:
-        driver.get(url)
-        winner = wait_for_any_sticker(driver, timeout=timeout)
-        if winner and settle > 0:
-            time.sleep(settle)
-        products = extract_products(driver)
-    except Exception as e:
-        log(f"  [err] {vid}: {e}")
-        products = []
-
-    return {"video_id": vid, "video_url": url, "products": products}
+    html, status = fetch_http(session, url, timeout, retries)
+    products = extract_products_from_json(html) if html else []
+    return {
+        "video_id": vid,
+        "video_url": url,
+        "products": products,
+        "http_status": status,
+    }
 
 
-def worker(
-    worker_id: int,
-    chunk: list[dict],
-    headless: bool,
-    timeout: float,
-    settle: float,
-    delay: float,
-) -> list[dict]:
-    """A worker thread: creates its own driver, processes chunk, returns results."""
-    log(f"[w{worker_id}] starting · {len(chunk)} video(s)")
-    try:
-        driver = build_driver_serialized(headless=headless, worker_id=worker_id)
-    except Exception as e:
-        log(f"[w{worker_id}] FAILED to start driver: {e}")
-        return []
+def run_http(videos: list[dict], workers: int, timeout: float, retries: int) -> list[dict]:
+    """Parallel HTTP fetcher. Returns results in the same order as `videos`."""
+    log(
+        f"[cfg] {len(videos)} video(s) | mode=HTTP | "
+        f"workers={workers} | timeout={timeout}s | retries={retries}"
+    )
 
-    results: list[dict] = []
-    try:
-        for i, video in enumerate(chunk, 1):
-            r = process_one(driver, video, timeout, settle)
-            results.append(r)
+    started = time.time()
+    # A shared Session enables connection pooling / keep-alive, which is
+    # important when hammering one host repeatedly.
+    session = requests.Session()
+    session.headers.update(DEFAULT_HEADERS)
 
-            n_products = len(r["products"])
-            title = (video.get("title") or "")[:42]
-            status = f"+{n_products} products" if n_products else "no sticker"
-            log(f"[w{worker_id}] {i:>2}/{len(chunk)} {r['video_id']}  ({status})  {title}")
+    results: list[dict | None] = [None] * len(videos)
 
-            if i < len(chunk):
-                time.sleep(delay)
-    finally:
+    with ThreadPoolExecutor(max_workers=workers, thread_name_prefix="http") as ex:
+        future_to_idx = {
+            ex.submit(process_one_http, session, v, timeout, retries): i
+            for i, v in enumerate(videos)
+        }
+        done = 0
+        for f in as_completed(future_to_idx):
+            idx = future_to_idx[f]
+            try:
+                r = f.result()
+            except Exception as e:
+                v = videos[idx]
+                log(f"  [err] {v.get('video_id')}: {e}")
+                r = {
+                    "video_id": v.get("video_id"),
+                    "video_url": v.get("video_url"),
+                    "products": [],
+                    "http_status": -1,
+                }
+            results[idx] = r
+            done += 1
+            hit = len(r["products"])
+            title = (videos[idx].get("title") or "")[:42]
+            tag = f"+{hit}" if hit else "·"
+            log(f"  {done:>3}/{len(videos)} [{r.get('http_status','?'):>3}] {tag:>4}  {title}")
+
+            # Save incrementally so a Ctrl-C doesn't wipe everything
+            if done % 10 == 0 or done == len(videos):
+                save_results([r for r in results if r is not None], len(videos))
+
+    final = [r for r in results if r is not None]
+    elapsed = time.time() - started
+    hits = sum(1 for r in final if r["products"])
+    total_products = sum(len(r["products"]) for r in final)
+    log("")
+    log(
+        f"[ok] {len(final)}/{len(videos)} processed in {elapsed:.1f}s "
+        f"({len(final)/max(elapsed, 0.001):.1f} videos/sec)"
+    )
+    log(f"     {hits} videos with sticker · {total_products} product(s) total")
+    return final
+
+
+# ────────────────────────────────────────────────────────────────────────────
+# Chrome path (legacy fallback, kept for --use-chrome)
+# ────────────────────────────────────────────────────────────────────────────
+def run_chrome(videos: list[dict], workers: int, timeout: float, headless: bool) -> list[dict]:
+    """Legacy uc.Chrome-based path. Slower but useful if HTTP ever gets blocked."""
+    # Imported lazily so the HTTP path doesn't pay the uc import cost
+    from poc_shopping_sticker import (
+        build_driver,
+        extract_products,
+        wait_for_any_sticker,
+    )
+
+    _driver_init_lock = threading.Lock()
+
+    def _build_serialized(worker_id: int):
+        with _driver_init_lock:
+            log(f"[w{worker_id}] initializing chrome…")
+            time.sleep(0.3)
+            d = build_driver(headless=headless)
+            log(f"[w{worker_id}] driver ready")
+            return d
+
+    def worker(worker_id: int, chunk: list[dict]) -> list[dict]:
         try:
-            driver.quit()
-        except Exception:
-            pass
+            driver = _build_serialized(worker_id)
+        except Exception as e:
+            log(f"[w{worker_id}] FAILED to start driver: {e}")
+            return []
+        out: list[dict] = []
+        try:
+            for i, v in enumerate(chunk, 1):
+                url = v.get("video_url")
+                vid = v.get("video_id")
+                products: list[dict] = []
+                try:
+                    driver.get(url)
+                    wait_for_any_sticker(driver, timeout=timeout)
+                    products = extract_products(driver)
+                except Exception as e:
+                    log(f"  [err] {vid}: {e}")
+                out.append({"video_id": vid, "video_url": url, "products": products})
+                hit = len(products)
+                tag = f"+{hit}" if hit else "·"
+                title = (v.get("title") or "")[:42]
+                log(f"[w{worker_id}] {i:>2}/{len(chunk)} {tag:>4} {vid}  {title}")
+        finally:
+            try:
+                driver.quit()
+            except Exception:
+                pass
+        return out
 
-    log(f"[w{worker_id}] done")
-    return results
+    log(f"[cfg] {len(videos)} video(s) | mode=CHROME | workers={workers} | headless={headless}")
+
+    # Pre-warm to download the patched chromedriver once
+    try:
+        warm = build_driver(headless=True)
+        warm.quit()
+    except Exception as e:
+        log(f"[init] pre-warm FAILED: {e}")
+        sys.exit(1)
+
+    started = time.time()
+    chunks = [videos[i::workers] for i in range(workers)]
+
+    out: list[dict] = []
+    with ThreadPoolExecutor(max_workers=workers) as ex:
+        futures = [ex.submit(worker, i, c) for i, c in enumerate(chunks)]
+        for f in as_completed(futures):
+            try:
+                out.extend(f.result())
+            except Exception as e:
+                log(f"worker crashed: {e}")
+
+    # Restore original order
+    by_id = {r["video_id"]: r for r in out}
+    ordered = [by_id[v["video_id"]] for v in videos if v.get("video_id") in by_id]
+    save_results(ordered, len(videos))
+
+    elapsed = time.time() - started
+    hits = sum(1 for r in ordered if r["products"])
+    total_products = sum(len(r["products"]) for r in ordered)
+    log("")
+    log(f"[ok] {len(ordered)}/{len(videos)} processed in {elapsed:.1f}s")
+    log(f"     {hits} videos with sticker · {total_products} product(s) total")
+    return ordered
 
 
+# ────────────────────────────────────────────────────────────────────────────
 def main() -> None:
     ap = argparse.ArgumentParser(
         description=__doc__,
         formatter_class=argparse.RawDescriptionHelpFormatter,
     )
-    ap.add_argument("--workers", type=int, default=4, help="parallel Chrome instances (default 4)")
-    ap.add_argument("--headless", action="store_true", default=True, help="run Chrome headless (default: on)")
-    ap.add_argument("--no-headless", dest="headless", action="store_false", help="show Chrome windows (debugging)")
-    ap.add_argument("--timeout", type=float, default=5.0, help="page wait per video (sec)")
-    ap.add_argument("--delay", type=float, default=0.3, help="pause between videos in same worker (sec)")
-    ap.add_argument("--settle", type=float, default=0.0, help="post-load settle time (sec)")
+    ap.add_argument("--workers", type=int, default=20, help="parallel workers (default 20 for HTTP, drop to 4 for Chrome)")
+    ap.add_argument("--timeout", type=float, default=15.0, help="per-request timeout (sec)")
+    ap.add_argument("--retries", type=int, default=1, help="HTTP retries on failure (default 1)")
     ap.add_argument("--limit", type=int, default=0, help="cap videos processed (0 = all)")
+    ap.add_argument("--use-chrome", action="store_true", help="use legacy uc.Chrome path (slower)")
+    ap.add_argument("--headless", action="store_true", default=True, help="(chrome path) run headless")
+    ap.add_argument("--no-headless", dest="headless", action="store_false")
     args = ap.parse_args()
 
     videos = load_videos()
     if args.limit:
         videos = videos[: args.limit]
 
-    n_workers = max(1, min(args.workers, len(videos)))
+    if args.use_chrome:
+        workers = min(args.workers, 4)  # Chrome wants fewer workers
+        results = run_chrome(videos, workers=workers, timeout=args.timeout, headless=args.headless)
+    else:
+        results = run_http(videos, workers=args.workers, timeout=args.timeout, retries=args.retries)
 
-    log(
-        f"[cfg] {len(videos)} video(s)  workers={n_workers}  "
-        f"headless={args.headless}  timeout={args.timeout}s  delay={args.delay}s"
-    )
-
-    # Pre-warm: first uc.Chrome() may download a patched chromedriver
-    # (~10-20s). Doing this once in the main thread avoids N parallel
-    # workers racing for the same download.
-    log("[init] pre-warming chromedriver (one-time setup)")
-    t0 = time.time()
-    try:
-        warm = build_driver(headless=True)
-        warm.quit()
-        log(f"[init] pre-warm done in {time.time()-t0:.1f}s")
-    except Exception as e:
-        log(f"[init] pre-warm FAILED: {e}")
-        sys.exit(1)
-
-    # Interleave videos across workers so per-keyword runs don't all land
-    # on one worker (which would create imbalance if some keywords have
-    # long videos)
-    chunks: list[list[dict]] = [videos[i::n_workers] for i in range(n_workers)]
-
-    started = time.time()
-    all_results: list[dict] = []
-
-    with ThreadPoolExecutor(max_workers=n_workers, thread_name_prefix="p3") as ex:
-        futures = {
-            ex.submit(worker, i, chunk, args.headless, args.timeout, args.settle, args.delay): i
-            for i, chunk in enumerate(chunks)
-        }
-        for f in as_completed(futures):
-            try:
-                all_results.extend(f.result())
-            except Exception as e:
-                log(f"[w{futures[f]}] crashed: {e}")
-
-    # Restore original order so downstream phases get predictable indexing
-    by_id = {r["video_id"]: r for r in all_results}
-    ordered = [by_id[v["video_id"]] for v in videos if v.get("video_id") in by_id]
-
-    elapsed = time.time() - started
-    hits = sum(1 for r in ordered if r.get("products"))
-    total_products = sum(len(r.get("products", [])) for r in ordered)
-
-    save_results(ordered, len(videos))
-
-    log("")
-    log(f"[ok] processed {len(ordered)}/{len(videos)} video(s) in {elapsed:.1f}s -> {OUTPUT_PATH}")
-    log(f"     {hits} had shopping sticker(s) · {total_products} product(s) total")
-    if elapsed > 0:
-        log(f"     ({len(ordered) / elapsed:.1f} videos/sec average)")
+    save_results(results, len(videos))
 
 
 if __name__ == "__main__":

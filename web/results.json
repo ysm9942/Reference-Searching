@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-14T05:54:50.877137+00:00",
+  "generated_at": "2026-05-28T07:15:26.455722+00:00",
   "items": [
     {
       "video_id": "VRftZLLThb4",
@@ -21,17 +21,7 @@
       "published_at": "2022-08-08T12:00:28Z",
       "thumbnail": "https://i.ytimg.com/vi/s3mngXTSx5I/hqdefault.jpg",
       "matched_keyword": "여름 옷 추천",
-      "products": [
-        {
-          "name": "라벨라코 테이 실내화 핑크 여성용 FREE(240 mm 내외) 1개",
-          "price": "₩13,900",
-          "seller": "쿠팡!",
-          "thumbnail": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcQu8G9Lx9o2V2vzf18pKdz2zf2EhPKr17mHVfI7J6k6VveNo320v92EaODT2ouPg1tMkNjWgGL1aCzWwStFbgaDPY5cZmOJkofHxSopgZJGw5XUgyfdUx4",
-          "link": "https://link.coupang.com/re3/AFYOUTUBE?pageKey=7371328878\\&ctag=7371328878\\&itemId=19015513396\\&vendorItemId=86140024257\\&subparam=YT3-Sp3Cg3lM6u2nxYKs6Wx1stZNQc5PiLjU4YaNiVaM0bGguOIGMlDZYLZlt2J6fhin0KlAgmLPNWBVBGxWUzuOj-_Uiri9ecbw",
-          "raw_alt": "라벨라코 테이 실내화 핑크 여성용 FREE(240 mm 내외) 1개, ₩13,900 제휴사, 판매처: 쿠팡!",
-          "matched_selector": "json:productSticker"
-        }
-      ]
+      "products": []
     },
     {
       "video_id": "-j92jOdKaCI",
@@ -59,7 +49,7 @@
           "price": "₩59,300",
           "seller": "쿠팡",
           "thumbnail": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcR6B5GlSQZWEXYJUol58vxbSs_lZaW5y_R2xsszMIXblAGKkSvx6ygXKYJdJbz93oxe9irY6AqtZdxWWbgoJofG-gQIwVyfnYOwyZJThwqAV5E-eTi4U_I",
-          "link": "https://link.coupang.com/re3/AFYOUTUBE?pageKey=8120865669&ctag=8120865669&itemId=23034997064&vendorItemId=90068747733&subparam=YT3-IzS1tUAnnOQsw4Y24IdSEhEboTDPzgGBQQFfyMGjvNWO47bLVOj7keR5f_8XvrUKYCF70gj7awqBav06RgF23PFNIswThl0",
+          "link": "https://link.coupang.com/re3/AFYOUTUBE?pageKey=8120865669&ctag=8120865669&itemId=23034997064&vendorItemId=90068747733&subparam=YT3-McxH-4qlRfxhqpXFFoWwZ93m2LlfX2nHQfH42lxiygz4K8P83SkcXdZ5l5TEOrXV_8kQG2n-jzLnSSHSLKidgw7o-0FyCRc",
           "raw_alt": "HDEX 에이치덱스 반팔 메인로고 머슬핏 반팔티 8 color 카키 M, ₩59,300 제휴사, 판매처: 쿠팡",
           "matched_selector": "json:productSticker"
         }
@@ -79,18 +69,9 @@
           "name": "서브22 역도 데드리프트 스쿼트화 헬스 리프팅화 39(245mm) 블랙",
           "price": "₩21,900",
           "seller": "쿠팡!",
-          "thumbnail": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQhAdIYlx4Yti93BTZuJVbNJ11VUynXUmWkDw01GCYI4EbbgQG01dK9adDiTozQYSBy21kc7vYR",
-          "link": "https://link.coupang.com/re3/AFYOUTUBE?pageKey=7251437557&ctag=7251437557&itemId=18447016969&vendorItemId=85589853215&subparam=YT3-V9_zXy4e2VhYP1MzE5TWghQbNtZ63mlWUDjz11vP-zdTSr7GFF0htM9kMob8gXryfticsyrC5ZCDbTOZ9Q2eeJX0HtodWniV",
+          "thumbnail": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcTGwPKWEkZIWIdKWdSL7wtpDtgZHj8vYj3xW6A9ATIsUfFo6vz-fUbW2GLm_AHnpqjpGUJp1cBkSg",
+          "link": "https://link.coupang.com/re3/AFYOUTUBE?pageKey=7251437557&ctag=7251437557&itemId=18447016969&vendorItemId=85589853215&subparam=YT3-azpstzGyrqqR7dvTuJGoNgcOuZ_mPE52zeLohSxpOA-xpaUvxD1nrfL9h2RcANAPQSjeSIHkl3nA-2apwyoPLWMUuoFf2M2c",
           "raw_alt": "서브22 역도 데드리프트 스쿼트화 헬스 리프팅화 39(245mm) 블랙, ₩21,900 제휴사, 판매처: 쿠팡!",
-          "matched_selector": "json:productSticker"
-        },
-        {
-          "name": "언더바 오토바이 헬멧 U-01 Neon L",
-          "price": "₩87,070",
-          "seller": "쿠팡!",
-          "thumbnail": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcT9fwRAPui5B_BbIC1FOl4Je9q13DgoYopQ4KhD3fGW8v9KQysiAjAEWpbcp5Yoc_NKFjx_uy2H5Xka76W2aHsfvo6E5QTvAoYjP0uKgLTlBCt022-iZA",
-          "link": "https://link.coupang.com/re3/AFYOUTUBE?pageKey=6514048239\\&ctag=6514048239\\&itemId=14401390228\\&vendorItemId=81645513465\\&subparam=YT3-x-U-8RRXvQxqLOez9DdxiL-zdp7fUxGbCoGo_xPwkL5BA25QsJ9hwYalvkdmDD2DITIAoKH-xHnNYJfEl8GxxIsKj_egb-4",
-          "raw_alt": "언더바 오토바이 헬멧 U-01 Neon L, ₩87,070 제휴사, 판매처: 쿠팡!",
           "matched_selector": "json:productSticker"
         }
       ]
@@ -121,8 +102,17 @@
           "price": "₩20,700",
           "seller": "쿠팡",
           "thumbnail": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQqvrvBGO21UBSYdVzqU2_3rJHguATDJQg5mOsnrd2VxTlpXTpbuvifDmlyilCerQE-0hBdbrW-Ii77PjETm0i20s4ZOlEOeDU6bTs8wMuaC1kop5sipKE",
-          "link": "https://link.coupang.com/re3/AFYOUTUBE?pageKey=7138680582&ctag=7138680582&itemId=17918304721&vendorItemId=85080936459&subparam=YT3-RsgBJ3E7P1YBtLYkuUBKR1wDv9bkEkOh3OJVGE9mo-BQh0oJxKlT7rQO69ZnYh0PHLlutwDoT9JCMc8aWSkqLkdWASbprk19",
+          "link": "https://link.coupang.com/re3/AFYOUTUBE?pageKey=7138680582&ctag=7138680582&itemId=17918304721&vendorItemId=85080936459&subparam=YT3-EZkK34OmQzaKTD4sGZumPKTZdoZ85hYOs90jh6tHQCgPboF6IOsfAzlrcC5nuihQPScbL6dMS9byRGMFYEVOIlIHlUf-6R5Z",
           "raw_alt": "얼굴 잡티 제거 스팀기 헤어 모공관리 홈케어 미스트기 가정용 미용 스티머 피부 관리기 토끼 파랑, ₩20,700 제휴사, 판매처: 쿠팡",
+          "matched_selector": "json:productSticker"
+        },
+        {
+          "name": "풍성 멸균 포비돈용 알콜용 소독면봉 30P 4개 30개입",
+          "price": "₩15,490",
+          "seller": "쿠팡",
+          "thumbnail": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcT8dDB8AGGe5k5Onn517Le9fc92nmpFb1Uczwm9N9-fK810DbgQ6qvmvUuIHyBlckFOsYvPg0pfE8Mhh4Dqi2YL7BPUpCqsbvQ_QJnFMG17oYhqRYOQjw",
+          "link": "https://link.coupang.com/re3/AFYOUTUBE?pageKey=8896675621\\&ctag=8896675621\\&itemId=25975839589\\&vendorItemId=92958423264\\&subparam=YT3-O4Fl3FgCbdwMDSJ6owrHMO4q3-ACsSdc_e80kWXlj093QV-lvhaxqTIxEuOXb9b1Bv6OI2bI8XGFyw9pZj5Ng4hZeo8Qggw",
+          "raw_alt": "풍성 멸균 포비돈용 알콜용 소독면봉 30P 4개 30개입, ₩15,490 제휴사, 판매처: 쿠팡",
           "matched_selector": "json:productSticker"
         }
       ]
@@ -136,17 +126,7 @@
       "published_at": "2025-07-08T00:20:17Z",
       "thumbnail": "https://i.ytimg.com/vi/Z6PPFqBQjPA/hqdefault.jpg",
       "matched_keyword": "반팔",
-      "products": [
-        {
-          "name": "펭귄 양모 펠트 동물 찌름 재미 Diy 자수 바느질 귀여운 수제 DIY 재미 있은 연인 재료 패키지 커플 선물 2 1개",
-          "price": "₩18,340",
-          "seller": "쿠팡",
-          "thumbnail": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcTdl1kZ3nALA_vSdzQhd1QAAZofA3jGAmT8OcQf_apuHl6GLEJ1v2Q_C5pfG1VTrms7YcT_1Sk",
-          "link": "https://link.coupang.com/re3/AFYOUTUBE?pageKey=8828426037\\&ctag=8828426037\\&itemId=19817179537\\&vendorItemId=86919198588\\&subparam=YT3-7ZyKODUdkJssdhztwxZ1TUm-e08YsmaJQSs5kcyL4CRk5Fwp_TjSoU9WbHCxYpVT6x4uyey2YAX2RvD00eyu7_WnuL1Q5eW6",
-          "raw_alt": "펭귄 양모 펠트 동물 찌름 재미 Diy 자수 바느질 귀여운 수제 DIY 재미 있은 연인 재료 패키지 커플 선물 2 1개, ₩18,340 제휴사, 판매처: 쿠팡",
-          "matched_selector": "json:productSticker"
-        }
-      ]
+      "products": []
     },
     {
       "video_id": "aE-2PBO5pSs",
@@ -193,11 +173,11 @@
       "products": [
         {
           "name": "[더달콤] 골반뽕 엉덩이뽕 보정팬티모음 보정속옷",
-          "price": "₩14,220",
+          "price": "₩14,060",
           "seller": "지그재그",
           "thumbnail": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcQ7kHzaMF_akcu4ymhAXGmL2RCGYopTkla-POL4YhygE7n3dAg",
-          "link": "https://zigzag.kr/link/bridge?product_id=125369152&shop_id=360&srsltid=AfmBOorPNuX_mgmElyCW9n3RPaEB7gL43mT3ICN17PhSSEbcQ5JqTPRSKJw&utm_content=YT3-9eI7bbde5-yomklx8cjVA9aW_PhUpNlxT7GGd0PyDu_6WvZjHDssrm5mI01aLh0ohjYhSMghiC1I1emHQqbRaCaLEf_Pr06a&utm_source=youtube&utm_medium=product_shelf&utm_commission=paid",
-          "raw_alt": "[더달콤] 골반뽕 엉덩이뽕 보정팬티모음 보정속옷, ₩14,220 제휴사, 판매처: 지그재그",
+          "link": "https://zigzag.kr/link/bridge?product_id=125369152&shop_id=360&srsltid=AfmBOopV2vkZ33ghStHkru71EG_HepoKtD8fZ3KIGAXj_LV4kJCG-YvAM6s&utm_content=YT3-4YMieuTRVWjGPzOt6ykLhy82p5WPe-GddUf9g3UbhumC8LM_1MqZzKQ4hw875VxKNSpw7Q56KwDwrgmJxJ8n6uOpQn6JtfOf&utm_source=youtube&utm_medium=product_shelf&utm_commission=paid",
+          "raw_alt": "[더달콤] 골반뽕 엉덩이뽕 보정팬티모음 보정속옷, ₩14,060 제휴사, 판매처: 지그재그",
           "matched_selector": "json:productSticker"
         }
       ]
@@ -211,17 +191,7 @@
       "published_at": "2024-04-24T03:00:10Z",
       "thumbnail": "https://i.ytimg.com/vi/GIO_3DLYDL0/hqdefault.jpg",
       "matched_keyword": "옷 코디",
-      "products": [
-        {
-          "name": "애원 동물 강아지 강아지 쿠션 사계절 하우스 50cm 오리 1개",
-          "price": "₩24,900",
-          "seller": "쿠팡",
-          "thumbnail": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcS0HbkLJGaOKFUihGaUm13iz1HTHhQcW-uAAvL7cC_IIDTUbe8",
-          "link": "https://link.coupang.com/re3/AFYOUTUBE?pageKey=6718888964\\&ctag=6718888964\\&itemId=15621618880\\&vendorItemId=82839254343\\&subparam=YT3-XZ54sSEbKlrwxg85SS8_RNAy021NixArbPCEjT__9NI-_RAbXvUZ1giFPetS_Y07lH4q5fUlEdKHv1xcI9H_cHtqyyW45Shu",
-          "raw_alt": "애원 동물 강아지 강아지 쿠션 사계절 하우스 50cm 오리 1개, ₩24,900 제휴사, 판매처: 쿠팡",
-          "matched_selector": "json:productSticker"
-        }
-      ]
+      "products": []
     },
     {
       "video_id": "lbsO1sVmu9c",
@@ -232,17 +202,7 @@
       "published_at": "2023-09-10T10:34:08Z",
       "thumbnail": "https://i.ytimg.com/vi/lbsO1sVmu9c/hqdefault.jpg",
       "matched_keyword": "옷 코디",
-      "products": [
-        {
-          "name": "다다미 카페트 그린 12mm 195x195cm(9칸) 잎 130x195cm(6구라) 두께 12 mm(봉투 공급) 4. 연한 파랑",
-          "price": "₩163,600",
-          "seller": "쿠팡",
-          "thumbnail": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcQtd57A4z3NtmPBKZIV00Doz90Lcg8Pdw-JkLUhfSOvIBz1iI2n",
-          "link": "https://link.coupang.com/re3/AFYOUTUBE?pageKey=9088733216\\&ctag=9088733216\\&itemId=26707221853\\&vendorItemId=93678979721\\&subparam=YT3-pwne-jUcqUPGUXU4GfRJmnMLazubzowdyNMOUjG7BAXE-Qg5UVW2Vkh2O-_6eYrHYDTwx4z3AhI6XqtifmW9KZVeXbysa9xQ",
-          "raw_alt": "다다미 카페트 그린 12mm 195x195cm(9칸) 잎 130x195cm(6구라) 두께 12 mm(봉투 공급) 4. 연한 파랑, ₩163,600 제휴사, 판매처: 쿠팡",
-          "matched_selector": "json:productSticker"
-        }
-      ]
+      "products": []
     },
     {
       "video_id": "Izq52_-t_BY",
@@ -308,17 +268,7 @@
       "published_at": "2023-03-01T03:15:00Z",
       "thumbnail": "https://i.ytimg.com/vi/DdNAc8o2Z50/hqdefault.jpg",
       "matched_keyword": "옷 추천",
-      "products": [
-        {
-          "name": "피구공 안전피구공 6.3인치 1개",
-          "price": "₩18,000",
-          "seller": "쿠팡",
-          "thumbnail": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcSl4UJRmqLO1xTn-vOZerXj6_qrc_pQmV2DKxlwImQaeH0RHz37fOGqjgQSFwW8LffOxn36BIbJcC1kAuue4DckgCV-LbKPpTP8lBF8C7bpxf0X2mooRiM",
-          "link": "https://link.coupang.com/re3/AFYOUTUBE?pageKey=8522492259\\&ctag=8522492259\\&itemId=22187013386\\&vendorItemId=89233275867\\&subparam=YT3-FfSgMNcuhXErdiyj9ceCwcsOLz6bheJGasw82h4X5PLDokJBCukRX_WXQr1lpWOdYVt2HJY9iJlyTlGH5PYmb5Qs9sxQT9Y0",
-          "raw_alt": "피구공 안전피구공 6.3인치 1개, ₩18,000 제휴사, 판매처: 쿠팡",
-          "matched_selector": "json:productSticker"
-        }
-      ]
+      "products": []
     },
     {
       "video_id": "5lJyzBHYQNo",
@@ -329,17 +279,7 @@
       "published_at": "2024-04-24T09:30:04Z",
       "thumbnail": "https://i.ytimg.com/vi/5lJyzBHYQNo/hqdefault.jpg",
       "matched_keyword": "여름 코디",
-      "products": [
-        {
-          "name": "킥복싱 연습용 스마트 복싱 머신 조절 1개 4. Black",
-          "price": "₩32,670",
-          "seller": "쿠팡",
-          "thumbnail": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcRR6EukUyifXfklnpSILXmKlwpImGqBzrS9llg1Lwu9vBkLKCdy8ULZshljSDtVzw_LAzaQabtXXvdoJgtgqo8P3ZH_TetWZ7U5YsfxXkanRbeP53Z5TQ",
-          "link": "https://link.coupang.com/re3/AFYOUTUBE?pageKey=8611839235\\&ctag=8611839235\\&itemId=24978648243\\&vendorItemId=91984217395\\&subparam=YT3-cQXQvyBBlQ1CW5rE-Xb0g4Qtu3q0gpIP2AzHL5-tXIiiShhjSRKa1wssBHz9qM9v41n5m7ZHp7SpfCBrdhEK34Ic_apNpbHD",
-          "raw_alt": "킥복싱 연습용 스마트 복싱 머신 조절 1개 4. Black, ₩32,670 제휴사, 판매처: 쿠팡",
-          "matched_selector": "json:productSticker"
-        }
-      ]
+      "products": []
     },
     {
       "video_id": "EUMtoOCjeyA",
@@ -350,17 +290,7 @@
       "published_at": "2022-07-26T08:46:15Z",
       "thumbnail": "https://i.ytimg.com/vi/EUMtoOCjeyA/hqdefault.jpg",
       "matched_keyword": "옷 추천",
-      "products": [
-        {
-          "name": "알작은선글라스 레옹 선글라스 레드",
-          "price": "₩2,600",
-          "seller": "쿠팡",
-          "thumbnail": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcQhhzWdOUCFJhT_H3WBi3Ri25Gm-G4pHDiq88jr64Wi079Hfw6wl2D6rFNntxs-yyZAkfsZkuDTJxQAgigra1kqfwp_eJzqSs_pgiMhvKWbD8_E7JWAX6eX",
-          "link": "https://link.coupang.com/re3/AFYOUTUBE?pageKey=9362246965\\&ctag=9362246965\\&itemId=27779993754\\&vendorItemId=94740325315\\&subparam=YT3-F6S1IJR3umrQbheK-7YD84z4YuNOZiiHrqBjD8F-cf-4fZojsgXSHgUIWDQUyMrjEKHek9ypQTd1RG9C5JxdOVNtyjK6dzqp",
-          "raw_alt": "알작은선글라스 레옹 선글라스 레드, ₩2,600 제휴사, 판매처: 쿠팡",
-          "matched_selector": "json:productSticker"
-        }
-      ]
+      "products": []
     },
     {
       "video_id": "o1_P8mhwZw8",
@@ -382,7 +312,17 @@
       "published_at": "2023-01-10T09:20:49Z",
       "thumbnail": "https://i.ytimg.com/vi/OpzONebj3tY/hqdefault.jpg",
       "matched_keyword": "남자 여름 옷",
-      "products": []
+      "products": [
+        {
+          "name": "1200ml 스테인레스 텀블러 레이크1200 블루 1개",
+          "price": "₩15,900",
+          "seller": "쿠팡",
+          "thumbnail": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcTu7fObBWSXcyr8OViJdlCdu_ffWAqFeGJyV1Ue6B-_FzKXSLEwn4lz5rHOBcmP8-bg6ZJP7P_zoZjNryMApx7b2ZORaSq73_sh7GGLeYDyZJi9yBDVDob4",
+          "link": "https://link.coupang.com/re3/AFYOUTUBE?pageKey=8103433145\\&ctag=8103433145\\&itemId=22930318166\\&vendorItemId=89964694912\\&subparam=YT3-0Z9BOybpfOPEwHGk-a-cYCucX9JBcszPOVBdTXuefN1rI7cD0wFeDdQWX60gglVomVfREFpQ7xfikCn7t9hEAkrfyCdshBKN",
+          "raw_alt": "1200ml 스테인레스 텀블러 레이크1200 블루 1개, ₩15,900 제휴사, 판매처: 쿠팡",
+          "matched_selector": "json:productSticker"
+        }
+      ]
     },
     {
       "video_id": "jtia9t2lKvA",
@@ -415,7 +355,17 @@
       "published_at": "2024-03-12T08:59:01Z",
       "thumbnail": "https://i.ytimg.com/vi/OG3cSwQiLZo/hqdefault.jpg",
       "matched_keyword": "여름 남자 코디",
-      "products": []
+      "products": [
+        {
+          "name": "BTS THE BEST 초회 A 2CD+BLURAY 1개",
+          "price": "₩70,900",
+          "seller": "쿠팡",
+          "thumbnail": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcS2xkMqNrs6SqOzLWlYFSkPvNH1MyY_YPQt3qXyiuMLePbJLK-H-4CYPBJLkdbrLm1znNmV_fvbD49sLZpnBe2VBX0tVrDaedO5-5VsQ4aaNI9DRzHkl5am",
+          "link": "https://link.coupang.com/re3/AFYOUTUBE?pageKey=8418011447\\&ctag=8418011447\\&itemId=24345207474\\&vendorItemId=91360666686\\&subparam=YT3-QTJf9x3f0CVit7hiV5dz1NOkCI52U4SF1tbS0vIE7CUL9mszGRZv2t-mbLnk6o6IW-RyS1xvG7_r9oaqot_Ds5xCNojn9kbk",
+          "raw_alt": "BTS THE BEST 초회 A 2CD+BLURAY 1개, ₩70,900 제휴사, 판매처: 쿠팡",
+          "matched_selector": "json:productSticker"
+        }
+      ]
     },
     {
       "video_id": "RmShzUHE_0w",
@@ -437,7 +387,17 @@
       "published_at": "2023-01-15T11:13:41Z",
       "thumbnail": "https://i.ytimg.com/vi/5aAph9r_kro/hqdefault.jpg",
       "matched_keyword": "옷 추천",
-      "products": []
+      "products": [
+        {
+          "name": "1200ml 스테인레스 텀블러 레이크1200 블루 1개",
+          "price": "₩15,900",
+          "seller": "쿠팡",
+          "thumbnail": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcTu7fObBWSXcyr8OViJdlCdu_ffWAqFeGJyV1Ue6B-_FzKXSLEwn4lz5rHOBcmP8-bg6ZJP7P_zoZjNryMApx7b2ZORaSq73_sh7GGLeYDyZJi9yBDVDob4",
+          "link": "https://link.coupang.com/re3/AFYOUTUBE?pageKey=8103433145\\&ctag=8103433145\\&itemId=22930318166\\&vendorItemId=89964694912\\&subparam=YT3-0Z9BOybpfOPEwHGk-a-cYCucX9JBcszPOVBdTXuefN1rI7cD0wFeDdQWX60gglVomVfREFpQ7xfikCn7t9hEAkrfyCdshBKN",
+          "raw_alt": "1200ml 스테인레스 텀블러 레이크1200 블루 1개, ₩15,900 제휴사, 판매처: 쿠팡",
+          "matched_selector": "json:productSticker"
+        }
+      ]
     },
     {
       "video_id": "w0QlJUzumyU",
@@ -448,17 +408,7 @@
       "published_at": "2022-03-26T16:17:01Z",
       "thumbnail": "https://i.ytimg.com/vi/w0QlJUzumyU/hqdefault.jpg",
       "matched_keyword": "코디",
-      "products": [
-        {
-          "name": "각얼음(택배발송불가상품)(MIR-0664)",
-          "price": "₩7,000",
-          "seller": "쿠팡",
-          "thumbnail": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcTfVcsg-41_L0dpndr9xte93it9tv6Qiv34TF8lEmtzmi9F5htr4kT-6Fgg4rFh090SCPfzcgHS",
-          "link": "https://link.coupang.com/re3/AFYOUTUBE?pageKey=7708824666\\&ctag=7708824666\\&itemId=20658739215\\&vendorItemId=87731569047\\&subparam=YT3-Q74xCCUc-bSTq-6fcwlziFT2IFpZfX1ITLvJ39qe0IDVyxpbg9X__O91Gvm44n8tGJprLsVX_uSIQ8Wf3bNZkjnT4V3VUPQ",
-          "raw_alt": "각얼음(택배발송불가상품)(MIR-0664), ₩7,000 제휴사, 판매처: 쿠팡",
-          "matched_selector": "json:productSticker"
-        }
-      ]
+      "products": []
     },
     {
       "video_id": "SsJ8ZYRS_RM",
@@ -469,17 +419,7 @@
       "published_at": "2023-08-29T11:34:46Z",
       "thumbnail": "https://i.ytimg.com/vi/SsJ8ZYRS_RM/hqdefault.jpg",
       "matched_keyword": "여름 남자 코디",
-      "products": [
-        {
-          "name": "야구방망이 진열대 야구장 걸이대 34x8x8cm(4구) 블랙",
-          "price": "₩22,500",
-          "seller": "쿠팡",
-          "thumbnail": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcTTtnhkKGI6XKkwT6WiU5fZDzvjgrRz7f4XwLg5PaUJnyfBTVnv",
-          "link": "https://link.coupang.com/re3/AFYOUTUBE?pageKey=9237091093\\&ctag=9237091093\\&itemId=27310651292\\&vendorItemId=94277105118\\&subparam=YT3-Egq4jeMaJOCGW-BLoylTyULNTKRuNcryTmRc_xY_xpo-KklTJaH8pX-yZxWtxxH9QOlFMg5qgAycmk5EWAHAWaSpzXjQjzFB",
-          "raw_alt": "야구방망이 진열대 야구장 걸이대 34x8x8cm(4구) 블랙, ₩22,500 제휴사, 판매처: 쿠팡",
-          "matched_selector": "json:productSticker"
-        }
-      ]
+      "products": []
     },
     {
       "video_id": "A1dK-nY08lc",
@@ -504,11 +444,11 @@
       "products": [
         {
           "name": "[변우석 PICK] 다슈 데일리 볼륨 업 컬크림 150ml",
-          "price": "₩10,500",
+          "price": "₩9,900",
           "seller": "다슈코리아",
           "thumbnail": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcSbYFo05RsOknAuKmOSe7xUWqjEl95Lf9BngxxmEYU7e32Pm9CKTsulrtNjhxjsrWk5DdG41j4",
-          "link": "https://hairwax.co.kr/product/detail.html?product_no=4318&utm_campaign=sag_organic&srsltid=AfmBOoqA9RgAn0yAd649X6yP4mXUi-VdaB2_jfQr9lrEc8ZqyOY2X-FaPR0&utm_content=YT3-cJNUaha7Qa81FpUxra9w9ZqhaknofpPzEPIU_rlMBhE2JfoUT2wWeCCX_4qPfoimQaI66R3BD94yQ7o55uT51ulshzr_XA_Q&utm_term=UCP2kDkT8fPPucv4SwkjJI-w&utm_medium=product_shelf&utm_source=youtube",
-          "raw_alt": "[변우석 PICK] 다슈 데일리 볼륨 업 컬크림 150ml, ₩10,500 , 판매처: 다슈코리아",
+          "link": "https://hairwax.co.kr/product/detail.html?product_no=4318&utm_campaign=sag_organic&srsltid=AfmBOoqJrsELYoEvpVxbrTq4IArXIe7ViDOvF-4ESFFDtKiAeRvRtcm5BgU&utm_content=YT3-XPsIgGbrVeYvTCuUif1HgNqPDeQaLm4R8qdtyfL6MgWhafl38VbAtT8spK8wJw8xFEY-yyEasGHHIa6fDHdawv-4pkwdDO70&utm_term=UCP2kDkT8fPPucv4SwkjJI-w&utm_medium=product_shelf&utm_source=youtube",
+          "raw_alt": "[변우석 PICK] 다슈 데일리 볼륨 업 컬크림 150ml, ₩9,900 , 판매처: 다슈코리아",
           "matched_selector": "json:productSticker"
         }
       ]
@@ -555,17 +495,7 @@
       "published_at": "2023-05-15T07:30:02Z",
       "thumbnail": "https://i.ytimg.com/vi/6936EQe5k0k/hqdefault.jpg",
       "matched_keyword": "여름 옷 추천",
-      "products": [
-        {
-          "name": "1/2 Pcs 프랑스 빵 쇼핑백 접이식 보관 가방 만화 휴대용 대용량 휴대용 친환경 가방",
-          "price": "₩7,564",
-          "seller": "AliExpress",
-          "thumbnail": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcRANHWihS0Bh0enZ8UkEC8RY53ykStBf_atHFQ4BvBFkGDyYry5ag3UATqYYNm1d9HW9gjH8nn7dScLXEGF4_dOzj49VdRpa1DsJVPD6lERhDBq_V8nHHo",
-          "link": "https://ko.aliexpress.com/item/1005011963386174.html?_randl_currency=KRW\\&_randl_shipto=KR\\&src=google\\&aff_short_key=_oCbUExD\\&aff_platform=true\\&isdl=y\\&dp=YT3-dKsyU-zUtMCJCULO5BY1nTLi3dEMI2zkw-dl9zJj3wzIAM2Po23ubvzFJUDKaHHWXYPblRNGmg3Pjsg5jzx11waHHlOzX8Y\\&cn=youtube",
-          "raw_alt": "1/2 Pcs 프랑스 빵 쇼핑백 접이식 보관 가방 만화 휴대용 대용량 휴대용 친환경 가방, ₩7,564 제휴사, 판매처: AliExpress",
-          "matched_selector": "json:productSticker"
-        }
-      ]
+      "products": []
     },
     {
       "video_id": "mZpCF70moFY",
@@ -582,7 +512,7 @@
           "price": "₩12,200",
           "seller": "쿠팡!",
           "thumbnail": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQimzR23Ewrjga0aLorpl8abzfUo5DGejLT2q6o9uD5ouxk4edZEmose9yPnqr_rBlgrZVe0o-mMTbvheZeebqzpPVDGaunTPcbMAFamPRZ21W76mBzpA",
-          "link": "https://link.coupang.com/re3/AFYOUTUBE?pageKey=8209668191&ctag=8209668191&itemId=9127713263&vendorItemId=76413756022&subparam=YT3-Ob68SrgR2OQ5adNdv5lxtoI4CkjOebYCW4rplgvo5pz0gTdBFrwueR0b-LlNLXPCi8kX6rZDE9Ers7ebDP3TVuzAXu0Rw_40",
+          "link": "https://link.coupang.com/re3/AFYOUTUBE?pageKey=8209668191&ctag=8209668191&itemId=9127713263&vendorItemId=76413756022&subparam=YT3-EbUo84i3EKbvTDHvGMDEUriSkHvp1LO3Et3nimYopwSg-CHxm62FmEfqv1X8-pe_9cP_PjOV01OrYf52N4kw8JSw3X79t7Cx",
           "raw_alt": "진정 아이스볼 쿨링 마사지기 GB004 펄핑크 2개, ₩12,200 제휴사, 판매처: 쿠팡!",
           "matched_selector": "json:productSticker"
         }
@@ -610,12 +540,12 @@
       "matched_keyword": "코디",
       "products": [
         {
-          "name": "로투스 스프레드 크런치 380g 5개",
-          "price": "₩30,750",
+          "name": "카멜레온 동물 손가락인형-A 1개 1종",
+          "price": "₩9,000",
           "seller": "쿠팡",
-          "thumbnail": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcQZ14BuvBt_IHPN0kUKYFNCG0N0xhXqf0mQmyhMUoL87Je-ESmLOdi89m6PmqCCsZHckOZkZ6n7uarIxtKKMtSy7clRMMEAaddAT9WvNW9j39UOC2SUEZt4",
-          "link": "https://link.coupang.com/re3/AFYOUTUBE?pageKey=9448492228\\&ctag=9448492228\\&itemId=15687255891\\&vendorItemId=87246169861\\&subparam=YT3-fA75eBTpuzasWAc2-f1D1o3WT6FkxjdPNBclO1fcFIa9KrWwI1zrNJhVCI9LSMDJnMsp8T6X58jnxhPxUY1bJobQPGhl6fU",
-          "raw_alt": "로투스 스프레드 크런치 380g 5개, ₩30,750 제휴사, 판매처: 쿠팡",
+          "thumbnail": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcSxh-eGXmVaKhpQiTKCfRdeLhPQyFjCJ3T63MGR3G-YEEv1v9YRePq8nNRN3EPZrZrzSjPBKH4zgmZDL_DmFfZd0tQmuyZWR8n5LalzHdLpi_dtOP58ekU",
+          "link": "https://link.coupang.com/re3/AFYOUTUBE?pageKey=8680136816\\&ctag=8680136816\\&itemId=25198092908\\&vendorItemId=92194729439\\&subparam=YT3-eTCrHmxUV2ewD5JTUvGHbVljdksG62QV9wFo3J-ntsYcBHwucJYb6iRpzFHR3XTQn2ZSe_FOfMZgEtLhKItE8ji2icgb-ao",
+          "raw_alt": "카멜레온 동물 손가락인형-A 1개 1종, ₩9,000 제휴사, 판매처: 쿠팡",
           "matched_selector": "json:productSticker"
         }
       ]
@@ -651,7 +581,17 @@
       "published_at": "2022-10-26T01:58:40Z",
       "thumbnail": "https://i.ytimg.com/vi/eWQn-X_MwDg/hqdefault.jpg",
       "matched_keyword": "옷 추천",
-      "products": []
+      "products": [
+        {
+          "name": "엘에이스 헬리콥터 프로펠러 핵인싸템 바람개비 야구모자 FREE",
+          "price": "₩8,500",
+          "seller": "쿠팡!",
+          "thumbnail": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcSGdMUEjOHLansbsDG0_dSkWEI1puB3vCxQqUUGyT3CBdvp8CdeFsnLV9_bbTJI1BgCMO1WATIkymCQ_LkpZIFzE9sQwFQtTvNoFZOiPZc1KbDQug68uGw",
+          "link": "https://link.coupang.com/re3/AFYOUTUBE?pageKey=7957130287\\&ctag=7957130287\\&itemId=21986486325\\&vendorItemId=89034070823\\&subparam=YT3-bdrwvjKYn2so6TecXnMNmd6JCBla3EFNQTYr-qy18mN_j0bAz_gZ1BoATaBJSW6OlA8mTYn8P1NMjJWO-q82BrtcJI7_kDc",
+          "raw_alt": "엘에이스 헬리콥터 프로펠러 핵인싸템 바람개비 야구모자 FREE, ₩8,500 제휴사, 판매처: 쿠팡!",
+          "matched_selector": "json:productSticker"
+        }
+      ]
     },
     {
       "video_id": "vu-rvO_spT0",
@@ -783,7 +723,17 @@
       "published_at": "2024-10-16T11:00:55Z",
       "thumbnail": "https://i.ytimg.com/vi/pbQAlTZMkIc/hqdefault.jpg",
       "matched_keyword": "남자 여름 바지",
-      "products": []
+      "products": [
+        {
+          "name": "카멜레온 동물 손가락인형-A 1개 1종",
+          "price": "₩9,000",
+          "seller": "쿠팡",
+          "thumbnail": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcSxh-eGXmVaKhpQiTKCfRdeLhPQyFjCJ3T63MGR3G-YEEv1v9YRePq8nNRN3EPZrZrzSjPBKH4zgmZDL_DmFfZd0tQmuyZWR8n5LalzHdLpi_dtOP58ekU",
+          "link": "https://link.coupang.com/re3/AFYOUTUBE?pageKey=8680136816\\&ctag=8680136816\\&itemId=25198092908\\&vendorItemId=92194729439\\&subparam=YT3-eTCrHmxUV2ewD5JTUvGHbVljdksG62QV9wFo3J-ntsYcBHwucJYb6iRpzFHR3XTQn2ZSe_FOfMZgEtLhKItE8ji2icgb-ao",
+          "raw_alt": "카멜레온 동물 손가락인형-A 1개 1종, ₩9,000 제휴사, 판매처: 쿠팡",
+          "matched_selector": "json:productSticker"
+        }
+      ]
     },
     {
       "video_id": "spT_r2RZrZE",
@@ -838,7 +788,17 @@
       "published_at": "2023-07-09T10:26:36Z",
       "thumbnail": "https://i.ytimg.com/vi/io_So3L7P_g/hqdefault.jpg",
       "matched_keyword": "여름 코디",
-      "products": []
+      "products": [
+        {
+          "name": "아티제 봉주르빵집 복분자 크로와상 (냉동) 70g 3개",
+          "price": "₩12,000",
+          "seller": "쿠팡!",
+          "thumbnail": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQJJXFG25C0fS1Rxk4_SNgbPPBdwed0wGqnRMBLWCj53Bt1zivQAofxZ31NsIYL9xCOiFpVtqk",
+          "link": "https://link.coupang.com/re3/AFYOUTUBE?pageKey=9544678695\\&ctag=9544678695\\&itemId=28474222375\\&vendorItemId=95424455600\\&subparam=YT3-q6re0S2NwLhQ3s6qJ9VG-BaP_PPbhSIUaWf2KU7eiqekcIodvI50uyMihkl6QN7yL4X9bWxFTFd6MrwS9wlUO3vxNgLEzFxw",
+          "raw_alt": "아티제 봉주르빵집 복분자 크로와상 (냉동) 70g 3개, ₩12,000 제휴사, 판매처: 쿠팡!",
+          "matched_selector": "json:productSticker"
+        }
+      ]
     },
     {
       "video_id": "hGmxZHPVnBc",
@@ -851,12 +811,12 @@
       "matched_keyword": "남자 여름 바지",
       "products": [
         {
-          "name": "1/2 Pcs 프랑스 빵 쇼핑백 접이식 보관 가방 만화 휴대용 대용량 휴대용 친환경 가방",
-          "price": "₩7,564",
-          "seller": "AliExpress",
-          "thumbnail": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcRANHWihS0Bh0enZ8UkEC8RY53ykStBf_atHFQ4BvBFkGDyYry5ag3UATqYYNm1d9HW9gjH8nn7dScLXEGF4_dOzj49VdRpa1DsJVPD6lERhDBq_V8nHHo",
-          "link": "https://ko.aliexpress.com/item/1005011963386174.html?_randl_currency=KRW\\&_randl_shipto=KR\\&src=google\\&aff_short_key=_oCbUExD\\&aff_platform=true\\&isdl=y\\&dp=YT3-dKsyU-zUtMCJCULO5BY1nTLi3dEMI2zkw-dl9zJj3wzIAM2Po23ubvzFJUDKaHHWXYPblRNGmg3Pjsg5jzx11waHHlOzX8Y\\&cn=youtube",
-          "raw_alt": "1/2 Pcs 프랑스 빵 쇼핑백 접이식 보관 가방 만화 휴대용 대용량 휴대용 친환경 가방, ₩7,564 제휴사, 판매처: AliExpress",
+          "name": "BTS THE BEST 초회 A 2CD+BLURAY 1개",
+          "price": "₩70,900",
+          "seller": "쿠팡",
+          "thumbnail": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcS2xkMqNrs6SqOzLWlYFSkPvNH1MyY_YPQt3qXyiuMLePbJLK-H-4CYPBJLkdbrLm1znNmV_fvbD49sLZpnBe2VBX0tVrDaedO5-5VsQ4aaNI9DRzHkl5am",
+          "link": "https://link.coupang.com/re3/AFYOUTUBE?pageKey=8418011447\\&ctag=8418011447\\&itemId=24345207474\\&vendorItemId=91360666686\\&subparam=YT3-QTJf9x3f0CVit7hiV5dz1NOkCI52U4SF1tbS0vIE7CUL9mszGRZv2t-mbLnk6o6IW-RyS1xvG7_r9oaqot_Ds5xCNojn9kbk",
+          "raw_alt": "BTS THE BEST 초회 A 2CD+BLURAY 1개, ₩70,900 제휴사, 판매처: 쿠팡",
           "matched_selector": "json:productSticker"
         }
       ]
@@ -914,17 +874,7 @@
       "published_at": "2024-04-09T06:13:52Z",
       "thumbnail": "https://i.ytimg.com/vi/dl8S5RmyXqc/hqdefault.jpg",
       "matched_keyword": "여름 원피스",
-      "products": [
-        {
-          "name": "천연가죽 럭스체인백 가정의달 할인",
-          "price": "₩129,800",
-          "seller": "Mintiz",
-          "thumbnail": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcTXBgOFPtT6ywaiPQw4N9Sjv2KVT7CHQpXTKnt6dYp-uCaDlwxre515V5oE6iI_Wjrm6SFUIfLzbaop6qvWB7JTg55Znxp-cQy66lIhuYaywYWQRRg7y_QG",
-          "link": "https://mintiz.shop/product/detail.html?product_no=359\\&utm_campaign=sag_organic\\&srsltid=AfmBOorCetTFF1eyilAMod0-Y9nv5wyTWsYGhrXgdGM_CvIfQo2LnVexVBU\\&utm_content=YT3-rTKUC5WHPT8fiGfLMX-O2SwTf7CN4Ha6WzB3yx8YnWLL4weqAu1k6Qs4cqYXkaToVYOacOWc1JJvUd64BVF35kMmpMj7t6A\\&utm_term=UCdYr-oAFinkSJtDeZ_38Gzw\\&utm_medium=product_shelf\\&utm_source=youtube\\&yts_sig=eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6IndHSGgyQSJ9.eyJleHBpcnlfdG9rZW4iOiI1ODY0OWYxNS00Mzc4LTRjYmYtOWI5Ny02OGYxODYwN2Y4ZWQiLCJleHAiOjE3NzkzNDIwODN9.Me_7-j1VIfWkvsiSVl6bjAHD0qN8UkcW1KCBN0m3imHpevDGomAQ4c2Lzb4wwwVDoaC5hlf3vqfS1KSYu9zIFddSbzpeIj_CrYcuE5n8FPUFdhHaSHBkJR5T1ZBo0Psv6wf9e4BjP3vzjQVtyQnU4Qq5NbRMuzezdKh1GThbblM6L67rpCsLWymlz0yy9goOOkwIQOQ3NACe3pcBTg6g3Iia7Pe-EOWYlXCtQlz4Uoqbor3YYBIVeMngkGbFFMvqD-VZV9aZ4XqSKRxGWvi2VUcqUBFWMRxe955TTFgZS7bQL1l_-i9qcKPv-l_j2KhHJdOy2_7NL9hLzxaH6ec2SQ_kLJLSM08ag-Ujz7rCgt8nCAP6XiTigI9e89BYEQEEJiLSjg4bWzMLTKvhf3_mgVg9O8Qt-R_VzmDT-ZiFLsTG1I52Js6Hz4TDXOhqg2reC7waG8xnu_yAkrRCkOoE5zDrliekb-DimwmF_yu6uBk7Uw6-g3CdHd_hGHpzztbm\\&yts_source=Aa9_yn5h-a_t9F6v3cMkFHapfUe3eNC8c2G1sQUcKw0EXFykgoYmlTCX6GqIfGa6aCBRsuw5hd83qgEhy2qtLOpdu73YjQKycwNVGhaOtfM5HY5qGzm1t-18zI2doyEJyW3esyI8UgdW-hh8nhjTkbdn0sj-JzH0C_xwns32BIv5SId78x0LCUlTUp8",
-          "raw_alt": "천연가죽 럭스체인백 가정의달 할인, ₩129,800 , 판매처: Mintiz",
-          "matched_selector": "json:productSticker"
-        }
-      ]
+      "products": []
     },
     {
       "video_id": "uP1O7U-__A8",
@@ -968,17 +918,7 @@
       "published_at": "2022-08-03T18:19:57Z",
       "thumbnail": "https://i.ytimg.com/vi/YJuS6vWMASA/hqdefault.jpg",
       "matched_keyword": "에이블리",
-      "products": [
-        {
-          "name": "DIPYLON 대형 일자 테이블 중역 사장책상 사무실 A",
-          "price": "₩11,080,000",
-          "seller": "쿠팡",
-          "thumbnail": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcSUJFySAbEs4uUcca9cGGFnTkLUjhV9JH3EzIAB3t8IJkmpy-_d",
-          "link": "https://link.coupang.com/re3/AFYOUTUBE?pageKey=8785869289\\&ctag=8785869289\\&itemId=25566749702\\&vendorItemId=92557939218\\&subparam=YT3-Hr4J2HD-Gwvak-63iXEROCcbrH97VZBLAHrtylnmZjbS0SDicqaA8URookrXZm2wgzk6cQDIsMYcOudHoT_JNNXYVcf3aEtj",
-          "raw_alt": "DIPYLON 대형 일자 테이블 중역 사장책상 사무실 A, ₩11,080,000 제휴사, 판매처: 쿠팡",
-          "matched_selector": "json:productSticker"
-        }
-      ]
+      "products": []
     },
     {
       "video_id": "4ML4_bsmT0s",
@@ -995,7 +935,7 @@
           "price": "₩27,900",
           "seller": "코디정 호감을 만드는 스타일",
           "thumbnail": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQNWXjtNgyEaNq_e5IRKM2B59CEbvZAMSd4NxmSg_cOslAqyqtkZwDyvpSQMQxaQ9HVZJtlIeI",
-          "link": "https://grit8518.cafe24.com/shop2/product/detail.html?product_no=2591&item_code=P0000DVR000A&utm_content=YT3-fEa0KSakJPhCqMDwqWCQj2HA7G73jpq7B5gQ4bXxJNZYXXrMuRwImT-tOw-vVHXeiTRNQ5d78-fkFWdjvoEFLOq3jtmx_o1n&utm_term=UCgQ39hN41_5BAy0BYo300Zg&utm_medium=product_shelf&utm_source=youtube&yts_sig=eyJhbGciOiJSUzI1NiIsImtpZCI6IndHSGgyQSIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NzkzNDIxMDYsImV4cGlyeV90b2tlbiI6IjFkOGIwMGRmLWNjZDEtNDlmNi1hMjg1LWQ1YzBjYmRmMTY1YiJ9.SIEH6UFChRmsLeqd93R3vDhlUvaI3kEMHOGE5jAqlVP6hyUB17cbRe8GzTajJAkcigWSbwJzG1WywVwDxNN93Og5Gd5XmirfWQbJwwOQds12El0EA0HINkcPKOdoq3DHutYct5y9zKVfE60w3Vi867-LSAd2x4FZM0w0fISvU5cAzhWyM3hOIxktVvcqlNZpXIVu418r-UeQsGcndI2gACUKX7eAjOqPyzmUi6Na-CjIuUS7V-NvQN9OxcaAJ-hQQXZMQIGIwjwgXZhckk0CIiwODzytQc7V9KAmc3iGOd93tJZV4XFHfHhEN4TqBffYBE1p9F2B7YJJyCqRHDsOwiYAn7S8eC4X0EiHXVrskCrx8eIxS5h5suQO49Gw-y434BFKwSClspTSnmRkRrD1vg5f-TEX88JFWGMOLyt53DNttO4BDTOoXUIZ4C7HBRFA-T0ixlAcgmjXxmzlnIVN5hHmCmi8G9nlhZ1YnioFNz--dByTuSPcDMuVJ5GwX5kj&yts_source=Aa9_yn7PemAL4IK_VnQ_6bLTVDNYOKj8RnFJd_T69T_j9KjVhwq8g0-71rIkO_mATeaPRRmepMcCs1u68R7cMUOkjGHQ53q2sSSTdcr53I2mACmUzfwrCZWKiHrBFTcwJ-1ZX_equ-wUqHQycrXmS3-B3s3SKTja1i5ope2TX2klziiYSAFjMb4HQQU",
+          "link": "https://grit8518.cafe24.com/shop2/product/detail.html?product_no=2591&item_code=P0000DVR000A&utm_content=YT3-QDo_RcUFDBugz3AF67NLyJWVYPmKMw70ln_MqBF2IlfzFxsqcw6PaTnh82ssLLFXkRVBL-ZONItFOnffj0NzFMv8UIKiB447&utm_term=UCgQ39hN41_5BAy0BYo300Zg&utm_medium=product_shelf&utm_source=youtube&yts_sig=eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6IndHSGgyQSJ9.eyJleHBpcnlfdG9rZW4iOiJmODYxYmM2NC01ZmQxLTQzYmMtYmMzZi03NWEyZmI2YWZiY2IiLCJleHAiOjE3ODA1NTcyOTV9.imBYVnGHkGXCmOk8vVckJf7-tTNhzlHIAuPb7bNkI99d3JYobLpsffaQdNQ4xH2ISi1t1wyw1CO69IvRGevHZAuDvA3PwhS5X8xbg9Q0_hiFaoSWNPCKs5Q8xSM-P2jh_REWaHQVPf6TNowM8SMo8wRTbaa0fNbg9v7mu5lp6bW9JaOgT1BvX2Ym16A9dl4_w3YjuCN5j1TPsABgpb656sEfqPr0WX-GcUriJDbq8qysLdhQY5U6WfSNft_Ee6llWnUpkkU6oE1qt5i9rgXJWlWae05rs0xQARinof-_qaS6kEoMb0O_74aN_LInhI5s1CMLoiYyErpfOkzTlk4I5dpagG8qO7Cr327Y-rGMFB-8c7JfaN4hhmqgN8BgP9C4Yb_WJe-II4bUhNHuGpq3WqhA72UFe7ogOfj4RaPr9ZuA2g2RnEueVMjht6_0U53aNN8TZc3BOMsE5yHGFLSjPuGRot4aX_RI_y77WFiRUaIY11P5eyCvmi4Z0fPlL8JO&yts_source=Aa9_yn4hm6l670SNkWg9wZ-a9NdjvmU4Y_gi7xy1Qx-I7RjFywmTiYySzpiBKSBMp1jtxlpS9Lu8twpWzR7JZhAOWfJEyt50ixjZ44bmCzxqSMTRvBqLDD-y97B7t_4ZY-5-y_rE9el4rHuXjrSk_B3MOYdzJRx4E-PZSJoFblbDbZP-sRx0LcYXLF8",
           "raw_alt": "[자체제작] 1mm 티셔츠, ₩27,900 , 판매처: 코디정 호감을 만드는 스타일",
           "matched_selector": "json:productSticker"
         }
@@ -1010,7 +950,17 @@
       "published_at": "2023-08-10T09:01:40Z",
       "thumbnail": "https://i.ytimg.com/vi/Meqno6_4eYM/hqdefault.jpg",
       "matched_keyword": "여름 원피스",
-      "products": []
+      "products": [
+        {
+          "name": "아티제 봉주르빵집 복분자 크로와상 (냉동) 70g 3개",
+          "price": "₩12,000",
+          "seller": "쿠팡!",
+          "thumbnail": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQJJXFG25C0fS1Rxk4_SNgbPPBdwed0wGqnRMBLWCj53Bt1zivQAofxZ31NsIYL9xCOiFpVtqk",
+          "link": "https://link.coupang.com/re3/AFYOUTUBE?pageKey=9544678695\\&ctag=9544678695\\&itemId=28474222375\\&vendorItemId=95424455600\\&subparam=YT3-q6re0S2NwLhQ3s6qJ9VG-BaP_PPbhSIUaWf2KU7eiqekcIodvI50uyMihkl6QN7yL4X9bWxFTFd6MrwS9wlUO3vxNgLEzFxw",
+          "raw_alt": "아티제 봉주르빵집 복분자 크로와상 (냉동) 70g 3개, ₩12,000 제휴사, 판매처: 쿠팡!",
+          "matched_selector": "json:productSticker"
+        }
+      ]
     },
     {
       "video_id": "cP3aMKDtAXk",
@@ -1049,8 +999,17 @@
           "price": "₩27,900",
           "seller": "코디정 호감을 만드는 스타일",
           "thumbnail": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQNWXjtNgyEaNq_e5IRKM2B59CEbvZAMSd4NxmSg_cOslAqyqtkZwDyvpSQMQxaQ9HVZJtlIeI",
-          "link": "https://grit8518.cafe24.com/shop2/product/detail.html?product_no=2591&item_code=P0000DVR000A&utm_content=YT3-tTXclz8yZzTpSh8GhvbJGfKu15CF1Zy3cJgAcKvr94SCkJuO3OGsWb15BE3btDJ_BPAKoIWud9tBCNCcM0hnPWOjLi1KlFA&utm_term=UCgQ39hN41_5BAy0BYo300Zg&utm_medium=product_shelf&utm_source=youtube&yts_sig=eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6IndHSGgyQSJ9.eyJleHAiOjE3NzkzNDIxMDgsImV4cGlyeV90b2tlbiI6IjJjY2M1ZDdkLTQyMjAtNDYwZS05OTExLTBhMTA2N2VmMGU0OSJ9.ut9En7JA7J3Vc3v02MCZsF_hEUv8E2v4SNm6HpmW3_LXekgAdTkMYDERXCU6U09OP4LhPmDIfazmV-fbyZDHsiQraOMjh5ATQei7ohLHhJ9ArEB25NDv-185nqK0Xk89P6MuGh4XPG8KndB8ZkVuX6nqVi-zhvUPe5OtKa2wA8B0gmUb0XvSgiS6DEVcUbKrv_0CfrEElGk7wV6cBfGeZ0_6MJNZu2zuyglAxUlG4tRzkp96HBqejkYavuk-0r69A77H2V4RDPgn98CPF6nPO2EPTgV1jDWAPMlPMtM-7Ftgp4k1hI-KQ38OC8BKR56ED8SsBe1-cgzbVRpvjf7YOuFQhgHUKpl3BqAFTxJ4V9sWgjuENMs7AgZWi1_lKdnIuD7Sb8MMIfQobcxtnnVEOgJcTVv9L3QXMeAzKefzwn6BADrz7uB2Fa86slQhtAuTddu4kOplza31eHXRBBQJ8rxn3pF9U-vog9zv0i0nlxnJmfx26_7pAOgrXNhJhHCz&yts_source=Aa9_yn5JfC9PJTTQa2XmpGSQ4nar0hr4A08R7gyqcdvpmqRNGmEl7_bjhQb1yaVpoQTkhEqkK4PMups0VDaXNyFUFLq8VWinMCOvK0caEoZU1vgub1CAA5nW6z6X7ToHc0MMEDC_CQOv9ka6QJy80Fad7Opc3k1nZrwFIHN2VqUAnK6RtTMbyPjoQwM",
+          "link": "https://grit8518.cafe24.com/shop2/product/detail.html?product_no=2591&item_code=P0000DVR000A&utm_content=YT3-fuqragvd1ZOhYrnnK405YaNW8RYDsLKe0Nkq5E4jJtV0PfjfsjnpURhX-WZ14qqOwq_ZMz8RqtTgvviI1u6-d_Tl9sQUkWc&utm_term=UCgQ39hN41_5BAy0BYo300Zg&utm_medium=product_shelf&utm_source=youtube&yts_sig=eyJraWQiOiJ3R0hoMkEiLCJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJleHAiOjE3ODA1NTcyOTYsImV4cGlyeV90b2tlbiI6IjY5ZmRkNjkwLWE3NjQtNDk5Zi1iM2NjLWMxOTgwYmE3MWI2MiJ9.Saz9I_ycUOVlB1N4pjTl1wHBTkhnQwd0SLGMaXLD0_saMgzsX6O1wvj0Gou3mMDsgoiAgsOm45VslYVquw5z4RdvTLcUFtH_jeZLnC1YSNEa10mYQ2-4IcaoJggKDWASihaYh2Ue9TXRGu81mMU6aK32iX5VcX1TXhIF4TLsoOMPmtfNiZ7hnvp1FHFmxPA4bVa7RJT1RSA06gHhXp1fdG_d3DjSnCXz3dXTfXiPbL6v3hX8TBc7dne79_brAQu1zlTgzTnnZJV1-o7CfkvgcAscI1_045yeiIr8ymrYCibZ5eol0G7qoXjsul9-jOHl8yIVQTflXYMiVcX3KC00S4dXWqgMA9nDD4PKPUcfILXOOLHewZVuUNFM2yjOhWl8qP2z21294rJc_JZyCL-O2DiQ8c4i1ffJMHVFxf9gafUOkSiW4cBacO_UE5yrtbmYRQ2eH0DTDn5WoogSL5RCY0vfnr9frNqE9CAtZ6VW6jxRnBqWPZNCXZFdU1E-B_--&yts_source=Aa9_yn4wSnUar8pgv-JDNB95Kzx-1bfj8QwJbS0hqXJe3J0FigBafFWqfKRQ9Zrc_zY4cYzU2NKZhEB__r-g8eMNmNjE9-dmD1dQOUdcEyhSSgKjWIHl02xsgzbH46QCsH8bNt9E43Fu-fw8PBO-UvTPYUz6OXTe3PARWQjclDTpK7FFSiXNb-ioLeo",
           "raw_alt": "[자체제작] 1mm 티셔츠, ₩27,900 , 판매처: 코디정 호감을 만드는 스타일",
+          "matched_selector": "json:productSticker"
+        },
+        {
+          "name": "지오비즈 유선 고성능 헤드마이크 2p",
+          "price": "₩9,840",
+          "seller": "쿠팡!",
+          "thumbnail": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcSgQRslukk8xedj_n59vrZj7QYutmT0_03P1mOFCxss1EZqPpDDdppbno9DAGt3SI7vhBM3ws7UeXVvRnpIKvlHZt8Aid24TdQJ3jzmsQ4JTtHVyzRYxhM",
+          "link": "https://link.coupang.com/re3/AFYOUTUBE?pageKey=6465923513\\&ctag=6465923513\\&itemId=14093321311\\&vendorItemId=84765583358\\&subparam=YT3-rTufVlWAM3wDmg_wnbY19jn2hgdaZqbLY2NoraP_SnSU6yAe1AEFc9nzV5ZWalAuadZkaeHsIOFO7tdeMuz-dj6i9l9EW2k",
+          "raw_alt": "지오비즈 유선 고성능 헤드마이크 2p, ₩9,840 제휴사, 판매처: 쿠팡!",
           "matched_selector": "json:productSticker"
         }
       ]
@@ -1064,7 +1023,17 @@
       "published_at": "2024-06-14T11:30:06Z",
       "thumbnail": "https://i.ytimg.com/vi/UTlbd2h4EtM/hqdefault.jpg",
       "matched_keyword": "여름 원피스",
-      "products": []
+      "products": [
+        {
+          "name": "타마루야 자쿠키리 혼와사비 42g 2개",
+          "price": "₩9,730",
+          "seller": "쿠팡!",
+          "thumbnail": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcSeBzK02ACx9Ck9fkAL_RYUqKeMFFiXKKEeKVGWYa3_8K9rVKwjaZU9wlLzLC28Fz3pOqgFzKQRNRZCmkEzv-tLtxbXl8MWzsdTpHRkneeTm0g-g4198luH",
+          "link": "https://link.coupang.com/re3/AFYOUTUBE?pageKey=6925878879\\&ctag=6925878879\\&itemId=24016684171\\&vendorItemId=91037295706\\&subparam=YT3-UDSicIVzGxePqGKiRjy6sScZs645-APyxf4ZJV0pWFCrEW5FQgVzS4O1t45GTi6mVfrqlhI-v7nnThE2SUTw3HCKyAbX3Rsr",
+          "raw_alt": "타마루야 자쿠키리 혼와사비 42g 2개, ₩9,730 제휴사, 판매처: 쿠팡!",
+          "matched_selector": "json:productSticker"
+        }
+      ]
     },
     {
       "video_id": "_jYFwCg1cP4",
@@ -1097,7 +1066,17 @@
       "published_at": "2023-05-15T12:00:02Z",
       "thumbnail": "https://i.ytimg.com/vi/4LhRn0t59Yg/hqdefault.jpg",
       "matched_keyword": "여름 원피스",
-      "products": []
+      "products": [
+        {
+          "name": "아티제 봉주르빵집 복분자 크로와상 (냉동) 70g 3개",
+          "price": "₩12,000",
+          "seller": "쿠팡!",
+          "thumbnail": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQJJXFG25C0fS1Rxk4_SNgbPPBdwed0wGqnRMBLWCj53Bt1zivQAofxZ31NsIYL9xCOiFpVtqk",
+          "link": "https://link.coupang.com/re3/AFYOUTUBE?pageKey=9544678695\\&ctag=9544678695\\&itemId=28474222375\\&vendorItemId=95424455600\\&subparam=YT3-q6re0S2NwLhQ3s6qJ9VG-BaP_PPbhSIUaWf2KU7eiqekcIodvI50uyMihkl6QN7yL4X9bWxFTFd6MrwS9wlUO3vxNgLEzFxw",
+          "raw_alt": "아티제 봉주르빵집 복분자 크로와상 (냉동) 70g 3개, ₩12,000 제휴사, 판매처: 쿠팡!",
+          "matched_selector": "json:productSticker"
+        }
+      ]
     },
     {
       "video_id": "iPjjXF7KwFo",
