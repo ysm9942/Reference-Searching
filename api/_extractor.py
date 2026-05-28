@@ -89,7 +89,12 @@ def _match_braces(text: str, start: int, limit: int = 15_000) -> int:
 
 _LABEL_RE = re.compile(r'"accessibility"\s*:\s*\{\s*"label"\s*:\s*"([^"]+)"')
 _SELLER_LABEL_RE = re.compile(r"판매처\s*:\s*(.+?)\s*$")
-_PRICE_LABEL_RE = re.compile(r"(₩\s*[\d,]+|\$\s*[\d,]+(?:\.\d{1,2})?)")
+_PRICE_LABEL_RE = re.compile(
+    r"(US\s*\$\s*[\d,]+(?:\.\d{1,2})?|"  # US$58.35 (Vercel US region)
+    r"₩\s*[\d,]+|"                        # ₩59,300
+    r"\$\s*[\d,]+(?:\.\d{1,2})?|"        # $58.35
+    r"[\d,]+\s*원)"                       # 59,300원
+)
 _THUMB_SOURCE_RE = re.compile(
     r'"image"\s*:\s*\{\s*"sources"\s*:\s*\[\s*\{\s*"url"\s*:\s*"([^"]+)"'
 )
