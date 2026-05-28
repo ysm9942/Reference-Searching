@@ -5,5 +5,12 @@
   "outputDirectory": "web",
   "framework": null,
   "cleanUrls": true,
-  "trailingSlash": false
+  "trailingSlash": false,
+  "functions": {
+    "api/search.py": {
+      "memory": 1024,
+      "maxDuration": 10,
+      "includeFiles": "api/_extractor.py"
+    }
+  }
 }
