@@ -45,8 +45,8 @@ HTTP_HEADERS = {
     "Upgrade-Insecure-Requests": "1",
 }
 
-MAX_RESULTS = 10  # hard cap, even if user asks for more
-DEFAULT_RESULTS = 5
+MAX_RESULTS = 20  # hard cap, even if user asks for more
+DEFAULT_RESULTS = 10
 HTTP_TIMEOUT = 6.0
 
 
@@ -102,15 +102,31 @@ def search_youtube(api_key: str, keyword: str, n: int) -> list[dict]:
 
 
 def fetch_products_for(video: dict, session: requests.Session) -> dict:
-    """Augment a video dict with `products` extracted from its Shorts page."""
-    products = []
+    """Augment a video dict with `products` extracted from its Shorts page.
+    Also stamps diagnostic fields so we can see what YouTube actually
+    returned (size + presence of the productSticker marker) — useful when
+    Vercel's IP gets served stripped HTML."""
+    products: list[dict] = []
+    http_status = None
+    response_size = 0
+    has_marker = False
+    err = None
     try:
         r = session.get(video["video_url"], timeout=HTTP_TIMEOUT)
+        http_status = r.status_code
+        response_size = len(r.text) if r.text else 0
         if r.status_code == 200 and r.text:
+            has_marker = "productSticker" in r.text
             products = extract_products(r.text)
-    except Exception:
-        products = []
+    except Exception as e:
+        err = f"{type(e).__name__}: {e}"
     video["products"] = products
+    video["_diag"] = {
+        "http_status": http_status,
+        "response_size": response_size,
+        "has_marker": has_marker,
+        "error": err,
+    }
     return video
 
 
@@ -140,7 +156,16 @@ def handle_search(keyword: str, n: int) -> dict:
             items = list(ex.map(lambda v: fetch_products_for(v, session), videos))
 
     items.sort(key=lambda v: v.get("view_count", 0), reverse=True)
-    return {"keyword": keyword, "items": items}, 200
+    return {
+        "keyword": keyword,
+        "items": items,
+        "_debug": {
+            "vercel_region": os.environ.get("VERCEL_REGION", "unknown"),
+            "items_total": len(items),
+            "items_with_marker": sum(1 for i in items if i.get("_diag", {}).get("has_marker")),
+            "items_with_products": sum(1 for i in items if i.get("products")),
+        },
+    }, 200
 
 
 class handler(BaseHTTPRequestHandler):
