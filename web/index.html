@@ -364,80 +364,6 @@
       text-align: center;
     }
 
-    /* ────────── PIN gate ────────── */
-    .pin-overlay {
-      position: fixed;
-      inset: 0;
-      z-index: 9999;
-      background:
-        radial-gradient(ellipse at 30% 30%, rgba(255,0,51,0.08), transparent 55%),
-        rgba(8, 8, 10, 0.97);
-      backdrop-filter: blur(8px);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .pin-box {
-      width: min(360px, 90vw);
-      background: var(--panel);
-      border: 1px solid var(--border);
-      border-radius: 14px;
-      padding: 2rem 1.75rem;
-      text-align: center;
-      box-shadow: 0 30px 80px rgba(0,0,0,0.4);
-    }
-    .pin-box .lock-icon { font-size: 2rem; margin-bottom: 0.5rem; }
-    .pin-box h2 {
-      font-size: 1.15rem;
-      font-weight: 700;
-      letter-spacing: -0.01em;
-      margin-bottom: 0.4rem;
-    }
-    .pin-box p {
-      color: var(--muted);
-      font-size: 0.82rem;
-      margin-bottom: 1.4rem;
-    }
-    #pin-input {
-      width: 100%;
-      background: var(--panel-2);
-      border: 1px solid var(--border);
-      color: var(--fg);
-      padding: 0.9rem 1rem;
-      border-radius: 8px;
-      font-size: 1.5rem;
-      font-family: ui-monospace, "SF Mono", Menlo, monospace;
-      letter-spacing: 0.6rem;
-      text-align: center;
-      transition: border-color 0.15s ease, background 0.15s ease;
-    }
-    #pin-input:focus { outline: none; border-color: var(--accent); background: #131318; }
-    .pin-actions {
-      display: flex;
-      gap: 0.5rem;
-      margin-top: 0.85rem;
-    }
-    #pin-submit {
-      flex: 1;
-      background: var(--accent);
-      color: white;
-      border: none;
-      padding: 0.7rem;
-      border-radius: 8px;
-      font-size: 0.95rem;
-      font-weight: 700;
-      font-family: inherit;
-      cursor: pointer;
-      transition: background 0.15s ease;
-    }
-    #pin-submit:hover { background: var(--accent-dim); }
-    .pin-error {
-      margin-top: 0.85rem;
-      color: var(--accent);
-      font-size: 0.82rem;
-      min-height: 1.2em;
-    }
-
     /* ────────── export button ────────── */
     #export-xlsx {
       background: var(--panel);
@@ -479,29 +405,6 @@
   </style>
 </head>
 <body>
-  <div id="pin-overlay" class="pin-overlay" hidden>
-    <div class="pin-box">
-      <div class="lock-icon">🔒</div>
-      <h2>Reference Searching</h2>
-      <p>PIN 번호를 입력하세요</p>
-      <form id="pin-form" autocomplete="off">
-        <input
-          id="pin-input"
-          type="password"
-          inputmode="numeric"
-          pattern="[0-9]*"
-          maxlength="4"
-          autocomplete="off"
-          aria-label="PIN 번호"
-        />
-        <div class="pin-actions">
-          <button type="submit" id="pin-submit">잠금 해제</button>
-        </div>
-      </form>
-      <div id="pin-error" class="pin-error"></div>
-    </div>
-  </div>
-
   <div class="container">
     <header>
       <h1 class="title">YouTube Shorts <span class="accent">쇼핑 트렌드</span></h1>
@@ -555,37 +458,6 @@
     // "all" | "with" | "without"  — filter by product presence
     let activeFilter = "all";
     let currentKeyword = "";
-
-    /* ────── PIN gate ──────
-     * Client-side soft gate. Default PIN is 5350 (configurable below).
-     * NOTE: this is obscurity, not security — the PIN sits in this JS file,
-     * so anyone who views the page source can see it. Use only as a casual
-     * "don't share this URL randomly" barrier.
-     */
-    const DEFAULT_PIN = "5350";
-    const PIN_UNLOCK_KEY = "rs_pin_unlocked_v1";
-
-    function isUnlocked() {
-      // Try localStorage first (survives browser restarts).
-      try {
-        if (localStorage.getItem(PIN_UNLOCK_KEY) === "yes") return true;
-      } catch (_) { /* private-mode / disabled */ }
-      // Fall back to a long-lived cookie so the unlock persists across
-      // refreshes even when localStorage isn't writable.
-      try {
-        return ("; " + document.cookie).indexOf("; " + PIN_UNLOCK_KEY + "=yes") >= 0;
-      } catch (_) { return false; }
-    }
-    function markUnlocked() {
-      let ok = false;
-      try { localStorage.setItem(PIN_UNLOCK_KEY, "yes"); ok = true; } catch (_) {}
-      try {
-        // 1-year cookie, same-origin only.
-        document.cookie = PIN_UNLOCK_KEY + "=yes; Max-Age=31536000; Path=/; SameSite=Strict";
-        ok = true;
-      } catch (_) {}
-      return ok;
-    }
 
     /* ────── helpers ────── */
     function escapeHtml(s) {
@@ -922,61 +794,7 @@
       }
     }
 
-    function showPinGate() {
-      const overlay = document.getElementById("pin-overlay");
-      const input = document.getElementById("pin-input");
-      const err = document.getElementById("pin-error");
-      const form = document.getElementById("pin-form");
-      const btn = document.getElementById("pin-submit");
-
-      // Make sure the overlay is actually visible. `hidden` attr is enough
-      // in spec, but some style sheets / browser quirks ignore it.
-      overlay.hidden = false;
-      overlay.style.display = "flex";
-      setTimeout(function () { try { input.focus(); } catch (_) {} }, 50);
-
-      function tryUnlock() {
-        // Strip anything that isn't a digit — autofill, soft-keyboards,
-        // copy-paste from sticky-notes can all sneak in extra characters
-        // that make a strict === comparison fail mysteriously.
-        const raw = String(input.value || "");
-        const digits = raw.replace(/\D+/g, "");
-        if (digits === DEFAULT_PIN) {
-          err.textContent = "";
-          markUnlocked();
-          overlay.hidden = true;
-          overlay.style.display = "none";
-          startApp();
-          return true;
-        }
-        err.textContent =
-          "PIN 번호가 일치하지 않습니다." +
-          (digits.length !== DEFAULT_PIN.length
-            ? "  (" + digits.length + "자리 입력됨)"
-            : "");
-        input.value = "";
-        try { input.focus(); } catch (_) {}
-        return false;
-      }
-
-      // Bind the unlock action on every plausible trigger:
-      //   - form submit  (Enter key in the input)
-      //   - button click (some mobile browsers don't fire submit on tap)
-      form.addEventListener("submit", function (e) {
-        e.preventDefault();
-        tryUnlock();
-      });
-      btn.addEventListener("click", function (e) {
-        e.preventDefault();
-        tryUnlock();
-      });
-    }
-
-    if (isUnlocked()) {
-      startApp();
-    } else {
-      showPinGate();
-    }
+    startApp();
   </script>
 </body>
 </html>
