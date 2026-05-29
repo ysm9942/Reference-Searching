@@ -6,6 +6,7 @@
   <title>Reference Searching — YouTube Shorts 쇼핑 트렌드</title>
   <meta name="description" content="구글 트렌드 기반 YouTube Shorts 쇼핑 정보 수집 결과" />
   <link rel="preconnect" href="https://i.ytimg.com" />
+  <script src="https://cdn.sheetjs.com/xlsx-0.20.3/package/dist/xlsx.full.min.js" defer></script>
   <style>
     :root {
       --bg: #08080a;
@@ -363,6 +364,101 @@
       text-align: center;
     }
 
+    /* ────────── PIN gate ────────── */
+    .pin-overlay {
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      background:
+        radial-gradient(ellipse at 30% 30%, rgba(255,0,51,0.08), transparent 55%),
+        rgba(8, 8, 10, 0.97);
+      backdrop-filter: blur(8px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .pin-box {
+      width: min(360px, 90vw);
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 2rem 1.75rem;
+      text-align: center;
+      box-shadow: 0 30px 80px rgba(0,0,0,0.4);
+    }
+    .pin-box .lock-icon { font-size: 2rem; margin-bottom: 0.5rem; }
+    .pin-box h2 {
+      font-size: 1.15rem;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      margin-bottom: 0.4rem;
+    }
+    .pin-box p {
+      color: var(--muted);
+      font-size: 0.82rem;
+      margin-bottom: 1.4rem;
+    }
+    #pin-input {
+      width: 100%;
+      background: var(--panel-2);
+      border: 1px solid var(--border);
+      color: var(--fg);
+      padding: 0.9rem 1rem;
+      border-radius: 8px;
+      font-size: 1.5rem;
+      font-family: ui-monospace, "SF Mono", Menlo, monospace;
+      letter-spacing: 0.6rem;
+      text-align: center;
+      transition: border-color 0.15s ease, background 0.15s ease;
+    }
+    #pin-input:focus { outline: none; border-color: var(--accent); background: #131318; }
+    .pin-actions {
+      display: flex;
+      gap: 0.5rem;
+      margin-top: 0.85rem;
+    }
+    #pin-submit {
+      flex: 1;
+      background: var(--accent);
+      color: white;
+      border: none;
+      padding: 0.7rem;
+      border-radius: 8px;
+      font-size: 0.95rem;
+      font-weight: 700;
+      font-family: inherit;
+      cursor: pointer;
+      transition: background 0.15s ease;
+    }
+    #pin-submit:hover { background: var(--accent-dim); }
+    .pin-error {
+      margin-top: 0.85rem;
+      color: var(--accent);
+      font-size: 0.82rem;
+      min-height: 1.2em;
+    }
+
+    /* ────────── export button ────────── */
+    #export-xlsx {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      color: var(--fg);
+      padding: 0.65rem 1rem;
+      border-radius: 8px;
+      font-size: 0.9rem;
+      font-family: inherit;
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+    #export-xlsx:hover:not(:disabled) {
+      border-color: var(--accent);
+      background: var(--panel-2);
+    }
+    #export-xlsx:disabled {
+      opacity: 0.4;
+      cursor: not-allowed;
+    }
+
     /* ────────── footer ────────── */
     footer {
       margin-top: 4rem;
@@ -383,6 +479,29 @@
   </style>
 </head>
 <body>
+  <div id="pin-overlay" class="pin-overlay" hidden>
+    <div class="pin-box">
+      <div class="lock-icon">🔒</div>
+      <h2>Reference Searching</h2>
+      <p>PIN 번호를 입력하세요</p>
+      <form id="pin-form" autocomplete="off">
+        <input
+          id="pin-input"
+          type="password"
+          inputmode="numeric"
+          pattern="[0-9]*"
+          maxlength="4"
+          autocomplete="off"
+          aria-label="PIN 번호"
+        />
+        <div class="pin-actions">
+          <button type="submit" id="pin-submit">잠금 해제</button>
+        </div>
+      </form>
+      <div id="pin-error" class="pin-error"></div>
+    </div>
+  </div>
+
   <div class="container">
     <header>
       <h1 class="title">YouTube Shorts <span class="accent">쇼핑 트렌드</span></h1>
@@ -419,6 +538,7 @@
           <option value="recent">최신순</option>
           <option value="oldest">오래된순</option>
         </select>
+        <button id="export-xlsx" type="button" title="현재 결과를 엑셀로 저장">📥 엑셀 내보내기</button>
       </div>
     </div>
 
@@ -434,6 +554,24 @@
     let allItems = [];
     // "all" | "with" | "without"  — filter by product presence
     let activeFilter = "all";
+    let currentKeyword = "";
+
+    /* ────── PIN gate ──────
+     * Client-side soft gate. Default PIN is 5350 (configurable below).
+     * NOTE: this is obscurity, not security — the PIN sits in this JS file,
+     * so anyone who views the page source can see it. Use only as a casual
+     * "don't share this URL randomly" barrier.
+     */
+    const DEFAULT_PIN = "5350";
+    const PIN_UNLOCK_KEY = "rs_pin_unlocked_v1";
+
+    function isUnlocked() {
+      try { return localStorage.getItem(PIN_UNLOCK_KEY) === "yes"; }
+      catch (_) { return false; }
+    }
+    function markUnlocked() {
+      try { localStorage.setItem(PIN_UNLOCK_KEY, "yes"); } catch (_) {}
+    }
 
     /* ────── helpers ────── */
     function escapeHtml(s) {
@@ -641,6 +779,7 @@
     }
 
     async function searchYouTube(keyword) {
+      currentKeyword = keyword;
       // Reflect keyword in URL bar so the page is shareable / bookmarkable
       const url = new URL(window.location.href);
       url.searchParams.set("q", keyword);
@@ -666,6 +805,7 @@
           '"' + keyword + '" · ' + allItems.length + "개 영상 · " + new Date().toLocaleString("ko-KR");
         renderStats(computeStats(allItems));
         renderFilterPills(allItems);
+        updateExportButton();
         apply();
       } catch (e) {
         showSearchError(String(e && e.message ? e.message : e));
@@ -675,22 +815,126 @@
       }
     }
 
+    /* ────── Excel export ────── */
+    function updateExportButton() {
+      const btn = document.getElementById("export-xlsx");
+      if (!btn) return;
+      btn.disabled = !(allItems && allItems.length);
+    }
+
+    function safeFilenamePart(s) {
+      return String(s || "").replace(/[\\\/:*?"<>|]+/g, "").trim().slice(0, 40) || "results";
+    }
+
+    function exportToExcel() {
+      if (!window.XLSX) {
+        alert("엑셀 라이브러리(SheetJS)가 아직 로드되지 않았어요. 잠시 후 다시 시도하세요.");
+        return;
+      }
+      if (!allItems.length) return;
+
+      const header = [
+        "키워드", "영상 제목", "채널", "조회수", "게시일",
+        "영상 URL", "썸네일",
+        "상품명", "가격", "판매처", "구매 링크", "상품 썸네일",
+      ];
+      const rows = [header];
+      for (const it of allItems) {
+        const products = it.products || [];
+        const baseRow = [
+          it.matched_keyword || currentKeyword || "",
+          it.title || "",
+          it.channel || "",
+          Number(it.view_count) || 0,
+          it.published_at || "",
+          it.video_url || "",
+          it.thumbnail || "",
+        ];
+        if (!products.length) {
+          rows.push([...baseRow, "", "", "", "", ""]);
+        } else {
+          for (const p of products) {
+            rows.push([
+              ...baseRow,
+              p.name || "",
+              p.price || "",
+              p.seller || "",
+              p.link || "",
+              p.thumbnail || "",
+            ]);
+          }
+        }
+      }
+
+      const ws = XLSX.utils.aoa_to_sheet(rows);
+      // Set column widths (rough heuristics, not perfect)
+      ws["!cols"] = [
+        { wch: 12 }, { wch: 50 }, { wch: 20 }, { wch: 12 }, { wch: 22 },
+        { wch: 45 }, { wch: 45 },
+        { wch: 50 }, { wch: 12 }, { wch: 12 }, { wch: 60 }, { wch: 45 },
+      ];
+      // Freeze the header row
+      ws["!freeze"] = { xSplit: 0, ySplit: 1 };
+
+      const wb = XLSX.utils.book_new();
+      XLSX.utils.book_append_sheet(wb, ws, "Shorts");
+
+      const dateStr = new Date().toISOString().slice(0, 10);
+      const fname = `reference-searching-${safeFilenamePart(currentKeyword)}-${dateStr}.xlsx`;
+      XLSX.writeFile(wb, fname);
+    }
+
     /* ────── boot ────── */
-    showEmptyState();
-    document.getElementById("subtitle").textContent = "키워드 입력 후 검색하세요";
+    function startApp() {
+      showEmptyState();
+      document.getElementById("subtitle").textContent = "키워드 입력 후 검색하세요";
+      updateExportButton();
 
-    document.getElementById("search-form").addEventListener("submit", function (e) {
-      e.preventDefault();
-      const kw = document.getElementById("search-input").value.trim();
-      if (kw) searchYouTube(kw);
-    });
-    document.getElementById("sort").addEventListener("change", apply);
+      document.getElementById("search-form").addEventListener("submit", function (e) {
+        e.preventDefault();
+        const kw = document.getElementById("search-input").value.trim();
+        if (kw) searchYouTube(kw);
+      });
+      document.getElementById("sort").addEventListener("change", apply);
+      document.getElementById("export-xlsx").addEventListener("click", exportToExcel);
 
-    // Auto-run search if ?q=keyword in URL
-    const initialQuery = new URLSearchParams(window.location.search).get("q");
-    if (initialQuery) {
-      document.getElementById("search-input").value = initialQuery;
-      searchYouTube(initialQuery);
+      // Auto-run search if ?q=keyword in URL
+      const autoQ = new URLSearchParams(window.location.search).get("q");
+      if (autoQ) {
+        document.getElementById("search-input").value = autoQ;
+        searchYouTube(autoQ);
+      } else {
+        document.getElementById("search-input").focus();
+      }
+    }
+
+    function showPinGate() {
+      const overlay = document.getElementById("pin-overlay");
+      const input = document.getElementById("pin-input");
+      const err = document.getElementById("pin-error");
+      overlay.hidden = false;
+      setTimeout(function () { input.focus(); }, 50);
+
+      document.getElementById("pin-form").addEventListener("submit", function (e) {
+        e.preventDefault();
+        const v = input.value.trim();
+        if (v === DEFAULT_PIN) {
+          err.textContent = "";
+          markUnlocked();
+          overlay.hidden = true;
+          startApp();
+        } else {
+          err.textContent = "PIN 번호가 일치하지 않습니다.";
+          input.value = "";
+          input.focus();
+        }
+      });
+    }
+
+    if (isUnlocked()) {
+      startApp();
+    } else {
+      showPinGate();
     }
   </script>
 </body>
