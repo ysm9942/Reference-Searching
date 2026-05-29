@@ -566,11 +566,25 @@
     const PIN_UNLOCK_KEY = "rs_pin_unlocked_v1";
 
     function isUnlocked() {
-      try { return localStorage.getItem(PIN_UNLOCK_KEY) === "yes"; }
-      catch (_) { return false; }
+      // Try localStorage first (survives browser restarts).
+      try {
+        if (localStorage.getItem(PIN_UNLOCK_KEY) === "yes") return true;
+      } catch (_) { /* private-mode / disabled */ }
+      // Fall back to a long-lived cookie so the unlock persists across
+      // refreshes even when localStorage isn't writable.
+      try {
+        return ("; " + document.cookie).indexOf("; " + PIN_UNLOCK_KEY + "=yes") >= 0;
+      } catch (_) { return false; }
     }
     function markUnlocked() {
-      try { localStorage.setItem(PIN_UNLOCK_KEY, "yes"); } catch (_) {}
+      let ok = false;
+      try { localStorage.setItem(PIN_UNLOCK_KEY, "yes"); ok = true; } catch (_) {}
+      try {
+        // 1-year cookie, same-origin only.
+        document.cookie = PIN_UNLOCK_KEY + "=yes; Max-Age=31536000; Path=/; SameSite=Strict";
+        ok = true;
+      } catch (_) {}
+      return ok;
     }
 
     /* ────── helpers ────── */
@@ -912,22 +926,49 @@
       const overlay = document.getElementById("pin-overlay");
       const input = document.getElementById("pin-input");
       const err = document.getElementById("pin-error");
-      overlay.hidden = false;
-      setTimeout(function () { input.focus(); }, 50);
+      const form = document.getElementById("pin-form");
+      const btn = document.getElementById("pin-submit");
 
-      document.getElementById("pin-form").addEventListener("submit", function (e) {
-        e.preventDefault();
-        const v = input.value.trim();
-        if (v === DEFAULT_PIN) {
+      // Make sure the overlay is actually visible. `hidden` attr is enough
+      // in spec, but some style sheets / browser quirks ignore it.
+      overlay.hidden = false;
+      overlay.style.display = "flex";
+      setTimeout(function () { try { input.focus(); } catch (_) {} }, 50);
+
+      function tryUnlock() {
+        // Strip anything that isn't a digit — autofill, soft-keyboards,
+        // copy-paste from sticky-notes can all sneak in extra characters
+        // that make a strict === comparison fail mysteriously.
+        const raw = String(input.value || "");
+        const digits = raw.replace(/\D+/g, "");
+        if (digits === DEFAULT_PIN) {
           err.textContent = "";
           markUnlocked();
           overlay.hidden = true;
+          overlay.style.display = "none";
           startApp();
-        } else {
-          err.textContent = "PIN 번호가 일치하지 않습니다.";
-          input.value = "";
-          input.focus();
+          return true;
         }
+        err.textContent =
+          "PIN 번호가 일치하지 않습니다." +
+          (digits.length !== DEFAULT_PIN.length
+            ? "  (" + digits.length + "자리 입력됨)"
+            : "");
+        input.value = "";
+        try { input.focus(); } catch (_) {}
+        return false;
+      }
+
+      // Bind the unlock action on every plausible trigger:
+      //   - form submit  (Enter key in the input)
+      //   - button click (some mobile browsers don't fire submit on tap)
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        tryUnlock();
+      });
+      btn.addEventListener("click", function (e) {
+        e.preventDefault();
+        tryUnlock();
       });
     }
 
