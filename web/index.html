@@ -651,7 +651,7 @@
       renderSkeleton();
 
       try {
-        const r = await fetch("/api/search?q=" + encodeURIComponent(keyword) + "&n=10");
+        const r = await fetch("/api/search?q=" + encodeURIComponent(keyword) + "&n=20");
         const data = await r.json();
         if (!r.ok || data.error) {
           showSearchError(data.error || ("HTTP " + r.status));

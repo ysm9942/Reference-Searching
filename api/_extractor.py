@@ -2,10 +2,21 @@
 Self-contained shopping-sticker extractor for Vercel serverless context.
 Mirrors poc_shopping_sticker.py:extract_products_from_json but lives in api/
 so Vercel can bundle it with the function without pulling in selenium / uc.
+
+NOTE on creator-tag vs algorithmic recommendation:
+    YouTube returns a `productSticker` JSON block even on videos with no
+    creator-tagged shopping — in that case the block is filled with an
+    algorithmic recommendation pulled from a different video. The "key"
+    field inside each productSticker is a base64 URL-safe encoded
+    protobuf containing the SOURCE video's ID. If that ID doesn't match
+    the video we're fetching, the sticker is not creator-tagged and we
+    drop it.
 """
 from __future__ import annotations
 
+import base64
 import re
+from urllib.parse import unquote
 
 
 # JS-level hex escapes used by YouTube inside the embedded JSON strings.
@@ -124,8 +135,45 @@ def _parse_label(label: str):
     return name or None, price, seller
 
 
-def extract_products(html: str):
-    """Return list of products extracted from `productSticker` blocks in `html`."""
+_KEY_RE = re.compile(r'"key"\s*:\s*"([^"]+)"')
+
+
+def _sticker_belongs_to(block: str, video_id: str) -> bool:
+    """
+    The productSticker's `key` is a URL-encoded base64 protobuf carrying the
+    source video ID. If it doesn't match the video we're scraping, this
+    sticker is an algorithmic recommendation pulled from a different video.
+    """
+    if not video_id:
+        return True  # caller didn't ask us to filter — keep everything
+    m = _KEY_RE.search(block)
+    if not m:
+        # No key field at all — can't verify. Be permissive (some videos
+        # may have stickers without keys in older API responses).
+        return True
+    encoded = unquote(m.group(1))
+    # Cheap substring check on the still-encoded key first.
+    if video_id in encoded:
+        return True
+    # Real check: base64 url-safe decode (pad-tolerant) and look for the ID.
+    for pad in ("", "=", "==", "==="):
+        try:
+            raw = base64.urlsafe_b64decode(encoded + pad)
+        except Exception:
+            continue
+        if video_id.encode("ascii", errors="ignore") in raw:
+            return True
+        break
+    return False
+
+
+def extract_products(html: str, video_id: str | None = None):
+    """
+    Return list of products extracted from `productSticker` blocks in `html`.
+    If `video_id` is given, only stickers whose embedded source-video-ID
+    matches it are returned (filtering out YouTube's algorithmic
+    cross-video shopping recommendations).
+    """
     decoded = _decode_escapes(html)
     products = []
     seen_keys = set()
@@ -138,6 +186,12 @@ def extract_products(html: str):
         if end < 0:
             continue
         block = decoded[brace_start:end]
+
+        # Reject stickers whose key points at a different video — those
+        # are YouTube's "you might also shop for…" recommendations, not
+        # the creator's tag.
+        if not _sticker_belongs_to(block, video_id):
+            continue
 
         label_m = _LABEL_RE.search(block)
         if not label_m:

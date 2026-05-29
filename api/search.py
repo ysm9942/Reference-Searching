@@ -45,8 +45,8 @@ HTTP_HEADERS = {
     "Upgrade-Insecure-Requests": "1",
 }
 
-MAX_RESULTS = 20  # hard cap, even if user asks for more
-DEFAULT_RESULTS = 10
+MAX_RESULTS = 30  # hard cap, even if user asks for more
+DEFAULT_RESULTS = 20
 HTTP_TIMEOUT = 6.0
 
 
@@ -117,7 +117,9 @@ def fetch_products_for(video: dict, session: requests.Session) -> dict:
         response_size = len(r.text) if r.text else 0
         if r.status_code == 200 and r.text:
             has_marker = "productSticker" in r.text
-            products = extract_products(r.text)
+            # Pass video_id so the extractor rejects algorithmic
+            # cross-video shopping recommendations.
+            products = extract_products(r.text, video_id=video.get("video_id"))
     except Exception as e:
         err = f"{type(e).__name__}: {e}"
     video["products"] = products
@@ -163,7 +165,10 @@ def handle_search(keyword: str, n: int) -> dict:
             "vercel_region": os.environ.get("VERCEL_REGION", "unknown"),
             "items_total": len(items),
             "items_with_marker": sum(1 for i in items if i.get("_diag", {}).get("has_marker")),
-            "items_with_products": sum(1 for i in items if i.get("products")),
+            "items_with_creator_tag": sum(1 for i in items if i.get("products")),
+            "note": "items_with_marker counts videos where productSticker JSON existed; "
+                    "items_with_creator_tag counts videos whose sticker key embeds the "
+                    "same video_id (i.e. genuinely creator-tagged, not algorithmic).",
         },
     }, 200
 

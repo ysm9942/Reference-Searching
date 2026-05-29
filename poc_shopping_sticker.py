@@ -164,6 +164,12 @@ def _match_braces(text: str, start: int, limit: int = 20_000) -> int:
 # video content. Earlier versions of this PoC scraped the latter, which
 # caused random products (치즈돈까스, 파충류사육상자, etc.) to be matched
 # to unrelated fashion videos. We now read ONLY productSticker.
+#
+# Even productSticker, however, is sometimes populated with an algorithmic
+# cross-video recommendation when the current video has no creator tag.
+# The sticker's `key` field is a URL-encoded base64 protobuf containing
+# the SOURCE video's ID; if that doesn't match the video we're scraping,
+# we drop the sticker. See api/_extractor.py for the full filter.
 _LABEL_RE = re.compile(
     r'"accessibility"\s*:\s*\{\s*"label"\s*:\s*"([^"]+)"'
 )
