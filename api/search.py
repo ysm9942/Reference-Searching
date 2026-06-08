@@ -50,6 +50,12 @@ MAX_RESULTS = 30  # hard cap, even if user asks for more
 DEFAULT_RESULTS = 20
 HTTP_TIMEOUT = 6.0
 
+# How many keywords (seed + auto-suggested) we expand a search into.
+# Each one costs ~100 YouTube API quota units, so capping at 5 keeps
+# us at ~500 units/search → ~20 searches/day on the free 10k quota.
+MAX_EXPANSION_KEYWORDS = 5
+SUGGEST_TIMEOUT = 4.0
+
 # Map UI period choice → days of lookback for the `publishedAfter`
 # parameter on YouTube Data API search.list. `None` = no time filter.
 PERIOD_DAYS: dict[str, int | None] = {
@@ -60,6 +66,46 @@ PERIOD_DAYS: dict[str, int | None] = {
     "all":   None,
 }
 DEFAULT_PERIOD = "week"
+
+
+def fetch_youtube_suggestions(seed: str, lang: str = "ko") -> list[str]:
+    """
+    Hit YouTube's public autocomplete endpoint and return the suggested
+    queries for `seed`. This is the same data source that powers the
+    dropdown under YouTube's search bar — closer to "what people actually
+    type on YouTube" than Google Trends (which reflects general web
+    search). Free, fast (~300ms), no rate-limit headaches.
+
+    Endpoint format with client=firefox returns plain JSON:
+        ["meme", ["meme review", "meme song", ...]]
+    """
+    url = "https://suggestqueries.google.com/complete/search"
+    params = {"client": "firefox", "ds": "yt", "q": seed, "hl": lang}
+    try:
+        r = requests.get(url, params=params, timeout=SUGGEST_TIMEOUT)
+        if r.status_code != 200:
+            return []
+        data = r.json()
+        if isinstance(data, list) and len(data) >= 2 and isinstance(data[1], list):
+            return [s.strip() for s in data[1] if isinstance(s, str) and s.strip()]
+    except Exception:
+        pass
+    return []
+
+
+def expand_keywords(seed: str, limit: int = MAX_EXPANSION_KEYWORDS) -> list[str]:
+    """Seed + dedup'd YouTube suggestions, capped at `limit`. Seed is always first."""
+    out = [seed]
+    seen = {seed.lower().strip()}
+    for s in fetch_youtube_suggestions(seed):
+        norm = s.lower().strip()
+        if norm in seen:
+            continue
+        seen.add(norm)
+        out.append(s)
+        if len(out) >= limit:
+            break
+    return out
 
 
 def search_youtube(api_key: str, keyword: str, n: int, period: str = DEFAULT_PERIOD) -> list[dict]:
@@ -158,37 +204,67 @@ def handle_search(keyword: str, n: int, period: str) -> dict:
     if period not in PERIOD_DAYS:
         period = DEFAULT_PERIOD
 
-    try:
-        videos = search_youtube(api_key, keyword, n, period=period)
-    except Exception as e:
-        return {"error": f"youtube search failed: {type(e).__name__}: {e}"}, 502
+    # 1) Expand seed keyword via YouTube autocomplete
+    keywords = expand_keywords(keyword, limit=MAX_EXPANSION_KEYWORDS)
+    # Allocate per-keyword video budget so combined results land near `n`.
+    # +1 absorbs duplicates that get merged out.
+    per_keyword = max(3, (n // max(len(keywords), 1)) + 1)
+
+    # 2) Run YouTube search for each expanded keyword in parallel
+    def _search_one(kw: str) -> tuple[str, list[dict]]:
+        try:
+            return kw, search_youtube(api_key, kw, per_keyword, period=period)
+        except Exception as e:
+            return kw, []
+
+    with ThreadPoolExecutor(max_workers=len(keywords)) as ex:
+        per_kw_results = list(ex.map(_search_one, keywords))
+
+    # 3) Merge & dedupe by video_id. Each video remembers which keyword
+    # surfaced it (the earlier keyword in the expansion wins on ties).
+    seen_ids: set[str] = set()
+    videos: list[dict] = []
+    for kw, vids in per_kw_results:
+        for v in vids:
+            vid = v.get("video_id")
+            if not vid or vid in seen_ids:
+                continue
+            seen_ids.add(vid)
+            v["matched_keyword"] = kw  # which expansion brought this in
+            videos.append(v)
+
+    # Cap total before doing the heavier HTML fetch
+    videos = videos[:n]
 
     if not videos:
         return {
             "keyword": keyword,
+            "keywords_used": keywords,
             "period": period,
             "items": [],
-            "note": "no videos returned from YouTube",
+            "note": "no videos returned from YouTube (across all expanded keywords)",
         }, 200
 
-    # Parallel fetch + extract — each request is ~1-2s, so n=5 in flight = ~2-3s
+    # 4) Pull each Shorts page and extract creator-tagged products
     with requests.Session() as session:
         session.headers.update(HTTP_HEADERS)
-        with ThreadPoolExecutor(max_workers=min(n, 10)) as ex:
+        with ThreadPoolExecutor(max_workers=min(len(videos), 10)) as ex:
             items = list(ex.map(lambda v: fetch_products_for(v, session), videos))
 
     items.sort(key=lambda v: v.get("view_count", 0), reverse=True)
     return {
         "keyword": keyword,
+        "keywords_used": keywords,
         "period": period,
         "items": items,
         "_debug": {
             "vercel_region": os.environ.get("VERCEL_REGION", "unknown"),
             "period_days": PERIOD_DAYS.get(period),
+            "keywords_expanded": len(keywords),
             "items_total": len(items),
             "items_with_marker": sum(1 for i in items if i.get("_diag", {}).get("has_marker")),
             "items_with_creator_tag": sum(1 for i in items if i.get("products")),
-            "note": "items_with_marker counts videos where productSticker JSON existed; "
+            "note": "keywords_used = seed + up to 4 YouTube-suggest autocompletions. "
                     "items_with_creator_tag counts videos whose sticker key embeds the "
                     "same video_id (i.e. genuinely creator-tagged, not algorithmic).",
         },

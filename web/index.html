@@ -709,9 +709,20 @@
         activeFilter = "all";
         document.getElementById("filters").hidden = false;
         document.getElementById("stats").style.display = "";
-        document.getElementById("subtitle").textContent =
+
+        // Show which auto-suggested keywords got rolled into this search
+        const expanded = Array.isArray(data.keywords_used) ? data.keywords_used : [];
+        const extras = expanded.filter(function (k) { return k !== keyword; });
+        const subtitleEl = document.getElementById("subtitle");
+        subtitleEl.textContent =
           '"' + keyword + '" · ' + periodLabel + " · " +
-          allItems.length + "개 영상 · " + new Date().toLocaleString("ko-KR");
+          allItems.length + "개 영상" +
+          (extras.length ? " (+" + extras.length + " 연관 키워드)" : "") +
+          " · " + new Date().toLocaleString("ko-KR");
+        // Hover-tip with the full keyword list so it's discoverable but not loud
+        subtitleEl.title = expanded.length
+          ? "확장된 검색 키워드: " + expanded.join(", ")
+          : "";
         renderStats(computeStats(allItems));
         renderFilterPills(allItems);
         updateExportButton();
