@@ -435,7 +435,14 @@
     <div class="filters" id="filters" hidden>
       <div class="keyword-pills" id="keyword-pills"></div>
       <div class="controls">
-        <select id="sort">
+        <select id="period" title="업로드 기간">
+          <option value="day">오늘</option>
+          <option value="week" selected>이번 주</option>
+          <option value="month">이번 달</option>
+          <option value="year">올해</option>
+          <option value="all">전체 기간</option>
+        </select>
+        <select id="sort" title="정렬">
           <option value="views">조회수↓</option>
           <option value="views-asc">조회수↑</option>
           <option value="recent">최신순</option>
@@ -664,19 +671,34 @@
       document.getElementById("stats").style.display = "none";
     }
 
+    const PERIOD_LABELS = {
+      day: "오늘",
+      week: "이번 주",
+      month: "이번 달",
+      year: "올해",
+      all: "전체 기간",
+    };
+
     async function searchYouTube(keyword) {
       currentKeyword = keyword;
-      // Reflect keyword in URL bar so the page is shareable / bookmarkable
+      const period = document.getElementById("period").value || "week";
+      // Reflect keyword + period in URL bar so the page is shareable
       const url = new URL(window.location.href);
       url.searchParams.set("q", keyword);
+      url.searchParams.set("period", period);
       window.history.replaceState({}, "", url);
 
-      document.getElementById("subtitle").textContent = '"' + keyword + '" 검색 중…';
+      const periodLabel = PERIOD_LABELS[period] || period;
+      document.getElementById("subtitle").textContent =
+        '"' + keyword + '" · ' + periodLabel + " · 검색 중…";
       setSearching(true);
       renderSkeleton();
 
       try {
-        const r = await fetch("/api/search?q=" + encodeURIComponent(keyword) + "&n=20");
+        const r = await fetch(
+          "/api/search?q=" + encodeURIComponent(keyword) +
+          "&n=20&period=" + encodeURIComponent(period)
+        );
         const data = await r.json();
         if (!r.ok || data.error) {
           showSearchError(data.error || ("HTTP " + r.status));
@@ -688,7 +710,8 @@
         document.getElementById("filters").hidden = false;
         document.getElementById("stats").style.display = "";
         document.getElementById("subtitle").textContent =
-          '"' + keyword + '" · ' + allItems.length + "개 영상 · " + new Date().toLocaleString("ko-KR");
+          '"' + keyword + '" · ' + periodLabel + " · " +
+          allItems.length + "개 영상 · " + new Date().toLocaleString("ko-KR");
         renderStats(computeStats(allItems));
         renderFilterPills(allItems);
         updateExportButton();
@@ -776,16 +799,27 @@
       document.getElementById("subtitle").textContent = "키워드 입력 후 검색하세요";
       updateExportButton();
 
+      // Restore period from URL if present (else keep the HTML default "이번 주")
+      const urlParams = new URLSearchParams(window.location.search);
+      const urlPeriod = urlParams.get("period");
+      if (urlPeriod && PERIOD_LABELS[urlPeriod]) {
+        document.getElementById("period").value = urlPeriod;
+      }
+
       document.getElementById("search-form").addEventListener("submit", function (e) {
         e.preventDefault();
         const kw = document.getElementById("search-input").value.trim();
         if (kw) searchYouTube(kw);
       });
       document.getElementById("sort").addEventListener("change", apply);
+      document.getElementById("period").addEventListener("change", function () {
+        // Re-run the last search with the new period if we have one
+        if (currentKeyword) searchYouTube(currentKeyword);
+      });
       document.getElementById("export-xlsx").addEventListener("click", exportToExcel);
 
       // Auto-run search if ?q=keyword in URL
-      const autoQ = new URLSearchParams(window.location.search).get("q");
+      const autoQ = urlParams.get("q");
       if (autoQ) {
         document.getElementById("search-input").value = autoQ;
         searchYouTube(autoQ);

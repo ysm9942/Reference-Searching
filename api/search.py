@@ -17,6 +17,7 @@ import json
 import os
 import sys
 from concurrent.futures import ThreadPoolExecutor
+from datetime import datetime, timedelta, timezone
 from http.server import BaseHTTPRequestHandler
 from urllib.parse import parse_qs, urlparse
 
@@ -49,25 +50,41 @@ MAX_RESULTS = 30  # hard cap, even if user asks for more
 DEFAULT_RESULTS = 20
 HTTP_TIMEOUT = 6.0
 
+# Map UI period choice → days of lookback for the `publishedAfter`
+# parameter on YouTube Data API search.list. `None` = no time filter.
+PERIOD_DAYS: dict[str, int | None] = {
+    "day":   1,
+    "week":  7,
+    "month": 30,
+    "year":  365,
+    "all":   None,
+}
+DEFAULT_PERIOD = "week"
 
-def search_youtube(api_key: str, keyword: str, n: int) -> list[dict]:
-    """Return up to n Shorts metadata dicts ordered by view count."""
+
+def search_youtube(api_key: str, keyword: str, n: int, period: str = DEFAULT_PERIOD) -> list[dict]:
+    """Return up to n Shorts metadata dicts ordered by view count.
+    `period` ∈ PERIOD_DAYS — restricts to videos published within that window."""
     youtube = build("youtube", "v3", developerKey=api_key, cache_discovery=False)
 
-    search_resp = (
-        youtube.search()
-        .list(
-            q=f"{keyword} #shorts",
-            part="snippet",
-            type="video",
-            videoDuration="short",
-            maxResults=n,
-            order="viewCount",
-            regionCode="KR",
-            relevanceLanguage="ko",
-        )
-        .execute()
+    params = dict(
+        q=f"{keyword} #shorts",
+        part="snippet",
+        type="video",
+        videoDuration="short",
+        maxResults=n,
+        order="viewCount",
+        regionCode="KR",
+        relevanceLanguage="ko",
     )
+
+    # publishedAfter wants RFC 3339, e.g. "2025-05-13T00:00:00Z"
+    days = PERIOD_DAYS.get(period)
+    if days is not None:
+        cutoff = datetime.now(timezone.utc) - timedelta(days=days)
+        params["publishedAfter"] = cutoff.strftime("%Y-%m-%dT%H:%M:%SZ")
+
+    search_resp = youtube.search().list(**params).execute()
     video_ids = [
         item["id"]["videoId"]
         for item in search_resp.get("items", [])
@@ -132,21 +149,24 @@ def fetch_products_for(video: dict, session: requests.Session) -> dict:
     return video
 
 
-def handle_search(keyword: str, n: int) -> dict:
+def handle_search(keyword: str, n: int, period: str) -> dict:
     api_key = os.environ.get("YOUTUBE_API_KEY")
     if not api_key:
         return {"error": "server is missing YOUTUBE_API_KEY env var"}, 500
 
     n = max(1, min(n, MAX_RESULTS))
+    if period not in PERIOD_DAYS:
+        period = DEFAULT_PERIOD
 
     try:
-        videos = search_youtube(api_key, keyword, n)
+        videos = search_youtube(api_key, keyword, n, period=period)
     except Exception as e:
         return {"error": f"youtube search failed: {type(e).__name__}: {e}"}, 502
 
     if not videos:
         return {
             "keyword": keyword,
+            "period": period,
             "items": [],
             "note": "no videos returned from YouTube",
         }, 200
@@ -160,9 +180,11 @@ def handle_search(keyword: str, n: int) -> dict:
     items.sort(key=lambda v: v.get("view_count", 0), reverse=True)
     return {
         "keyword": keyword,
+        "period": period,
         "items": items,
         "_debug": {
             "vercel_region": os.environ.get("VERCEL_REGION", "unknown"),
+            "period_days": PERIOD_DAYS.get(period),
             "items_total": len(items),
             "items_with_marker": sum(1 for i in items if i.get("_diag", {}).get("has_marker")),
             "items_with_creator_tag": sum(1 for i in items if i.get("products")),
@@ -181,12 +203,13 @@ class handler(BaseHTTPRequestHandler):
             n = int((qs.get("n") or [str(DEFAULT_RESULTS)])[0])
         except ValueError:
             n = DEFAULT_RESULTS
+        period = (qs.get("period") or [DEFAULT_PERIOD])[0].strip().lower()
 
         if not keyword:
             self._send_json({"error": "missing required query param 'q'"}, 400)
             return
 
-        body, status = handle_search(keyword, n)
+        body, status = handle_search(keyword, n, period)
         self._send_json(body, status)
 
     def do_OPTIONS(self):
